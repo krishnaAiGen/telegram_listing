@@ -1,0 +1,161 @@
+2025-06-15 01:57:58,717 - INFO - TradingBot initialized
+2025-06-15 01:57:58,717 - INFO - Trade amount: $100.0
+2025-06-15 01:57:58,717 - INFO - Profit target: 15.0%
+2025-06-15 01:57:58,717 - INFO - Stop loss: 2.0%
+2025-06-15 01:57:58,717 - INFO - Leverage: 1x
+2025-06-15 01:57:58,717 - INFO - Max hold time: 2 hours
+2025-06-15 01:57:58,717 - INFO - TelegramListener initialized
+2025-06-15 01:57:58,717 - INFO - Monitoring channel: @test_binance_list
+2025-06-15 01:57:58,717 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-06-15 01:58:00,979 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-06-15 01:58:02,033 - INFO - Phone migrated to 5
+2025-06-15 01:58:02,230 - INFO - Reconnecting to new data center 5
+2025-06-15 01:58:02,489 - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-06-15 01:58:02,490 - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-06-15 01:58:02,490 - INFO - Connecting to 91.108.56.138:443/TcpFull...
+2025-06-15 01:58:03,914 - INFO - Connection to 91.108.56.138:443/TcpFull complete!
+2025-06-15 01:58:17,659 - INFO - Telegram client started successfully
+2025-06-15 01:58:18,564 - ERROR - Binance connection failed: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2025-06-15 01:58:19,174 - ERROR - Trading bot connection failed - exiting
+2025-06-15 02:01:55,173 - INFO - TradingBot initialized
+2025-06-15 02:01:55,173 - INFO - Trade amount: $100.0
+2025-06-15 02:01:55,173 - INFO - Profit target: 15.0%
+2025-06-15 02:01:55,173 - INFO - Stop loss: 2.0%
+2025-06-15 02:01:55,173 - INFO - Leverage: 1x
+2025-06-15 02:01:55,173 - INFO - Max hold time: 2 hours
+2025-06-15 02:01:55,173 - INFO - TelegramListener initialized
+2025-06-15 02:01:55,173 - INFO - Monitoring channel: @test_binance_list
+2025-06-15 02:01:55,173 - INFO - Connecting to 91.108.56.138:443/TcpFull...
+2025-06-15 02:01:55,260 - INFO - Connection to 91.108.56.138:443/TcpFull complete!
+2025-06-15 02:01:55,794 - INFO - Telegram client started successfully
+2025-06-15 02:01:56,669 - INFO - Binance connection successful
+2025-06-15 02:01:56,669 - INFO - Message handler registered. Listening for messages...
+2025-06-15 02:02:55,206 - INFO - Got difference for channel 2671637984 updates
+2025-06-15 02:02:55,212 - INFO - New message: $HOME listed on Binance futures
+2025-06-15 02:02:55,212 - INFO - Message contains 'binance' and 'futures' - analyzing...
+2025-06-15 02:02:55,975 - INFO - Symbol extracted: HOME
+2025-06-15 02:02:56,569 - INFO - Attempting to execute LONG trade for HOMEUSDT
+2025-06-15 02:02:56,743 - INFO - Current price for HOMEUSDT: $0.0273
+2025-06-15 02:02:57,371 - INFO - Available USDT balance: $0.0
+2025-06-15 02:02:57,558 - WARNING - Calculated quantity 0 is below minimum 1.0 for HOMEUSDT
+2025-06-15 02:02:57,558 - INFO - Final calculated quantity: 1.0 HOMEUSDT
+2025-06-15 02:02:57,725 - INFO - Leverage set to 1x for HOMEUSDT
+2025-06-15 02:02:57,896 - ERROR - Error placing trade for HOMEUSDT: APIError(code=-4164): Order's notional must be no smaller than 5 (unless you choose reduce only).
+2025-06-15 02:02:57,896 - WARNING - ❌ Trade failed for HOMEUSDT - adding to retry list
+2025-06-15 02:02:58,507 - INFO - Retrying trade for HOMEUSDT (attempt 2)
+2025-06-15 02:02:58,676 - INFO - Current price for HOMEUSDT: $0.0273
+2025-06-15 02:02:58,852 - INFO - Available USDT balance: $0.0
+2025-06-15 02:02:59,037 - WARNING - Calculated quantity 0 is below minimum 1.0 for HOMEUSDT
+2025-06-15 02:02:59,037 - INFO - Final calculated quantity: 1.0 HOMEUSDT
+2025-06-15 02:02:59,212 - INFO - Leverage set to 1x for HOMEUSDT
+2025-06-15 02:02:59,382 - ERROR - Error placing trade for HOMEUSDT: APIError(code=-4164): Order's notional must be no smaller than 5 (unless you choose reduce only).
+2025-06-15 02:02:59,382 - INFO - ❌ Retry failed for HOMEUSDT (attempt 2)
+2025-06-15 02:03:47,848 - INFO - Disconnecting from 91.108.56.138:443/TcpFull...
+2025-06-15 02:03:47,852 - INFO - Disconnection from 91.108.56.138:443/TcpFull complete!
+2025-06-15 02:05:26,773 - INFO - TradingBot initialized
+2025-06-15 02:05:26,774 - INFO - Trade amount: $100.0
+2025-06-15 02:05:26,774 - INFO - Profit target: 15.0%
+2025-06-15 02:05:26,774 - INFO - Stop loss: 2.0%
+2025-06-15 02:05:26,774 - INFO - Leverage: 1x
+2025-06-15 02:05:26,774 - INFO - Max hold time: 2 hours
+2025-06-15 02:05:26,774 - INFO - TelegramListener initialized
+2025-06-15 02:05:26,774 - INFO - Monitoring channel: @test_binance_list
+2025-06-15 02:05:26,774 - INFO - Connecting to 91.108.56.138:443/TcpFull...
+2025-06-15 02:05:26,866 - INFO - Connection to 91.108.56.138:443/TcpFull complete!
+2025-06-15 02:05:27,394 - INFO - Telegram client started successfully
+2025-06-15 02:05:28,267 - INFO - Binance connection successful
+2025-06-15 02:05:28,268 - INFO - Message handler registered. Listening for messages...
+2025-06-15 02:05:38,253 - INFO - New message: $HOME listed on Binance futures
+2025-06-15 02:05:38,254 - INFO - Message contains 'binance' and 'futures' - analyzing...
+2025-06-15 02:05:38,945 - INFO - Symbol extracted: HOME
+2025-06-15 02:05:39,618 - INFO - Attempting to execute LONG trade for HOMEUSDT
+2025-06-15 02:05:39,814 - INFO - Current price for HOMEUSDT: $0.02703
+2025-06-15 02:05:40,370 - INFO - Available USDT balance: $759.91583775
+2025-06-15 02:05:40,727 - INFO - Final calculated quantity: 3699.0 HOMEUSDT
+2025-06-15 02:05:40,886 - INFO - Leverage set to 1x for HOMEUSDT
+2025-06-15 02:05:41,043 - INFO - Market order placed: {'orderId': 171465733, 'symbol': 'HOMEUSDT', 'status': 'NEW', 'clientOrderId': 'gIuWzAh5igiTbF8XuP2DCO', 'price': '0.0000000', 'avgPrice': '0.00', 'origQty': '3699', 'executedQty': '0', 'cumQty': '0', 'cumQuote': '0.0000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.0000000', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1749933340990}
+2025-06-15 02:05:41,431 - INFO - Stop loss order placed at $0.0265
+2025-06-15 02:05:41,600 - INFO - Take profit order placed at $0.0311
+2025-06-15 02:05:41,600 - INFO - 
+            🎯 TRADE EXECUTED FOR HOMEUSDT
+            Entry Price: $0.02702
+            Quantity: 3699.0
+            Stop Loss: $0.0265 (-2.0%)
+            Take Profit: $0.0311 (+15.0%)
+            Leverage: 1x
+            Trade Amount: $100.0
+            Max Hold Time: 2 hours
+            
+2025-06-15 02:05:41,600 - INFO - ✅ Trade executed successfully for HOMEUSDT
+2025-06-15 02:05:41,601 - INFO - Trade logged to trades.json
+2025-06-15 02:08:08,275 - INFO - Disconnecting from 91.108.56.138:443/TcpFull...
+2025-06-15 02:08:08,281 - INFO - Disconnection from 91.108.56.138:443/TcpFull complete!
+2025-06-15 02:37:16,320 - INFO - TradingBot initialized
+2025-06-15 02:37:16,321 - INFO - Trade amount: $100.0
+2025-06-15 02:37:16,321 - INFO - Profit target: 15.0%
+2025-06-15 02:37:16,321 - INFO - Stop loss: 2.0%
+2025-06-15 02:37:16,321 - INFO - Leverage: 1x
+2025-06-15 02:37:16,321 - INFO - Max hold time: 2 hours
+2025-06-15 02:37:16,321 - INFO - TelegramListener initialized
+2025-06-15 02:37:16,321 - INFO - Monitoring channel: @test_binance_list
+2025-06-15 02:37:16,321 - INFO - Connecting to 91.108.56.138:443/TcpFull...
+2025-06-15 02:37:16,421 - INFO - Connection to 91.108.56.138:443/TcpFull complete!
+2025-06-15 02:37:17,105 - INFO - Telegram client started successfully
+2025-06-15 02:37:18,005 - INFO - Binance connection successful
+2025-06-15 02:37:18,005 - INFO - Message handler registered. Listening for messages...
+2025-06-15 02:37:38,307 - INFO - Got difference for channel 2671637984 updates
+2025-06-15 02:37:38,315 - INFO - New message: $HOME listed on Binance futures
+2025-06-15 02:37:38,315 - INFO - Message contains 'binance' and 'futures' - analyzing...
+2025-06-15 02:37:38,942 - INFO - Multiple symbols detected, using first one: HOME
+2025-06-15 02:37:38,944 - INFO - Symbol extracted: HOME
+2025-06-15 02:37:38,959 - INFO - Found active trade: HOMEUSDT at 2025-06-15T02:05:41.600913
+2025-06-15 02:37:38,960 - INFO - Active trade exists - ignoring new trade for HOMEUSDT
+2025-06-15 02:37:39,479 - INFO - New message: $HOME listed on Binance futures
+2025-06-15 02:37:39,480 - INFO - Message contains 'binance' and 'futures' - analyzing...
+2025-06-15 02:37:40,180 - INFO - Multiple symbols detected, using first one: HOME
+2025-06-15 02:37:40,182 - INFO - Symbol extracted: HOME
+2025-06-15 02:37:40,183 - INFO - Found active trade: HOMEUSDT at 2025-06-15T02:05:41.600913
+2025-06-15 02:37:40,183 - INFO - Active trade exists - ignoring new trade for HOMEUSDT
+2025-06-15 02:37:57,737 - INFO - Disconnecting from 91.108.56.138:443/TcpFull...
+2025-06-15 02:37:57,742 - INFO - Disconnection from 91.108.56.138:443/TcpFull complete!
+2025-06-15 02:38:16,411 - INFO - TradingBot initialized
+2025-06-15 02:38:16,412 - INFO - Trade amount: $100.0
+2025-06-15 02:38:16,412 - INFO - Profit target: 15.0%
+2025-06-15 02:38:16,412 - INFO - Stop loss: 2.0%
+2025-06-15 02:38:16,412 - INFO - Leverage: 1x
+2025-06-15 02:38:16,412 - INFO - Max hold time: 2 hours
+2025-06-15 02:38:16,412 - INFO - TelegramListener initialized
+2025-06-15 02:38:16,412 - INFO - Monitoring channel: @test_binance_list
+2025-06-15 02:38:16,412 - INFO - Connecting to 91.108.56.138:443/TcpFull...
+2025-06-15 02:38:16,504 - INFO - Connection to 91.108.56.138:443/TcpFull complete!
+2025-06-15 02:38:17,086 - INFO - Telegram client started successfully
+2025-06-15 02:38:17,869 - INFO - Binance connection successful
+2025-06-15 02:38:17,869 - INFO - Message handler registered. Listening for messages...
+2025-06-15 02:38:30,201 - INFO - New message: $HOME listed on Binance futures
+2025-06-15 02:38:30,202 - INFO - Message contains 'binance' and 'futures' - analyzing...
+2025-06-15 02:38:30,937 - INFO - Multiple symbols detected, using first one: HOME
+2025-06-15 02:38:30,937 - INFO - Symbol extracted: HOME
+2025-06-15 02:38:30,938 - ERROR - Error loading trades log: Expecting value: line 1 column 1 (char 0)
+2025-06-15 02:38:31,538 - INFO - Attempting to execute LONG trade for HOMEUSDT
+2025-06-15 02:38:31,741 - INFO - Current price for HOMEUSDT: $0.02683
+2025-06-15 02:38:32,116 - INFO - Available USDT balance: $1069.99829537
+2025-06-15 02:38:32,759 - INFO - Final calculated quantity: 3727.0 HOMEUSDT
+2025-06-15 02:38:32,929 - INFO - Leverage set to 1x for HOMEUSDT
+2025-06-15 02:38:33,572 - INFO - Market order placed: {'orderId': 172091311, 'symbol': 'HOMEUSDT', 'status': 'NEW', 'clientOrderId': '7PawYJQIt2GetKQ3fHCBVA', 'price': '0.0000000', 'avgPrice': '0.00', 'origQty': '3727', 'executedQty': '0', 'cumQty': '0', 'cumQuote': '0.0000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.0000000', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1749935313105}
+2025-06-15 02:38:34,112 - INFO - Stop loss order placed at $0.0263
+2025-06-15 02:38:34,278 - INFO - Take profit order placed at $0.0309
+2025-06-15 02:38:34,278 - INFO - 
+            🎯 TRADE EXECUTED FOR HOMEUSDT
+            Entry Price: $0.02687
+            Quantity: 3727.0
+            Stop Loss: $0.0263 (-2.0%)
+            Take Profit: $0.0309 (+15.0%)
+            Leverage: 1x
+            Trade Amount: $100.0
+            Max Hold Time: 2 hours
+            
+2025-06-15 02:38:34,278 - INFO - ✅ Trade executed successfully for HOMEUSDT
+2025-06-15 02:38:34,278 - ERROR - Error loading trades log: Expecting value: line 1 column 1 (char 0)
+2025-06-15 02:38:34,278 - INFO - Trade logged to trades.json
+2025-06-15 02:38:59,543 - INFO - Disconnecting from 91.108.56.138:443/TcpFull...
+2025-06-15 02:38:59,547 - INFO - Disconnection from 91.108.56.138:443/TcpFull complete!
