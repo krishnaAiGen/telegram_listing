@@ -5,9 +5,8 @@ def sort_messages_by_timestamp():
     """Sort messages in coin_symbols_from_message.json by timestamp"""
     
     # File paths
-    input_file = '/Users/krishnayadav/Documents/test_projects/telegram_trade/coin_symbols_from_message.json'
-    output_file = '/Users/krishnayadav/Documents/test_projects/telegram_trade/coin_symbols_from_message_sorted.json'
-    
+    input_file = '/Users/krishnayadav/Documents/test_projects/telegram_listing/binance_data/bybit_futures_coin_symbols.json'
+    output_file = '/Users/krishnayadav/Documents/test_projects/telegram_listing/binance_data/bybit_futures_coin_symbols_sorted.json'
     try:
         # Load the JSON data
         print(f"Loading data from: {input_file}")

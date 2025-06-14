@@ -1,0 +1,5769 @@
+{
+  "symbol": "KAITOUSDT",
+  "exchange": "bybit",
+  "listing_time": "2025-02-20T13:35:09+00:00",
+  "interval": "5m",
+  "data_points": 576,
+  "price_history": [
+    {
+      "time_index": 0,
+      "timestamp": "2025-02-20T13:40:00+00:00",
+      "open_price": 1.1016,
+      "high_price": 1.1813,
+      "low_price": 1.0914,
+      "close_price": 1.151,
+      "volume": 1101803.0,
+      "minutes_from_listing": 0
+    },
+    {
+      "time_index": 1,
+      "timestamp": "2025-02-20T13:45:00+00:00",
+      "open_price": 1.151,
+      "high_price": 1.1614,
+      "low_price": 1.1115,
+      "close_price": 1.14,
+      "volume": 1408266.0,
+      "minutes_from_listing": 5
+    },
+    {
+      "time_index": 2,
+      "timestamp": "2025-02-20T13:50:00+00:00",
+      "open_price": 1.14,
+      "high_price": 1.1535,
+      "low_price": 1.1174,
+      "close_price": 1.1438,
+      "volume": 1160516.0,
+      "minutes_from_listing": 10
+    },
+    {
+      "time_index": 3,
+      "timestamp": "2025-02-20T13:55:00+00:00",
+      "open_price": 1.1438,
+      "high_price": 1.145,
+      "low_price": 1.0963,
+      "close_price": 1.1001,
+      "volume": 1482928.0,
+      "minutes_from_listing": 15
+    },
+    {
+      "time_index": 4,
+      "timestamp": "2025-02-20T14:00:00+00:00",
+      "open_price": 1.1001,
+      "high_price": 1.1093,
+      "low_price": 1.0395,
+      "close_price": 1.0676,
+      "volume": 6016472.0,
+      "minutes_from_listing": 20
+    },
+    {
+      "time_index": 5,
+      "timestamp": "2025-02-20T14:05:00+00:00",
+      "open_price": 1.0676,
+      "high_price": 1.0725,
+      "low_price": 0.9886,
+      "close_price": 1.0009,
+      "volume": 4734687.0,
+      "minutes_from_listing": 25
+    },
+    {
+      "time_index": 6,
+      "timestamp": "2025-02-20T14:10:00+00:00",
+      "open_price": 1.0009,
+      "high_price": 1.0373,
+      "low_price": 0.9818,
+      "close_price": 1.0132,
+      "volume": 4319151.0,
+      "minutes_from_listing": 30
+    },
+    {
+      "time_index": 7,
+      "timestamp": "2025-02-20T14:15:00+00:00",
+      "open_price": 1.0132,
+      "high_price": 1.065,
+      "low_price": 1.01,
+      "close_price": 1.0323,
+      "volume": 3230829.0,
+      "minutes_from_listing": 35
+    },
+    {
+      "time_index": 8,
+      "timestamp": "2025-02-20T14:20:00+00:00",
+      "open_price": 1.0323,
+      "high_price": 1.04,
+      "low_price": 0.99,
+      "close_price": 0.9944,
+      "volume": 3949767.0,
+      "minutes_from_listing": 40
+    },
+    {
+      "time_index": 9,
+      "timestamp": "2025-02-20T14:25:00+00:00",
+      "open_price": 0.9944,
+      "high_price": 1.0017,
+      "low_price": 0.9325,
+      "close_price": 0.9406,
+      "volume": 5309822.0,
+      "minutes_from_listing": 45
+    },
+    {
+      "time_index": 10,
+      "timestamp": "2025-02-20T14:30:00+00:00",
+      "open_price": 0.9406,
+      "high_price": 0.9655,
+      "low_price": 0.9008,
+      "close_price": 0.9194,
+      "volume": 5145542.0,
+      "minutes_from_listing": 50
+    },
+    {
+      "time_index": 11,
+      "timestamp": "2025-02-20T14:35:00+00:00",
+      "open_price": 0.9194,
+      "high_price": 0.9205,
+      "low_price": 0.87,
+      "close_price": 0.8873,
+      "volume": 5087864.0,
+      "minutes_from_listing": 55
+    },
+    {
+      "time_index": 12,
+      "timestamp": "2025-02-20T14:40:00+00:00",
+      "open_price": 0.8873,
+      "high_price": 0.894,
+      "low_price": 0.8569,
+      "close_price": 0.8818,
+      "volume": 4231106.0,
+      "minutes_from_listing": 60
+    },
+    {
+      "time_index": 13,
+      "timestamp": "2025-02-20T14:45:00+00:00",
+      "open_price": 0.8818,
+      "high_price": 0.9264,
+      "low_price": 0.8799,
+      "close_price": 0.8883,
+      "volume": 5902983.0,
+      "minutes_from_listing": 65
+    },
+    {
+      "time_index": 14,
+      "timestamp": "2025-02-20T14:50:00+00:00",
+      "open_price": 0.8883,
+      "high_price": 0.9111,
+      "low_price": 0.8749,
+      "close_price": 0.9048,
+      "volume": 3225796.0,
+      "minutes_from_listing": 70
+    },
+    {
+      "time_index": 15,
+      "timestamp": "2025-02-20T14:55:00+00:00",
+      "open_price": 0.9048,
+      "high_price": 0.9247,
+      "low_price": 0.8983,
+      "close_price": 0.9067,
+      "volume": 2325465.0,
+      "minutes_from_listing": 75
+    },
+    {
+      "time_index": 16,
+      "timestamp": "2025-02-20T15:00:00+00:00",
+      "open_price": 0.9067,
+      "high_price": 0.9344,
+      "low_price": 0.8945,
+      "close_price": 0.9243,
+      "volume": 3249485.0,
+      "minutes_from_listing": 80
+    },
+    {
+      "time_index": 17,
+      "timestamp": "2025-02-20T15:05:00+00:00",
+      "open_price": 0.9243,
+      "high_price": 0.933,
+      "low_price": 0.8788,
+      "close_price": 0.8902,
+      "volume": 3314514.0,
+      "minutes_from_listing": 85
+    },
+    {
+      "time_index": 18,
+      "timestamp": "2025-02-20T15:10:00+00:00",
+      "open_price": 0.8902,
+      "high_price": 0.909,
+      "low_price": 0.8881,
+      "close_price": 0.8984,
+      "volume": 2353371.0,
+      "minutes_from_listing": 90
+    },
+    {
+      "time_index": 19,
+      "timestamp": "2025-02-20T15:15:00+00:00",
+      "open_price": 0.8984,
+      "high_price": 0.9161,
+      "low_price": 0.8922,
+      "close_price": 0.9034,
+      "volume": 1947072.0,
+      "minutes_from_listing": 95
+    },
+    {
+      "time_index": 20,
+      "timestamp": "2025-02-20T15:20:00+00:00",
+      "open_price": 0.9034,
+      "high_price": 0.9139,
+      "low_price": 0.8888,
+      "close_price": 0.8996,
+      "volume": 2026745.0,
+      "minutes_from_listing": 100
+    },
+    {
+      "time_index": 21,
+      "timestamp": "2025-02-20T15:25:00+00:00",
+      "open_price": 0.8996,
+      "high_price": 0.9389,
+      "low_price": 0.8873,
+      "close_price": 0.9267,
+      "volume": 5788660.0,
+      "minutes_from_listing": 105
+    },
+    {
+      "time_index": 22,
+      "timestamp": "2025-02-20T15:30:00+00:00",
+      "open_price": 0.9267,
+      "high_price": 0.965,
+      "low_price": 0.9229,
+      "close_price": 0.9401,
+      "volume": 5080034.0,
+      "minutes_from_listing": 110
+    },
+    {
+      "time_index": 23,
+      "timestamp": "2025-02-20T15:35:00+00:00",
+      "open_price": 0.9401,
+      "high_price": 0.9403,
+      "low_price": 0.9176,
+      "close_price": 0.9226,
+      "volume": 2874707.0,
+      "minutes_from_listing": 115
+    },
+    {
+      "time_index": 24,
+      "timestamp": "2025-02-20T15:40:00+00:00",
+      "open_price": 0.9226,
+      "high_price": 0.926,
+      "low_price": 0.9059,
+      "close_price": 0.9121,
+      "volume": 1954412.0,
+      "minutes_from_listing": 120
+    },
+    {
+      "time_index": 25,
+      "timestamp": "2025-02-20T15:45:00+00:00",
+      "open_price": 0.9121,
+      "high_price": 0.9348,
+      "low_price": 0.9097,
+      "close_price": 0.9293,
+      "volume": 1961854.0,
+      "minutes_from_listing": 125
+    },
+    {
+      "time_index": 26,
+      "timestamp": "2025-02-20T15:50:00+00:00",
+      "open_price": 0.9293,
+      "high_price": 0.9373,
+      "low_price": 0.9197,
+      "close_price": 0.9313,
+      "volume": 1876145.0,
+      "minutes_from_listing": 130
+    },
+    {
+      "time_index": 27,
+      "timestamp": "2025-02-20T15:55:00+00:00",
+      "open_price": 0.9313,
+      "high_price": 0.9343,
+      "low_price": 0.9222,
+      "close_price": 0.9268,
+      "volume": 1234556.0,
+      "minutes_from_listing": 135
+    },
+    {
+      "time_index": 28,
+      "timestamp": "2025-02-20T16:00:00+00:00",
+      "open_price": 0.9268,
+      "high_price": 0.9268,
+      "low_price": 0.8902,
+      "close_price": 0.9111,
+      "volume": 3387725.0,
+      "minutes_from_listing": 140
+    },
+    {
+      "time_index": 29,
+      "timestamp": "2025-02-20T16:05:00+00:00",
+      "open_price": 0.9111,
+      "high_price": 0.9175,
+      "low_price": 0.8996,
+      "close_price": 0.9062,
+      "volume": 1469853.0,
+      "minutes_from_listing": 145
+    },
+    {
+      "time_index": 30,
+      "timestamp": "2025-02-20T16:10:00+00:00",
+      "open_price": 0.9062,
+      "high_price": 0.9305,
+      "low_price": 0.906,
+      "close_price": 0.9188,
+      "volume": 1392884.0,
+      "minutes_from_listing": 150
+    },
+    {
+      "time_index": 31,
+      "timestamp": "2025-02-20T16:15:00+00:00",
+      "open_price": 0.9188,
+      "high_price": 0.9573,
+      "low_price": 0.9132,
+      "close_price": 0.9346,
+      "volume": 3014841.0,
+      "minutes_from_listing": 155
+    },
+    {
+      "time_index": 32,
+      "timestamp": "2025-02-20T16:20:00+00:00",
+      "open_price": 0.9346,
+      "high_price": 1.0184,
+      "low_price": 0.9339,
+      "close_price": 0.9878,
+      "volume": 6098829.0,
+      "minutes_from_listing": 160
+    },
+    {
+      "time_index": 33,
+      "timestamp": "2025-02-20T16:25:00+00:00",
+      "open_price": 0.9878,
+      "high_price": 1.0,
+      "low_price": 0.9645,
+      "close_price": 0.9772,
+      "volume": 3744857.0,
+      "minutes_from_listing": 165
+    },
+    {
+      "time_index": 34,
+      "timestamp": "2025-02-20T16:30:00+00:00",
+      "open_price": 0.9772,
+      "high_price": 0.9933,
+      "low_price": 0.9551,
+      "close_price": 0.9655,
+      "volume": 3534436.0,
+      "minutes_from_listing": 170
+    },
+    {
+      "time_index": 35,
+      "timestamp": "2025-02-20T16:35:00+00:00",
+      "open_price": 0.9655,
+      "high_price": 0.9695,
+      "low_price": 0.9436,
+      "close_price": 0.9463,
+      "volume": 2413589.0,
+      "minutes_from_listing": 175
+    },
+    {
+      "time_index": 36,
+      "timestamp": "2025-02-20T16:40:00+00:00",
+      "open_price": 0.9463,
+      "high_price": 0.9843,
+      "low_price": 0.9449,
+      "close_price": 0.9701,
+      "volume": 1840588.0,
+      "minutes_from_listing": 180
+    },
+    {
+      "time_index": 37,
+      "timestamp": "2025-02-20T16:45:00+00:00",
+      "open_price": 0.9701,
+      "high_price": 0.9888,
+      "low_price": 0.9618,
+      "close_price": 0.9775,
+      "volume": 1800194.0,
+      "minutes_from_listing": 185
+    },
+    {
+      "time_index": 38,
+      "timestamp": "2025-02-20T16:50:00+00:00",
+      "open_price": 0.9775,
+      "high_price": 0.9933,
+      "low_price": 0.9629,
+      "close_price": 0.9764,
+      "volume": 1533188.0,
+      "minutes_from_listing": 190
+    },
+    {
+      "time_index": 39,
+      "timestamp": "2025-02-20T16:55:00+00:00",
+      "open_price": 0.9764,
+      "high_price": 0.977,
+      "low_price": 0.9515,
+      "close_price": 0.9721,
+      "volume": 1465859.0,
+      "minutes_from_listing": 195
+    },
+    {
+      "time_index": 40,
+      "timestamp": "2025-02-20T17:00:00+00:00",
+      "open_price": 0.9721,
+      "high_price": 0.9998,
+      "low_price": 0.961,
+      "close_price": 0.9881,
+      "volume": 1743440.0,
+      "minutes_from_listing": 200
+    },
+    {
+      "time_index": 41,
+      "timestamp": "2025-02-20T17:05:00+00:00",
+      "open_price": 0.9881,
+      "high_price": 0.9937,
+      "low_price": 0.9783,
+      "close_price": 0.9804,
+      "volume": 790253.0,
+      "minutes_from_listing": 205
+    },
+    {
+      "time_index": 42,
+      "timestamp": "2025-02-20T17:10:00+00:00",
+      "open_price": 0.9804,
+      "high_price": 0.986,
+      "low_price": 0.9696,
+      "close_price": 0.9832,
+      "volume": 1096684.0,
+      "minutes_from_listing": 210
+    },
+    {
+      "time_index": 43,
+      "timestamp": "2025-02-20T17:15:00+00:00",
+      "open_price": 0.9832,
+      "high_price": 0.9893,
+      "low_price": 0.9745,
+      "close_price": 0.9802,
+      "volume": 608192.0,
+      "minutes_from_listing": 215
+    },
+    {
+      "time_index": 44,
+      "timestamp": "2025-02-20T17:20:00+00:00",
+      "open_price": 0.9802,
+      "high_price": 0.9812,
+      "low_price": 0.9625,
+      "close_price": 0.9632,
+      "volume": 855898.0,
+      "minutes_from_listing": 220
+    },
+    {
+      "time_index": 45,
+      "timestamp": "2025-02-20T17:25:00+00:00",
+      "open_price": 0.9632,
+      "high_price": 0.97,
+      "low_price": 0.94,
+      "close_price": 0.9654,
+      "volume": 1936485.0,
+      "minutes_from_listing": 225
+    },
+    {
+      "time_index": 46,
+      "timestamp": "2025-02-20T17:30:00+00:00",
+      "open_price": 0.9654,
+      "high_price": 0.9906,
+      "low_price": 0.9616,
+      "close_price": 0.9794,
+      "volume": 1449394.0,
+      "minutes_from_listing": 230
+    },
+    {
+      "time_index": 47,
+      "timestamp": "2025-02-20T17:35:00+00:00",
+      "open_price": 0.9794,
+      "high_price": 1.0894,
+      "low_price": 0.9751,
+      "close_price": 1.0628,
+      "volume": 5404104.0,
+      "minutes_from_listing": 235
+    },
+    {
+      "time_index": 48,
+      "timestamp": "2025-02-20T17:40:00+00:00",
+      "open_price": 1.0628,
+      "high_price": 1.0997,
+      "low_price": 1.0479,
+      "close_price": 1.0535,
+      "volume": 3358212.0,
+      "minutes_from_listing": 240
+    },
+    {
+      "time_index": 49,
+      "timestamp": "2025-02-20T17:45:00+00:00",
+      "open_price": 1.0535,
+      "high_price": 1.0876,
+      "low_price": 1.0465,
+      "close_price": 1.0809,
+      "volume": 2196860.0,
+      "minutes_from_listing": 245
+    },
+    {
+      "time_index": 50,
+      "timestamp": "2025-02-20T17:50:00+00:00",
+      "open_price": 1.0809,
+      "high_price": 1.2031,
+      "low_price": 1.0801,
+      "close_price": 1.1988,
+      "volume": 8017048.0,
+      "minutes_from_listing": 250
+    },
+    {
+      "time_index": 51,
+      "timestamp": "2025-02-20T17:55:00+00:00",
+      "open_price": 1.1988,
+      "high_price": 1.2601,
+      "low_price": 1.17,
+      "close_price": 1.2121,
+      "volume": 7950971.0,
+      "minutes_from_listing": 255
+    },
+    {
+      "time_index": 52,
+      "timestamp": "2025-02-20T18:00:00+00:00",
+      "open_price": 1.2121,
+      "high_price": 1.249,
+      "low_price": 1.1833,
+      "close_price": 1.2187,
+      "volume": 4733526.0,
+      "minutes_from_listing": 260
+    },
+    {
+      "time_index": 53,
+      "timestamp": "2025-02-20T18:05:00+00:00",
+      "open_price": 1.2187,
+      "high_price": 1.3017,
+      "low_price": 1.2187,
+      "close_price": 1.2799,
+      "volume": 6816570.0,
+      "minutes_from_listing": 265
+    },
+    {
+      "time_index": 54,
+      "timestamp": "2025-02-20T18:10:00+00:00",
+      "open_price": 1.2799,
+      "high_price": 1.3145,
+      "low_price": 1.2453,
+      "close_price": 1.2546,
+      "volume": 3232402.0,
+      "minutes_from_listing": 270
+    },
+    {
+      "time_index": 55,
+      "timestamp": "2025-02-20T18:15:00+00:00",
+      "open_price": 1.2546,
+      "high_price": 1.2571,
+      "low_price": 1.1667,
+      "close_price": 1.1961,
+      "volume": 4705248.0,
+      "minutes_from_listing": 275
+    },
+    {
+      "time_index": 56,
+      "timestamp": "2025-02-20T18:20:00+00:00",
+      "open_price": 1.1961,
+      "high_price": 1.2447,
+      "low_price": 1.168,
+      "close_price": 1.2341,
+      "volume": 2933112.0,
+      "minutes_from_listing": 280
+    },
+    {
+      "time_index": 57,
+      "timestamp": "2025-02-20T18:25:00+00:00",
+      "open_price": 1.2341,
+      "high_price": 1.2978,
+      "low_price": 1.2253,
+      "close_price": 1.2391,
+      "volume": 3148465.0,
+      "minutes_from_listing": 285
+    },
+    {
+      "time_index": 58,
+      "timestamp": "2025-02-20T18:30:00+00:00",
+      "open_price": 1.2391,
+      "high_price": 1.3129,
+      "low_price": 1.2309,
+      "close_price": 1.2862,
+      "volume": 3368379.0,
+      "minutes_from_listing": 290
+    },
+    {
+      "time_index": 59,
+      "timestamp": "2025-02-20T18:35:00+00:00",
+      "open_price": 1.2862,
+      "high_price": 1.2979,
+      "low_price": 1.2191,
+      "close_price": 1.2362,
+      "volume": 2516218.0,
+      "minutes_from_listing": 295
+    },
+    {
+      "time_index": 60,
+      "timestamp": "2025-02-20T18:40:00+00:00",
+      "open_price": 1.2362,
+      "high_price": 1.2468,
+      "low_price": 1.188,
+      "close_price": 1.2228,
+      "volume": 3080317.0,
+      "minutes_from_listing": 300
+    },
+    {
+      "time_index": 61,
+      "timestamp": "2025-02-20T18:45:00+00:00",
+      "open_price": 1.2228,
+      "high_price": 1.2642,
+      "low_price": 1.2189,
+      "close_price": 1.2317,
+      "volume": 1779637.0,
+      "minutes_from_listing": 305
+    },
+    {
+      "time_index": 62,
+      "timestamp": "2025-02-20T18:50:00+00:00",
+      "open_price": 1.2317,
+      "high_price": 1.241,
+      "low_price": 1.2006,
+      "close_price": 1.224,
+      "volume": 1226113.0,
+      "minutes_from_listing": 310
+    },
+    {
+      "time_index": 63,
+      "timestamp": "2025-02-20T18:55:00+00:00",
+      "open_price": 1.224,
+      "high_price": 1.2453,
+      "low_price": 1.2227,
+      "close_price": 1.2387,
+      "volume": 840970.0,
+      "minutes_from_listing": 315
+    },
+    {
+      "time_index": 64,
+      "timestamp": "2025-02-20T19:00:00+00:00",
+      "open_price": 1.2387,
+      "high_price": 1.3055,
+      "low_price": 1.2188,
+      "close_price": 1.2694,
+      "volume": 3080466.0,
+      "minutes_from_listing": 320
+    },
+    {
+      "time_index": 65,
+      "timestamp": "2025-02-20T19:05:00+00:00",
+      "open_price": 1.2694,
+      "high_price": 1.2845,
+      "low_price": 1.2445,
+      "close_price": 1.2717,
+      "volume": 1381286.0,
+      "minutes_from_listing": 325
+    },
+    {
+      "time_index": 66,
+      "timestamp": "2025-02-20T19:10:00+00:00",
+      "open_price": 1.2717,
+      "high_price": 1.3214,
+      "low_price": 1.2552,
+      "close_price": 1.289,
+      "volume": 2476556.0,
+      "minutes_from_listing": 330
+    },
+    {
+      "time_index": 67,
+      "timestamp": "2025-02-20T19:15:00+00:00",
+      "open_price": 1.289,
+      "high_price": 1.3247,
+      "low_price": 1.2471,
+      "close_price": 1.2674,
+      "volume": 3330259.0,
+      "minutes_from_listing": 335
+    },
+    {
+      "time_index": 68,
+      "timestamp": "2025-02-20T19:20:00+00:00",
+      "open_price": 1.2674,
+      "high_price": 1.2844,
+      "low_price": 1.2604,
+      "close_price": 1.2673,
+      "volume": 917287.0,
+      "minutes_from_listing": 340
+    },
+    {
+      "time_index": 69,
+      "timestamp": "2025-02-20T19:25:00+00:00",
+      "open_price": 1.2673,
+      "high_price": 1.2687,
+      "low_price": 1.2355,
+      "close_price": 1.2639,
+      "volume": 1449965.0,
+      "minutes_from_listing": 345
+    },
+    {
+      "time_index": 70,
+      "timestamp": "2025-02-20T19:30:00+00:00",
+      "open_price": 1.2639,
+      "high_price": 1.2699,
+      "low_price": 1.2198,
+      "close_price": 1.2251,
+      "volume": 1305411.0,
+      "minutes_from_listing": 350
+    },
+    {
+      "time_index": 71,
+      "timestamp": "2025-02-20T19:35:00+00:00",
+      "open_price": 1.2251,
+      "high_price": 1.2423,
+      "low_price": 1.2111,
+      "close_price": 1.2328,
+      "volume": 934898.0,
+      "minutes_from_listing": 355
+    },
+    {
+      "time_index": 72,
+      "timestamp": "2025-02-20T19:40:00+00:00",
+      "open_price": 1.2328,
+      "high_price": 1.2367,
+      "low_price": 1.1941,
+      "close_price": 1.2025,
+      "volume": 1120854.0,
+      "minutes_from_listing": 360
+    },
+    {
+      "time_index": 73,
+      "timestamp": "2025-02-20T19:45:00+00:00",
+      "open_price": 1.2025,
+      "high_price": 1.2367,
+      "low_price": 1.1972,
+      "close_price": 1.2198,
+      "volume": 1028437.0,
+      "minutes_from_listing": 365
+    },
+    {
+      "time_index": 74,
+      "timestamp": "2025-02-20T19:50:00+00:00",
+      "open_price": 1.2198,
+      "high_price": 1.2484,
+      "low_price": 1.2196,
+      "close_price": 1.2353,
+      "volume": 951121.0,
+      "minutes_from_listing": 370
+    },
+    {
+      "time_index": 75,
+      "timestamp": "2025-02-20T19:55:00+00:00",
+      "open_price": 1.2353,
+      "high_price": 1.2384,
+      "low_price": 1.2222,
+      "close_price": 1.2306,
+      "volume": 659806.0,
+      "minutes_from_listing": 375
+    },
+    {
+      "time_index": 76,
+      "timestamp": "2025-02-20T20:00:00+00:00",
+      "open_price": 1.2306,
+      "high_price": 1.2591,
+      "low_price": 1.221,
+      "close_price": 1.2258,
+      "volume": 1235728.0,
+      "minutes_from_listing": 380
+    },
+    {
+      "time_index": 77,
+      "timestamp": "2025-02-20T20:05:00+00:00",
+      "open_price": 1.2258,
+      "high_price": 1.2416,
+      "low_price": 1.2234,
+      "close_price": 1.2373,
+      "volume": 433498.0,
+      "minutes_from_listing": 385
+    },
+    {
+      "time_index": 78,
+      "timestamp": "2025-02-20T20:10:00+00:00",
+      "open_price": 1.2373,
+      "high_price": 1.2465,
+      "low_price": 1.2317,
+      "close_price": 1.233,
+      "volume": 401737.0,
+      "minutes_from_listing": 390
+    },
+    {
+      "time_index": 79,
+      "timestamp": "2025-02-20T20:15:00+00:00",
+      "open_price": 1.233,
+      "high_price": 1.2408,
+      "low_price": 1.2092,
+      "close_price": 1.2273,
+      "volume": 1294182.0,
+      "minutes_from_listing": 395
+    },
+    {
+      "time_index": 80,
+      "timestamp": "2025-02-20T20:20:00+00:00",
+      "open_price": 1.2273,
+      "high_price": 1.2337,
+      "low_price": 1.221,
+      "close_price": 1.2269,
+      "volume": 411570.0,
+      "minutes_from_listing": 400
+    },
+    {
+      "time_index": 81,
+      "timestamp": "2025-02-20T20:25:00+00:00",
+      "open_price": 1.2269,
+      "high_price": 1.2321,
+      "low_price": 1.1904,
+      "close_price": 1.2075,
+      "volume": 763702.0,
+      "minutes_from_listing": 405
+    },
+    {
+      "time_index": 82,
+      "timestamp": "2025-02-20T20:30:00+00:00",
+      "open_price": 1.2075,
+      "high_price": 1.2328,
+      "low_price": 1.1896,
+      "close_price": 1.227,
+      "volume": 1130092.0,
+      "minutes_from_listing": 410
+    },
+    {
+      "time_index": 83,
+      "timestamp": "2025-02-20T20:35:00+00:00",
+      "open_price": 1.227,
+      "high_price": 1.2358,
+      "low_price": 1.2217,
+      "close_price": 1.2288,
+      "volume": 469352.0,
+      "minutes_from_listing": 415
+    },
+    {
+      "time_index": 84,
+      "timestamp": "2025-02-20T20:40:00+00:00",
+      "open_price": 1.2288,
+      "high_price": 1.2309,
+      "low_price": 1.2134,
+      "close_price": 1.2137,
+      "volume": 446750.0,
+      "minutes_from_listing": 420
+    },
+    {
+      "time_index": 85,
+      "timestamp": "2025-02-20T20:45:00+00:00",
+      "open_price": 1.2137,
+      "high_price": 1.2735,
+      "low_price": 1.2035,
+      "close_price": 1.271,
+      "volume": 1518096.0,
+      "minutes_from_listing": 425
+    },
+    {
+      "time_index": 86,
+      "timestamp": "2025-02-20T20:50:00+00:00",
+      "open_price": 1.271,
+      "high_price": 1.2735,
+      "low_price": 1.2466,
+      "close_price": 1.2542,
+      "volume": 1212892.0,
+      "minutes_from_listing": 430
+    },
+    {
+      "time_index": 87,
+      "timestamp": "2025-02-20T20:55:00+00:00",
+      "open_price": 1.2542,
+      "high_price": 1.258,
+      "low_price": 1.2362,
+      "close_price": 1.2499,
+      "volume": 711940.0,
+      "minutes_from_listing": 435
+    },
+    {
+      "time_index": 88,
+      "timestamp": "2025-02-20T21:00:00+00:00",
+      "open_price": 1.2499,
+      "high_price": 1.48,
+      "low_price": 1.2372,
+      "close_price": 1.4384,
+      "volume": 6732792.0,
+      "minutes_from_listing": 440
+    },
+    {
+      "time_index": 89,
+      "timestamp": "2025-02-20T21:05:00+00:00",
+      "open_price": 1.4384,
+      "high_price": 1.6727,
+      "low_price": 1.3768,
+      "close_price": 1.6207,
+      "volume": 9206705.0,
+      "minutes_from_listing": 445
+    },
+    {
+      "time_index": 90,
+      "timestamp": "2025-02-20T21:10:00+00:00",
+      "open_price": 1.6207,
+      "high_price": 1.7138,
+      "low_price": 1.5314,
+      "close_price": 1.5757,
+      "volume": 7100676.0,
+      "minutes_from_listing": 450
+    },
+    {
+      "time_index": 91,
+      "timestamp": "2025-02-20T21:15:00+00:00",
+      "open_price": 1.5757,
+      "high_price": 1.6587,
+      "low_price": 1.55,
+      "close_price": 1.5996,
+      "volume": 3600958.0,
+      "minutes_from_listing": 455
+    },
+    {
+      "time_index": 92,
+      "timestamp": "2025-02-20T21:20:00+00:00",
+      "open_price": 1.5996,
+      "high_price": 1.9814,
+      "low_price": 1.5802,
+      "close_price": 1.8678,
+      "volume": 7981110.0,
+      "minutes_from_listing": 460
+    },
+    {
+      "time_index": 93,
+      "timestamp": "2025-02-20T21:25:00+00:00",
+      "open_price": 1.8678,
+      "high_price": 1.9331,
+      "low_price": 1.7756,
+      "close_price": 1.8701,
+      "volume": 4727067.0,
+      "minutes_from_listing": 465
+    },
+    {
+      "time_index": 94,
+      "timestamp": "2025-02-20T21:30:00+00:00",
+      "open_price": 1.8701,
+      "high_price": 2.1156,
+      "low_price": 1.781,
+      "close_price": 1.8268,
+      "volume": 7242561.0,
+      "minutes_from_listing": 470
+    },
+    {
+      "time_index": 95,
+      "timestamp": "2025-02-20T21:35:00+00:00",
+      "open_price": 1.8268,
+      "high_price": 1.9,
+      "low_price": 1.7082,
+      "close_price": 1.758,
+      "volume": 4620518.0,
+      "minutes_from_listing": 475
+    },
+    {
+      "time_index": 96,
+      "timestamp": "2025-02-20T21:40:00+00:00",
+      "open_price": 1.758,
+      "high_price": 1.8342,
+      "low_price": 1.747,
+      "close_price": 1.7955,
+      "volume": 2699897.0,
+      "minutes_from_listing": 480
+    },
+    {
+      "time_index": 97,
+      "timestamp": "2025-02-20T21:45:00+00:00",
+      "open_price": 1.7955,
+      "high_price": 1.8282,
+      "low_price": 1.7609,
+      "close_price": 1.7755,
+      "volume": 1813502.0,
+      "minutes_from_listing": 485
+    },
+    {
+      "time_index": 98,
+      "timestamp": "2025-02-20T21:50:00+00:00",
+      "open_price": 1.7755,
+      "high_price": 1.785,
+      "low_price": 1.6267,
+      "close_price": 1.6414,
+      "volume": 3844168.0,
+      "minutes_from_listing": 490
+    },
+    {
+      "time_index": 99,
+      "timestamp": "2025-02-20T21:55:00+00:00",
+      "open_price": 1.6414,
+      "high_price": 1.7264,
+      "low_price": 1.6413,
+      "close_price": 1.6835,
+      "volume": 2092676.0,
+      "minutes_from_listing": 495
+    },
+    {
+      "time_index": 100,
+      "timestamp": "2025-02-20T22:00:00+00:00",
+      "open_price": 1.6835,
+      "high_price": 1.8236,
+      "low_price": 1.673,
+      "close_price": 1.7793,
+      "volume": 2743287.0,
+      "minutes_from_listing": 500
+    },
+    {
+      "time_index": 101,
+      "timestamp": "2025-02-20T22:05:00+00:00",
+      "open_price": 1.7793,
+      "high_price": 1.8462,
+      "low_price": 1.7313,
+      "close_price": 1.8154,
+      "volume": 1909260.0,
+      "minutes_from_listing": 505
+    },
+    {
+      "time_index": 102,
+      "timestamp": "2025-02-20T22:10:00+00:00",
+      "open_price": 1.8154,
+      "high_price": 1.8772,
+      "low_price": 1.7625,
+      "close_price": 1.8096,
+      "volume": 1906697.0,
+      "minutes_from_listing": 510
+    },
+    {
+      "time_index": 103,
+      "timestamp": "2025-02-20T22:15:00+00:00",
+      "open_price": 1.8096,
+      "high_price": 1.8683,
+      "low_price": 1.7814,
+      "close_price": 1.8444,
+      "volume": 1479784.0,
+      "minutes_from_listing": 515
+    },
+    {
+      "time_index": 104,
+      "timestamp": "2025-02-20T22:20:00+00:00",
+      "open_price": 1.8444,
+      "high_price": 1.8891,
+      "low_price": 1.7932,
+      "close_price": 1.8352,
+      "volume": 1796084.0,
+      "minutes_from_listing": 520
+    },
+    {
+      "time_index": 105,
+      "timestamp": "2025-02-20T22:25:00+00:00",
+      "open_price": 1.8352,
+      "high_price": 1.9112,
+      "low_price": 1.8192,
+      "close_price": 1.882,
+      "volume": 2122789.0,
+      "minutes_from_listing": 525
+    },
+    {
+      "time_index": 106,
+      "timestamp": "2025-02-20T22:30:00+00:00",
+      "open_price": 1.882,
+      "high_price": 1.8916,
+      "low_price": 1.8385,
+      "close_price": 1.8584,
+      "volume": 1069428.0,
+      "minutes_from_listing": 530
+    },
+    {
+      "time_index": 107,
+      "timestamp": "2025-02-20T22:35:00+00:00",
+      "open_price": 1.8584,
+      "high_price": 1.8635,
+      "low_price": 1.7715,
+      "close_price": 1.7999,
+      "volume": 1523997.0,
+      "minutes_from_listing": 535
+    },
+    {
+      "time_index": 108,
+      "timestamp": "2025-02-20T22:40:00+00:00",
+      "open_price": 1.7999,
+      "high_price": 1.8125,
+      "low_price": 1.7435,
+      "close_price": 1.8009,
+      "volume": 775998.0,
+      "minutes_from_listing": 540
+    },
+    {
+      "time_index": 109,
+      "timestamp": "2025-02-20T22:45:00+00:00",
+      "open_price": 1.8009,
+      "high_price": 1.8264,
+      "low_price": 1.7141,
+      "close_price": 1.7207,
+      "volume": 630995.0,
+      "minutes_from_listing": 545
+    },
+    {
+      "time_index": 110,
+      "timestamp": "2025-02-20T22:50:00+00:00",
+      "open_price": 1.7207,
+      "high_price": 1.7687,
+      "low_price": 1.6753,
+      "close_price": 1.6798,
+      "volume": 1065733.0,
+      "minutes_from_listing": 550
+    },
+    {
+      "time_index": 111,
+      "timestamp": "2025-02-20T22:55:00+00:00",
+      "open_price": 1.6798,
+      "high_price": 1.7451,
+      "low_price": 1.6798,
+      "close_price": 1.7334,
+      "volume": 822220.0,
+      "minutes_from_listing": 555
+    },
+    {
+      "time_index": 112,
+      "timestamp": "2025-02-20T23:00:00+00:00",
+      "open_price": 1.7334,
+      "high_price": 1.8143,
+      "low_price": 1.7334,
+      "close_price": 1.7767,
+      "volume": 1332323.0,
+      "minutes_from_listing": 560
+    },
+    {
+      "time_index": 113,
+      "timestamp": "2025-02-20T23:05:00+00:00",
+      "open_price": 1.7767,
+      "high_price": 1.79,
+      "low_price": 1.711,
+      "close_price": 1.7633,
+      "volume": 962267.0,
+      "minutes_from_listing": 565
+    },
+    {
+      "time_index": 114,
+      "timestamp": "2025-02-20T23:10:00+00:00",
+      "open_price": 1.7633,
+      "high_price": 1.8353,
+      "low_price": 1.7633,
+      "close_price": 1.7893,
+      "volume": 947841.0,
+      "minutes_from_listing": 570
+    },
+    {
+      "time_index": 115,
+      "timestamp": "2025-02-20T23:15:00+00:00",
+      "open_price": 1.7893,
+      "high_price": 1.8188,
+      "low_price": 1.7606,
+      "close_price": 1.7729,
+      "volume": 527309.0,
+      "minutes_from_listing": 575
+    },
+    {
+      "time_index": 116,
+      "timestamp": "2025-02-20T23:20:00+00:00",
+      "open_price": 1.7729,
+      "high_price": 1.7933,
+      "low_price": 1.7296,
+      "close_price": 1.7423,
+      "volume": 562505.0,
+      "minutes_from_listing": 580
+    },
+    {
+      "time_index": 117,
+      "timestamp": "2025-02-20T23:25:00+00:00",
+      "open_price": 1.7423,
+      "high_price": 1.7737,
+      "low_price": 1.717,
+      "close_price": 1.7325,
+      "volume": 715302.0,
+      "minutes_from_listing": 585
+    },
+    {
+      "time_index": 118,
+      "timestamp": "2025-02-20T23:30:00+00:00",
+      "open_price": 1.7325,
+      "high_price": 1.7839,
+      "low_price": 1.7225,
+      "close_price": 1.7329,
+      "volume": 616872.0,
+      "minutes_from_listing": 590
+    },
+    {
+      "time_index": 119,
+      "timestamp": "2025-02-20T23:35:00+00:00",
+      "open_price": 1.7329,
+      "high_price": 1.7945,
+      "low_price": 1.7315,
+      "close_price": 1.7749,
+      "volume": 560896.0,
+      "minutes_from_listing": 595
+    },
+    {
+      "time_index": 120,
+      "timestamp": "2025-02-20T23:40:00+00:00",
+      "open_price": 1.7749,
+      "high_price": 1.7764,
+      "low_price": 1.74,
+      "close_price": 1.7636,
+      "volume": 605958.0,
+      "minutes_from_listing": 600
+    },
+    {
+      "time_index": 121,
+      "timestamp": "2025-02-20T23:45:00+00:00",
+      "open_price": 1.7636,
+      "high_price": 1.7783,
+      "low_price": 1.7517,
+      "close_price": 1.7663,
+      "volume": 338479.0,
+      "minutes_from_listing": 605
+    },
+    {
+      "time_index": 122,
+      "timestamp": "2025-02-20T23:50:00+00:00",
+      "open_price": 1.7663,
+      "high_price": 1.7663,
+      "low_price": 1.6357,
+      "close_price": 1.6536,
+      "volume": 1644805.0,
+      "minutes_from_listing": 610
+    },
+    {
+      "time_index": 123,
+      "timestamp": "2025-02-20T23:55:00+00:00",
+      "open_price": 1.6536,
+      "high_price": 1.6714,
+      "low_price": 1.575,
+      "close_price": 1.6407,
+      "volume": 2460376.0,
+      "minutes_from_listing": 615
+    },
+    {
+      "time_index": 124,
+      "timestamp": "2025-02-21T00:00:00+00:00",
+      "open_price": 1.6407,
+      "high_price": 1.6417,
+      "low_price": 1.5365,
+      "close_price": 1.5482,
+      "volume": 2312670.0,
+      "minutes_from_listing": 620
+    },
+    {
+      "time_index": 125,
+      "timestamp": "2025-02-21T00:05:00+00:00",
+      "open_price": 1.5482,
+      "high_price": 1.5634,
+      "low_price": 1.4956,
+      "close_price": 1.5268,
+      "volume": 2251817.0,
+      "minutes_from_listing": 625
+    },
+    {
+      "time_index": 126,
+      "timestamp": "2025-02-21T00:10:00+00:00",
+      "open_price": 1.5268,
+      "high_price": 1.5375,
+      "low_price": 1.4655,
+      "close_price": 1.4925,
+      "volume": 1638504.0,
+      "minutes_from_listing": 630
+    },
+    {
+      "time_index": 127,
+      "timestamp": "2025-02-21T00:15:00+00:00",
+      "open_price": 1.4925,
+      "high_price": 1.5856,
+      "low_price": 1.4811,
+      "close_price": 1.536,
+      "volume": 1922562.0,
+      "minutes_from_listing": 635
+    },
+    {
+      "time_index": 128,
+      "timestamp": "2025-02-21T00:20:00+00:00",
+      "open_price": 1.536,
+      "high_price": 1.5444,
+      "low_price": 1.5004,
+      "close_price": 1.5076,
+      "volume": 842754.0,
+      "minutes_from_listing": 640
+    },
+    {
+      "time_index": 129,
+      "timestamp": "2025-02-21T00:25:00+00:00",
+      "open_price": 1.5076,
+      "high_price": 1.5147,
+      "low_price": 1.3906,
+      "close_price": 1.4001,
+      "volume": 2130830.0,
+      "minutes_from_listing": 645
+    },
+    {
+      "time_index": 130,
+      "timestamp": "2025-02-21T00:30:00+00:00",
+      "open_price": 1.4001,
+      "high_price": 1.4338,
+      "low_price": 1.3822,
+      "close_price": 1.4194,
+      "volume": 1245414.0,
+      "minutes_from_listing": 650
+    },
+    {
+      "time_index": 131,
+      "timestamp": "2025-02-21T00:35:00+00:00",
+      "open_price": 1.4194,
+      "high_price": 1.4904,
+      "low_price": 1.4132,
+      "close_price": 1.4377,
+      "volume": 1299805.0,
+      "minutes_from_listing": 655
+    },
+    {
+      "time_index": 132,
+      "timestamp": "2025-02-21T00:40:00+00:00",
+      "open_price": 1.4377,
+      "high_price": 1.4505,
+      "low_price": 1.3899,
+      "close_price": 1.4202,
+      "volume": 807723.0,
+      "minutes_from_listing": 660
+    },
+    {
+      "time_index": 133,
+      "timestamp": "2025-02-21T00:45:00+00:00",
+      "open_price": 1.4202,
+      "high_price": 1.4638,
+      "low_price": 1.3447,
+      "close_price": 1.3676,
+      "volume": 2252128.0,
+      "minutes_from_listing": 665
+    },
+    {
+      "time_index": 134,
+      "timestamp": "2025-02-21T00:50:00+00:00",
+      "open_price": 1.3676,
+      "high_price": 1.3826,
+      "low_price": 1.3209,
+      "close_price": 1.3348,
+      "volume": 2016527.0,
+      "minutes_from_listing": 670
+    },
+    {
+      "time_index": 135,
+      "timestamp": "2025-02-21T00:55:00+00:00",
+      "open_price": 1.3348,
+      "high_price": 1.3704,
+      "low_price": 1.3278,
+      "close_price": 1.35,
+      "volume": 976622.0,
+      "minutes_from_listing": 675
+    },
+    {
+      "time_index": 136,
+      "timestamp": "2025-02-21T01:00:00+00:00",
+      "open_price": 1.35,
+      "high_price": 1.3645,
+      "low_price": 1.313,
+      "close_price": 1.3504,
+      "volume": 1155796.0,
+      "minutes_from_listing": 680
+    },
+    {
+      "time_index": 137,
+      "timestamp": "2025-02-21T01:05:00+00:00",
+      "open_price": 1.3504,
+      "high_price": 1.4255,
+      "low_price": 1.3364,
+      "close_price": 1.4066,
+      "volume": 1469079.0,
+      "minutes_from_listing": 685
+    },
+    {
+      "time_index": 138,
+      "timestamp": "2025-02-21T01:10:00+00:00",
+      "open_price": 1.4066,
+      "high_price": 1.4441,
+      "low_price": 1.3835,
+      "close_price": 1.402,
+      "volume": 962874.0,
+      "minutes_from_listing": 690
+    },
+    {
+      "time_index": 139,
+      "timestamp": "2025-02-21T01:15:00+00:00",
+      "open_price": 1.402,
+      "high_price": 1.4742,
+      "low_price": 1.3948,
+      "close_price": 1.4255,
+      "volume": 1009377.0,
+      "minutes_from_listing": 695
+    },
+    {
+      "time_index": 140,
+      "timestamp": "2025-02-21T01:20:00+00:00",
+      "open_price": 1.4255,
+      "high_price": 1.4396,
+      "low_price": 1.3642,
+      "close_price": 1.3779,
+      "volume": 945774.0,
+      "minutes_from_listing": 700
+    },
+    {
+      "time_index": 141,
+      "timestamp": "2025-02-21T01:25:00+00:00",
+      "open_price": 1.3779,
+      "high_price": 1.4243,
+      "low_price": 1.3732,
+      "close_price": 1.4141,
+      "volume": 604213.0,
+      "minutes_from_listing": 705
+    },
+    {
+      "time_index": 142,
+      "timestamp": "2025-02-21T01:30:00+00:00",
+      "open_price": 1.4141,
+      "high_price": 1.4373,
+      "low_price": 1.3949,
+      "close_price": 1.4339,
+      "volume": 611810.0,
+      "minutes_from_listing": 710
+    },
+    {
+      "time_index": 143,
+      "timestamp": "2025-02-21T01:35:00+00:00",
+      "open_price": 1.4339,
+      "high_price": 1.4499,
+      "low_price": 1.3955,
+      "close_price": 1.4115,
+      "volume": 621501.0,
+      "minutes_from_listing": 715
+    },
+    {
+      "time_index": 144,
+      "timestamp": "2025-02-21T01:40:00+00:00",
+      "open_price": 1.4115,
+      "high_price": 1.4988,
+      "low_price": 1.4105,
+      "close_price": 1.4773,
+      "volume": 831453.0,
+      "minutes_from_listing": 720
+    },
+    {
+      "time_index": 145,
+      "timestamp": "2025-02-21T01:45:00+00:00",
+      "open_price": 1.4773,
+      "high_price": 1.5227,
+      "low_price": 1.432,
+      "close_price": 1.4559,
+      "volume": 1400125.0,
+      "minutes_from_listing": 725
+    },
+    {
+      "time_index": 146,
+      "timestamp": "2025-02-21T01:50:00+00:00",
+      "open_price": 1.4559,
+      "high_price": 1.4698,
+      "low_price": 1.4323,
+      "close_price": 1.4612,
+      "volume": 586503.0,
+      "minutes_from_listing": 730
+    },
+    {
+      "time_index": 147,
+      "timestamp": "2025-02-21T01:55:00+00:00",
+      "open_price": 1.4612,
+      "high_price": 1.4622,
+      "low_price": 1.4217,
+      "close_price": 1.4283,
+      "volume": 408653.0,
+      "minutes_from_listing": 735
+    },
+    {
+      "time_index": 148,
+      "timestamp": "2025-02-21T02:00:00+00:00",
+      "open_price": 1.4283,
+      "high_price": 1.4656,
+      "low_price": 1.4205,
+      "close_price": 1.4435,
+      "volume": 485621.0,
+      "minutes_from_listing": 740
+    },
+    {
+      "time_index": 149,
+      "timestamp": "2025-02-21T02:05:00+00:00",
+      "open_price": 1.4435,
+      "high_price": 1.4521,
+      "low_price": 1.4225,
+      "close_price": 1.4431,
+      "volume": 424038.0,
+      "minutes_from_listing": 745
+    },
+    {
+      "time_index": 150,
+      "timestamp": "2025-02-21T02:10:00+00:00",
+      "open_price": 1.4431,
+      "high_price": 1.4543,
+      "low_price": 1.4297,
+      "close_price": 1.4325,
+      "volume": 388692.0,
+      "minutes_from_listing": 750
+    },
+    {
+      "time_index": 151,
+      "timestamp": "2025-02-21T02:15:00+00:00",
+      "open_price": 1.4325,
+      "high_price": 1.4729,
+      "low_price": 1.4265,
+      "close_price": 1.4585,
+      "volume": 643552.0,
+      "minutes_from_listing": 755
+    },
+    {
+      "time_index": 152,
+      "timestamp": "2025-02-21T02:20:00+00:00",
+      "open_price": 1.4585,
+      "high_price": 1.4642,
+      "low_price": 1.3975,
+      "close_price": 1.4113,
+      "volume": 849587.0,
+      "minutes_from_listing": 760
+    },
+    {
+      "time_index": 153,
+      "timestamp": "2025-02-21T02:25:00+00:00",
+      "open_price": 1.4113,
+      "high_price": 1.4286,
+      "low_price": 1.4045,
+      "close_price": 1.4228,
+      "volume": 511030.0,
+      "minutes_from_listing": 765
+    },
+    {
+      "time_index": 154,
+      "timestamp": "2025-02-21T02:30:00+00:00",
+      "open_price": 1.4228,
+      "high_price": 1.4253,
+      "low_price": 1.3631,
+      "close_price": 1.3685,
+      "volume": 865627.0,
+      "minutes_from_listing": 770
+    },
+    {
+      "time_index": 155,
+      "timestamp": "2025-02-21T02:35:00+00:00",
+      "open_price": 1.3685,
+      "high_price": 1.3848,
+      "low_price": 1.3629,
+      "close_price": 1.3717,
+      "volume": 810538.0,
+      "minutes_from_listing": 775
+    },
+    {
+      "time_index": 156,
+      "timestamp": "2025-02-21T02:40:00+00:00",
+      "open_price": 1.3717,
+      "high_price": 1.373,
+      "low_price": 1.2992,
+      "close_price": 1.3099,
+      "volume": 1524445.0,
+      "minutes_from_listing": 780
+    },
+    {
+      "time_index": 157,
+      "timestamp": "2025-02-21T02:45:00+00:00",
+      "open_price": 1.3099,
+      "high_price": 1.3311,
+      "low_price": 1.262,
+      "close_price": 1.2947,
+      "volume": 1289235.0,
+      "minutes_from_listing": 785
+    },
+    {
+      "time_index": 158,
+      "timestamp": "2025-02-21T02:50:00+00:00",
+      "open_price": 1.2947,
+      "high_price": 1.325,
+      "low_price": 1.2816,
+      "close_price": 1.2968,
+      "volume": 596241.0,
+      "minutes_from_listing": 790
+    },
+    {
+      "time_index": 159,
+      "timestamp": "2025-02-21T02:55:00+00:00",
+      "open_price": 1.2968,
+      "high_price": 1.3281,
+      "low_price": 1.2909,
+      "close_price": 1.3175,
+      "volume": 531435.0,
+      "minutes_from_listing": 795
+    },
+    {
+      "time_index": 160,
+      "timestamp": "2025-02-21T03:00:00+00:00",
+      "open_price": 1.3175,
+      "high_price": 1.3769,
+      "low_price": 1.3171,
+      "close_price": 1.3613,
+      "volume": 1022355.0,
+      "minutes_from_listing": 800
+    },
+    {
+      "time_index": 161,
+      "timestamp": "2025-02-21T03:05:00+00:00",
+      "open_price": 1.3613,
+      "high_price": 1.3733,
+      "low_price": 1.3423,
+      "close_price": 1.3534,
+      "volume": 601080.0,
+      "minutes_from_listing": 805
+    },
+    {
+      "time_index": 162,
+      "timestamp": "2025-02-21T03:10:00+00:00",
+      "open_price": 1.3534,
+      "high_price": 1.3779,
+      "low_price": 1.3458,
+      "close_price": 1.3573,
+      "volume": 406863.0,
+      "minutes_from_listing": 810
+    },
+    {
+      "time_index": 163,
+      "timestamp": "2025-02-21T03:15:00+00:00",
+      "open_price": 1.3573,
+      "high_price": 1.3717,
+      "low_price": 1.3136,
+      "close_price": 1.3231,
+      "volume": 547591.0,
+      "minutes_from_listing": 815
+    },
+    {
+      "time_index": 164,
+      "timestamp": "2025-02-21T03:20:00+00:00",
+      "open_price": 1.3231,
+      "high_price": 1.346,
+      "low_price": 1.2729,
+      "close_price": 1.3424,
+      "volume": 1595007.0,
+      "minutes_from_listing": 820
+    },
+    {
+      "time_index": 165,
+      "timestamp": "2025-02-21T03:25:00+00:00",
+      "open_price": 1.3424,
+      "high_price": 1.3755,
+      "low_price": 1.3364,
+      "close_price": 1.3686,
+      "volume": 596428.0,
+      "minutes_from_listing": 825
+    },
+    {
+      "time_index": 166,
+      "timestamp": "2025-02-21T03:30:00+00:00",
+      "open_price": 1.3686,
+      "high_price": 1.3816,
+      "low_price": 1.3396,
+      "close_price": 1.3523,
+      "volume": 761513.0,
+      "minutes_from_listing": 830
+    },
+    {
+      "time_index": 167,
+      "timestamp": "2025-02-21T03:35:00+00:00",
+      "open_price": 1.3523,
+      "high_price": 1.3644,
+      "low_price": 1.3362,
+      "close_price": 1.358,
+      "volume": 456739.0,
+      "minutes_from_listing": 835
+    },
+    {
+      "time_index": 168,
+      "timestamp": "2025-02-21T03:40:00+00:00",
+      "open_price": 1.358,
+      "high_price": 1.3581,
+      "low_price": 1.3262,
+      "close_price": 1.3407,
+      "volume": 300689.0,
+      "minutes_from_listing": 840
+    },
+    {
+      "time_index": 169,
+      "timestamp": "2025-02-21T03:45:00+00:00",
+      "open_price": 1.3407,
+      "high_price": 1.3516,
+      "low_price": 1.3211,
+      "close_price": 1.3311,
+      "volume": 342133.0,
+      "minutes_from_listing": 845
+    },
+    {
+      "time_index": 170,
+      "timestamp": "2025-02-21T03:50:00+00:00",
+      "open_price": 1.3311,
+      "high_price": 1.3438,
+      "low_price": 1.3311,
+      "close_price": 1.3411,
+      "volume": 191828.0,
+      "minutes_from_listing": 850
+    },
+    {
+      "time_index": 171,
+      "timestamp": "2025-02-21T03:55:00+00:00",
+      "open_price": 1.3411,
+      "high_price": 1.3689,
+      "low_price": 1.3411,
+      "close_price": 1.3505,
+      "volume": 389313.0,
+      "minutes_from_listing": 855
+    },
+    {
+      "time_index": 172,
+      "timestamp": "2025-02-21T04:00:00+00:00",
+      "open_price": 1.3505,
+      "high_price": 1.3798,
+      "low_price": 1.333,
+      "close_price": 1.3732,
+      "volume": 574652.0,
+      "minutes_from_listing": 860
+    },
+    {
+      "time_index": 173,
+      "timestamp": "2025-02-21T04:05:00+00:00",
+      "open_price": 1.3732,
+      "high_price": 1.3809,
+      "low_price": 1.3484,
+      "close_price": 1.37,
+      "volume": 535482.0,
+      "minutes_from_listing": 865
+    },
+    {
+      "time_index": 174,
+      "timestamp": "2025-02-21T04:10:00+00:00",
+      "open_price": 1.37,
+      "high_price": 1.4437,
+      "low_price": 1.3667,
+      "close_price": 1.4039,
+      "volume": 1495693.0,
+      "minutes_from_listing": 870
+    },
+    {
+      "time_index": 175,
+      "timestamp": "2025-02-21T04:15:00+00:00",
+      "open_price": 1.4039,
+      "high_price": 1.4403,
+      "low_price": 1.386,
+      "close_price": 1.4253,
+      "volume": 710594.0,
+      "minutes_from_listing": 875
+    },
+    {
+      "time_index": 176,
+      "timestamp": "2025-02-21T04:20:00+00:00",
+      "open_price": 1.4253,
+      "high_price": 1.4272,
+      "low_price": 1.3933,
+      "close_price": 1.4059,
+      "volume": 567412.0,
+      "minutes_from_listing": 880
+    },
+    {
+      "time_index": 177,
+      "timestamp": "2025-02-21T04:25:00+00:00",
+      "open_price": 1.4059,
+      "high_price": 1.414,
+      "low_price": 1.3804,
+      "close_price": 1.3932,
+      "volume": 459042.0,
+      "minutes_from_listing": 885
+    },
+    {
+      "time_index": 178,
+      "timestamp": "2025-02-21T04:30:00+00:00",
+      "open_price": 1.3932,
+      "high_price": 1.4129,
+      "low_price": 1.3673,
+      "close_price": 1.3781,
+      "volume": 639586.0,
+      "minutes_from_listing": 890
+    },
+    {
+      "time_index": 179,
+      "timestamp": "2025-02-21T04:35:00+00:00",
+      "open_price": 1.3781,
+      "high_price": 1.3952,
+      "low_price": 1.3769,
+      "close_price": 1.3931,
+      "volume": 326416.0,
+      "minutes_from_listing": 895
+    },
+    {
+      "time_index": 180,
+      "timestamp": "2025-02-21T04:40:00+00:00",
+      "open_price": 1.3931,
+      "high_price": 1.3966,
+      "low_price": 1.374,
+      "close_price": 1.391,
+      "volume": 304503.0,
+      "minutes_from_listing": 900
+    },
+    {
+      "time_index": 181,
+      "timestamp": "2025-02-21T04:45:00+00:00",
+      "open_price": 1.391,
+      "high_price": 1.4136,
+      "low_price": 1.3854,
+      "close_price": 1.3993,
+      "volume": 510405.0,
+      "minutes_from_listing": 905
+    },
+    {
+      "time_index": 182,
+      "timestamp": "2025-02-21T04:50:00+00:00",
+      "open_price": 1.3993,
+      "high_price": 1.4092,
+      "low_price": 1.3782,
+      "close_price": 1.3943,
+      "volume": 346981.0,
+      "minutes_from_listing": 910
+    },
+    {
+      "time_index": 183,
+      "timestamp": "2025-02-21T04:55:00+00:00",
+      "open_price": 1.3943,
+      "high_price": 1.4106,
+      "low_price": 1.3857,
+      "close_price": 1.4077,
+      "volume": 415292.0,
+      "minutes_from_listing": 915
+    },
+    {
+      "time_index": 184,
+      "timestamp": "2025-02-21T05:00:00+00:00",
+      "open_price": 1.4077,
+      "high_price": 1.4145,
+      "low_price": 1.3869,
+      "close_price": 1.3904,
+      "volume": 402500.0,
+      "minutes_from_listing": 920
+    },
+    {
+      "time_index": 185,
+      "timestamp": "2025-02-21T05:05:00+00:00",
+      "open_price": 1.3904,
+      "high_price": 1.3993,
+      "low_price": 1.372,
+      "close_price": 1.3907,
+      "volume": 332989.0,
+      "minutes_from_listing": 925
+    },
+    {
+      "time_index": 186,
+      "timestamp": "2025-02-21T05:10:00+00:00",
+      "open_price": 1.3907,
+      "high_price": 1.4213,
+      "low_price": 1.3896,
+      "close_price": 1.4094,
+      "volume": 583121.0,
+      "minutes_from_listing": 930
+    },
+    {
+      "time_index": 187,
+      "timestamp": "2025-02-21T05:15:00+00:00",
+      "open_price": 1.4094,
+      "high_price": 1.4115,
+      "low_price": 1.3962,
+      "close_price": 1.4042,
+      "volume": 332646.0,
+      "minutes_from_listing": 935
+    },
+    {
+      "time_index": 188,
+      "timestamp": "2025-02-21T05:20:00+00:00",
+      "open_price": 1.4042,
+      "high_price": 1.4051,
+      "low_price": 1.3827,
+      "close_price": 1.3883,
+      "volume": 472912.0,
+      "minutes_from_listing": 940
+    },
+    {
+      "time_index": 189,
+      "timestamp": "2025-02-21T05:25:00+00:00",
+      "open_price": 1.3883,
+      "high_price": 1.393,
+      "low_price": 1.3771,
+      "close_price": 1.3896,
+      "volume": 324257.0,
+      "minutes_from_listing": 945
+    },
+    {
+      "time_index": 190,
+      "timestamp": "2025-02-21T05:30:00+00:00",
+      "open_price": 1.3896,
+      "high_price": 1.41,
+      "low_price": 1.387,
+      "close_price": 1.4053,
+      "volume": 385458.0,
+      "minutes_from_listing": 950
+    },
+    {
+      "time_index": 191,
+      "timestamp": "2025-02-21T05:35:00+00:00",
+      "open_price": 1.4053,
+      "high_price": 1.4119,
+      "low_price": 1.396,
+      "close_price": 1.3999,
+      "volume": 460932.0,
+      "minutes_from_listing": 955
+    },
+    {
+      "time_index": 192,
+      "timestamp": "2025-02-21T05:40:00+00:00",
+      "open_price": 1.3999,
+      "high_price": 1.426,
+      "low_price": 1.3978,
+      "close_price": 1.4164,
+      "volume": 432138.0,
+      "minutes_from_listing": 960
+    },
+    {
+      "time_index": 193,
+      "timestamp": "2025-02-21T05:45:00+00:00",
+      "open_price": 1.4164,
+      "high_price": 1.4886,
+      "low_price": 1.4164,
+      "close_price": 1.4604,
+      "volume": 1564083.0,
+      "minutes_from_listing": 965
+    },
+    {
+      "time_index": 194,
+      "timestamp": "2025-02-21T05:50:00+00:00",
+      "open_price": 1.4604,
+      "high_price": 1.6019,
+      "low_price": 1.4536,
+      "close_price": 1.5516,
+      "volume": 2463519.0,
+      "minutes_from_listing": 970
+    },
+    {
+      "time_index": 195,
+      "timestamp": "2025-02-21T05:55:00+00:00",
+      "open_price": 1.5516,
+      "high_price": 1.6053,
+      "low_price": 1.523,
+      "close_price": 1.5923,
+      "volume": 1579070.0,
+      "minutes_from_listing": 975
+    },
+    {
+      "time_index": 196,
+      "timestamp": "2025-02-21T06:00:00+00:00",
+      "open_price": 1.5923,
+      "high_price": 1.7171,
+      "low_price": 1.5788,
+      "close_price": 1.6543,
+      "volume": 3197116.0,
+      "minutes_from_listing": 980
+    },
+    {
+      "time_index": 197,
+      "timestamp": "2025-02-21T06:05:00+00:00",
+      "open_price": 1.6543,
+      "high_price": 1.678,
+      "low_price": 1.6068,
+      "close_price": 1.6398,
+      "volume": 1302693.0,
+      "minutes_from_listing": 985
+    },
+    {
+      "time_index": 198,
+      "timestamp": "2025-02-21T06:10:00+00:00",
+      "open_price": 1.6398,
+      "high_price": 1.6401,
+      "low_price": 1.5269,
+      "close_price": 1.5379,
+      "volume": 1696172.0,
+      "minutes_from_listing": 990
+    },
+    {
+      "time_index": 199,
+      "timestamp": "2025-02-21T06:15:00+00:00",
+      "open_price": 1.5379,
+      "high_price": 1.5955,
+      "low_price": 1.5364,
+      "close_price": 1.5807,
+      "volume": 1430852.0,
+      "minutes_from_listing": 995
+    },
+    {
+      "time_index": 200,
+      "timestamp": "2025-02-21T06:20:00+00:00",
+      "open_price": 1.5807,
+      "high_price": 1.5852,
+      "low_price": 1.5539,
+      "close_price": 1.578,
+      "volume": 599544.0,
+      "minutes_from_listing": 1000
+    },
+    {
+      "time_index": 201,
+      "timestamp": "2025-02-21T06:25:00+00:00",
+      "open_price": 1.578,
+      "high_price": 1.5791,
+      "low_price": 1.5364,
+      "close_price": 1.5704,
+      "volume": 718125.0,
+      "minutes_from_listing": 1005
+    },
+    {
+      "time_index": 202,
+      "timestamp": "2025-02-21T06:30:00+00:00",
+      "open_price": 1.5704,
+      "high_price": 1.7237,
+      "low_price": 1.5648,
+      "close_price": 1.6455,
+      "volume": 2686666.0,
+      "minutes_from_listing": 1010
+    },
+    {
+      "time_index": 203,
+      "timestamp": "2025-02-21T06:35:00+00:00",
+      "open_price": 1.6455,
+      "high_price": 1.6761,
+      "low_price": 1.6233,
+      "close_price": 1.6325,
+      "volume": 943965.0,
+      "minutes_from_listing": 1015
+    },
+    {
+      "time_index": 204,
+      "timestamp": "2025-02-21T06:40:00+00:00",
+      "open_price": 1.6325,
+      "high_price": 1.6591,
+      "low_price": 1.5659,
+      "close_price": 1.5717,
+      "volume": 1423326.0,
+      "minutes_from_listing": 1020
+    },
+    {
+      "time_index": 205,
+      "timestamp": "2025-02-21T06:45:00+00:00",
+      "open_price": 1.5717,
+      "high_price": 1.6124,
+      "low_price": 1.53,
+      "close_price": 1.5854,
+      "volume": 1712832.0,
+      "minutes_from_listing": 1025
+    },
+    {
+      "time_index": 206,
+      "timestamp": "2025-02-21T06:50:00+00:00",
+      "open_price": 1.5854,
+      "high_price": 1.6374,
+      "low_price": 1.5701,
+      "close_price": 1.6237,
+      "volume": 851290.0,
+      "minutes_from_listing": 1030
+    },
+    {
+      "time_index": 207,
+      "timestamp": "2025-02-21T06:55:00+00:00",
+      "open_price": 1.6237,
+      "high_price": 1.6237,
+      "low_price": 1.5865,
+      "close_price": 1.597,
+      "volume": 697644.0,
+      "minutes_from_listing": 1035
+    },
+    {
+      "time_index": 208,
+      "timestamp": "2025-02-21T07:00:00+00:00",
+      "open_price": 1.597,
+      "high_price": 1.6515,
+      "low_price": 1.597,
+      "close_price": 1.6264,
+      "volume": 974074.0,
+      "minutes_from_listing": 1040
+    },
+    {
+      "time_index": 209,
+      "timestamp": "2025-02-21T07:05:00+00:00",
+      "open_price": 1.6264,
+      "high_price": 1.641,
+      "low_price": 1.604,
+      "close_price": 1.6132,
+      "volume": 804793.0,
+      "minutes_from_listing": 1045
+    },
+    {
+      "time_index": 210,
+      "timestamp": "2025-02-21T07:10:00+00:00",
+      "open_price": 1.6132,
+      "high_price": 1.6283,
+      "low_price": 1.5886,
+      "close_price": 1.6242,
+      "volume": 612167.0,
+      "minutes_from_listing": 1050
+    },
+    {
+      "time_index": 211,
+      "timestamp": "2025-02-21T07:15:00+00:00",
+      "open_price": 1.6242,
+      "high_price": 1.6336,
+      "low_price": 1.599,
+      "close_price": 1.6047,
+      "volume": 498596.0,
+      "minutes_from_listing": 1055
+    },
+    {
+      "time_index": 212,
+      "timestamp": "2025-02-21T07:20:00+00:00",
+      "open_price": 1.6047,
+      "high_price": 1.6063,
+      "low_price": 1.5577,
+      "close_price": 1.5805,
+      "volume": 1009076.0,
+      "minutes_from_listing": 1060
+    },
+    {
+      "time_index": 213,
+      "timestamp": "2025-02-21T07:25:00+00:00",
+      "open_price": 1.5805,
+      "high_price": 1.599,
+      "low_price": 1.5612,
+      "close_price": 1.574,
+      "volume": 547579.0,
+      "minutes_from_listing": 1065
+    },
+    {
+      "time_index": 214,
+      "timestamp": "2025-02-21T07:30:00+00:00",
+      "open_price": 1.574,
+      "high_price": 1.5893,
+      "low_price": 1.5074,
+      "close_price": 1.5402,
+      "volume": 1581777.0,
+      "minutes_from_listing": 1070
+    },
+    {
+      "time_index": 215,
+      "timestamp": "2025-02-21T07:35:00+00:00",
+      "open_price": 1.5402,
+      "high_price": 1.6199,
+      "low_price": 1.5272,
+      "close_price": 1.5887,
+      "volume": 1029182.0,
+      "minutes_from_listing": 1075
+    },
+    {
+      "time_index": 216,
+      "timestamp": "2025-02-21T07:40:00+00:00",
+      "open_price": 1.5887,
+      "high_price": 1.5966,
+      "low_price": 1.5616,
+      "close_price": 1.5693,
+      "volume": 495788.0,
+      "minutes_from_listing": 1080
+    },
+    {
+      "time_index": 217,
+      "timestamp": "2025-02-21T07:45:00+00:00",
+      "open_price": 1.5693,
+      "high_price": 1.59,
+      "low_price": 1.5354,
+      "close_price": 1.5547,
+      "volume": 743965.0,
+      "minutes_from_listing": 1085
+    },
+    {
+      "time_index": 218,
+      "timestamp": "2025-02-21T07:50:00+00:00",
+      "open_price": 1.5547,
+      "high_price": 1.5829,
+      "low_price": 1.5453,
+      "close_price": 1.5707,
+      "volume": 525737.0,
+      "minutes_from_listing": 1090
+    },
+    {
+      "time_index": 219,
+      "timestamp": "2025-02-21T07:55:00+00:00",
+      "open_price": 1.5707,
+      "high_price": 1.596,
+      "low_price": 1.5523,
+      "close_price": 1.5787,
+      "volume": 717083.0,
+      "minutes_from_listing": 1095
+    },
+    {
+      "time_index": 220,
+      "timestamp": "2025-02-21T08:00:00+00:00",
+      "open_price": 1.5787,
+      "high_price": 1.5962,
+      "low_price": 1.5451,
+      "close_price": 1.572,
+      "volume": 805769.0,
+      "minutes_from_listing": 1100
+    },
+    {
+      "time_index": 221,
+      "timestamp": "2025-02-21T08:05:00+00:00",
+      "open_price": 1.572,
+      "high_price": 1.587,
+      "low_price": 1.5571,
+      "close_price": 1.5664,
+      "volume": 497791.0,
+      "minutes_from_listing": 1105
+    },
+    {
+      "time_index": 222,
+      "timestamp": "2025-02-21T08:10:00+00:00",
+      "open_price": 1.5664,
+      "high_price": 1.5727,
+      "low_price": 1.5401,
+      "close_price": 1.5546,
+      "volume": 568685.0,
+      "minutes_from_listing": 1110
+    },
+    {
+      "time_index": 223,
+      "timestamp": "2025-02-21T08:15:00+00:00",
+      "open_price": 1.5546,
+      "high_price": 1.566,
+      "low_price": 1.5215,
+      "close_price": 1.5563,
+      "volume": 739808.0,
+      "minutes_from_listing": 1115
+    },
+    {
+      "time_index": 224,
+      "timestamp": "2025-02-21T08:20:00+00:00",
+      "open_price": 1.5563,
+      "high_price": 1.5685,
+      "low_price": 1.5449,
+      "close_price": 1.5617,
+      "volume": 436813.0,
+      "minutes_from_listing": 1120
+    },
+    {
+      "time_index": 225,
+      "timestamp": "2025-02-21T08:25:00+00:00",
+      "open_price": 1.5617,
+      "high_price": 1.5844,
+      "low_price": 1.5521,
+      "close_price": 1.5662,
+      "volume": 502628.0,
+      "minutes_from_listing": 1125
+    },
+    {
+      "time_index": 226,
+      "timestamp": "2025-02-21T08:30:00+00:00",
+      "open_price": 1.5662,
+      "high_price": 1.6,
+      "low_price": 1.5506,
+      "close_price": 1.5588,
+      "volume": 856562.0,
+      "minutes_from_listing": 1130
+    },
+    {
+      "time_index": 227,
+      "timestamp": "2025-02-21T08:35:00+00:00",
+      "open_price": 1.5588,
+      "high_price": 1.5978,
+      "low_price": 1.5571,
+      "close_price": 1.5784,
+      "volume": 686806.0,
+      "minutes_from_listing": 1135
+    },
+    {
+      "time_index": 228,
+      "timestamp": "2025-02-21T08:40:00+00:00",
+      "open_price": 1.5784,
+      "high_price": 1.642,
+      "low_price": 1.578,
+      "close_price": 1.6074,
+      "volume": 1388257.0,
+      "minutes_from_listing": 1140
+    },
+    {
+      "time_index": 229,
+      "timestamp": "2025-02-21T08:45:00+00:00",
+      "open_price": 1.6074,
+      "high_price": 1.627,
+      "low_price": 1.5959,
+      "close_price": 1.6029,
+      "volume": 445108.0,
+      "minutes_from_listing": 1145
+    },
+    {
+      "time_index": 230,
+      "timestamp": "2025-02-21T08:50:00+00:00",
+      "open_price": 1.6029,
+      "high_price": 1.612,
+      "low_price": 1.574,
+      "close_price": 1.603,
+      "volume": 581954.0,
+      "minutes_from_listing": 1150
+    },
+    {
+      "time_index": 231,
+      "timestamp": "2025-02-21T08:55:00+00:00",
+      "open_price": 1.603,
+      "high_price": 1.6337,
+      "low_price": 1.5977,
+      "close_price": 1.6276,
+      "volume": 847880.0,
+      "minutes_from_listing": 1155
+    },
+    {
+      "time_index": 232,
+      "timestamp": "2025-02-21T09:00:00+00:00",
+      "open_price": 1.6276,
+      "high_price": 1.6783,
+      "low_price": 1.5977,
+      "close_price": 1.6091,
+      "volume": 2299998.0,
+      "minutes_from_listing": 1160
+    },
+    {
+      "time_index": 233,
+      "timestamp": "2025-02-21T09:05:00+00:00",
+      "open_price": 1.6091,
+      "high_price": 1.6274,
+      "low_price": 1.5963,
+      "close_price": 1.6173,
+      "volume": 590079.0,
+      "minutes_from_listing": 1165
+    },
+    {
+      "time_index": 234,
+      "timestamp": "2025-02-21T09:10:00+00:00",
+      "open_price": 1.6173,
+      "high_price": 1.645,
+      "low_price": 1.6136,
+      "close_price": 1.6329,
+      "volume": 686883.0,
+      "minutes_from_listing": 1170
+    },
+    {
+      "time_index": 235,
+      "timestamp": "2025-02-21T09:15:00+00:00",
+      "open_price": 1.6329,
+      "high_price": 1.6876,
+      "low_price": 1.6225,
+      "close_price": 1.6605,
+      "volume": 1367081.0,
+      "minutes_from_listing": 1175
+    },
+    {
+      "time_index": 236,
+      "timestamp": "2025-02-21T09:20:00+00:00",
+      "open_price": 1.6605,
+      "high_price": 1.7589,
+      "low_price": 1.6538,
+      "close_price": 1.7282,
+      "volume": 2395628.0,
+      "minutes_from_listing": 1180
+    },
+    {
+      "time_index": 237,
+      "timestamp": "2025-02-21T09:25:00+00:00",
+      "open_price": 1.7282,
+      "high_price": 1.7815,
+      "low_price": 1.709,
+      "close_price": 1.713,
+      "volume": 2182169.0,
+      "minutes_from_listing": 1185
+    },
+    {
+      "time_index": 238,
+      "timestamp": "2025-02-21T09:30:00+00:00",
+      "open_price": 1.713,
+      "high_price": 1.7957,
+      "low_price": 1.7104,
+      "close_price": 1.7637,
+      "volume": 2498468.0,
+      "minutes_from_listing": 1190
+    },
+    {
+      "time_index": 239,
+      "timestamp": "2025-02-21T09:35:00+00:00",
+      "open_price": 1.7637,
+      "high_price": 1.7637,
+      "low_price": 1.7054,
+      "close_price": 1.7124,
+      "volume": 1378168.0,
+      "minutes_from_listing": 1195
+    },
+    {
+      "time_index": 240,
+      "timestamp": "2025-02-21T09:40:00+00:00",
+      "open_price": 1.7124,
+      "high_price": 1.7223,
+      "low_price": 1.65,
+      "close_price": 1.6825,
+      "volume": 1556539.0,
+      "minutes_from_listing": 1200
+    },
+    {
+      "time_index": 241,
+      "timestamp": "2025-02-21T09:45:00+00:00",
+      "open_price": 1.6825,
+      "high_price": 1.7475,
+      "low_price": 1.6822,
+      "close_price": 1.7365,
+      "volume": 1101894.0,
+      "minutes_from_listing": 1205
+    },
+    {
+      "time_index": 242,
+      "timestamp": "2025-02-21T09:50:00+00:00",
+      "open_price": 1.7365,
+      "high_price": 1.75,
+      "low_price": 1.7221,
+      "close_price": 1.7287,
+      "volume": 891730.0,
+      "minutes_from_listing": 1210
+    },
+    {
+      "time_index": 243,
+      "timestamp": "2025-02-21T09:55:00+00:00",
+      "open_price": 1.7287,
+      "high_price": 1.7483,
+      "low_price": 1.7142,
+      "close_price": 1.7337,
+      "volume": 819005.0,
+      "minutes_from_listing": 1215
+    },
+    {
+      "time_index": 244,
+      "timestamp": "2025-02-21T10:00:00+00:00",
+      "open_price": 1.7337,
+      "high_price": 1.7671,
+      "low_price": 1.7065,
+      "close_price": 1.7149,
+      "volume": 1518604.0,
+      "minutes_from_listing": 1220
+    },
+    {
+      "time_index": 245,
+      "timestamp": "2025-02-21T10:05:00+00:00",
+      "open_price": 1.7149,
+      "high_price": 1.7516,
+      "low_price": 1.7112,
+      "close_price": 1.7368,
+      "volume": 761643.0,
+      "minutes_from_listing": 1225
+    },
+    {
+      "time_index": 246,
+      "timestamp": "2025-02-21T10:10:00+00:00",
+      "open_price": 1.7368,
+      "high_price": 1.7515,
+      "low_price": 1.714,
+      "close_price": 1.7467,
+      "volume": 687417.0,
+      "minutes_from_listing": 1230
+    },
+    {
+      "time_index": 247,
+      "timestamp": "2025-02-21T10:15:00+00:00",
+      "open_price": 1.7467,
+      "high_price": 1.7641,
+      "low_price": 1.7291,
+      "close_price": 1.7343,
+      "volume": 730951.0,
+      "minutes_from_listing": 1235
+    },
+    {
+      "time_index": 248,
+      "timestamp": "2025-02-21T10:20:00+00:00",
+      "open_price": 1.7343,
+      "high_price": 1.79,
+      "low_price": 1.727,
+      "close_price": 1.7614,
+      "volume": 942347.0,
+      "minutes_from_listing": 1240
+    },
+    {
+      "time_index": 249,
+      "timestamp": "2025-02-21T10:25:00+00:00",
+      "open_price": 1.7614,
+      "high_price": 1.7729,
+      "low_price": 1.7394,
+      "close_price": 1.7495,
+      "volume": 731976.0,
+      "minutes_from_listing": 1245
+    },
+    {
+      "time_index": 250,
+      "timestamp": "2025-02-21T10:30:00+00:00",
+      "open_price": 1.7495,
+      "high_price": 1.8401,
+      "low_price": 1.7245,
+      "close_price": 1.8068,
+      "volume": 1934165.0,
+      "minutes_from_listing": 1250
+    },
+    {
+      "time_index": 251,
+      "timestamp": "2025-02-21T10:35:00+00:00",
+      "open_price": 1.8068,
+      "high_price": 1.826,
+      "low_price": 1.79,
+      "close_price": 1.8063,
+      "volume": 1014753.0,
+      "minutes_from_listing": 1255
+    },
+    {
+      "time_index": 252,
+      "timestamp": "2025-02-21T10:40:00+00:00",
+      "open_price": 1.8063,
+      "high_price": 1.8838,
+      "low_price": 1.8063,
+      "close_price": 1.8801,
+      "volume": 2172858.0,
+      "minutes_from_listing": 1260
+    },
+    {
+      "time_index": 253,
+      "timestamp": "2025-02-21T10:45:00+00:00",
+      "open_price": 1.8801,
+      "high_price": 1.8868,
+      "low_price": 1.8362,
+      "close_price": 1.8753,
+      "volume": 1601157.0,
+      "minutes_from_listing": 1265
+    },
+    {
+      "time_index": 254,
+      "timestamp": "2025-02-21T10:50:00+00:00",
+      "open_price": 1.8753,
+      "high_price": 1.9579,
+      "low_price": 1.8422,
+      "close_price": 1.939,
+      "volume": 3112924.0,
+      "minutes_from_listing": 1270
+    },
+    {
+      "time_index": 255,
+      "timestamp": "2025-02-21T10:55:00+00:00",
+      "open_price": 1.939,
+      "high_price": 1.9736,
+      "low_price": 1.8823,
+      "close_price": 1.8926,
+      "volume": 2485438.0,
+      "minutes_from_listing": 1275
+    },
+    {
+      "time_index": 256,
+      "timestamp": "2025-02-21T11:00:00+00:00",
+      "open_price": 1.8926,
+      "high_price": 1.9911,
+      "low_price": 1.8907,
+      "close_price": 1.9715,
+      "volume": 2675950.0,
+      "minutes_from_listing": 1280
+    },
+    {
+      "time_index": 257,
+      "timestamp": "2025-02-21T11:05:00+00:00",
+      "open_price": 1.9715,
+      "high_price": 1.9825,
+      "low_price": 1.9268,
+      "close_price": 1.9538,
+      "volume": 1764892.0,
+      "minutes_from_listing": 1285
+    },
+    {
+      "time_index": 258,
+      "timestamp": "2025-02-21T11:10:00+00:00",
+      "open_price": 1.9538,
+      "high_price": 1.969,
+      "low_price": 1.9116,
+      "close_price": 1.9334,
+      "volume": 1566646.0,
+      "minutes_from_listing": 1290
+    },
+    {
+      "time_index": 259,
+      "timestamp": "2025-02-21T11:15:00+00:00",
+      "open_price": 1.9334,
+      "high_price": 1.9409,
+      "low_price": 1.8322,
+      "close_price": 1.8658,
+      "volume": 3013835.0,
+      "minutes_from_listing": 1295
+    },
+    {
+      "time_index": 260,
+      "timestamp": "2025-02-21T11:20:00+00:00",
+      "open_price": 1.8658,
+      "high_price": 1.886,
+      "low_price": 1.8389,
+      "close_price": 1.8524,
+      "volume": 1247118.0,
+      "minutes_from_listing": 1300
+    },
+    {
+      "time_index": 261,
+      "timestamp": "2025-02-21T11:25:00+00:00",
+      "open_price": 1.8524,
+      "high_price": 1.8686,
+      "low_price": 1.8028,
+      "close_price": 1.8106,
+      "volume": 1531819.0,
+      "minutes_from_listing": 1305
+    },
+    {
+      "time_index": 262,
+      "timestamp": "2025-02-21T11:30:00+00:00",
+      "open_price": 1.8106,
+      "high_price": 1.839,
+      "low_price": 1.761,
+      "close_price": 1.8301,
+      "volume": 2286898.0,
+      "minutes_from_listing": 1310
+    },
+    {
+      "time_index": 263,
+      "timestamp": "2025-02-21T11:35:00+00:00",
+      "open_price": 1.8301,
+      "high_price": 1.8588,
+      "low_price": 1.81,
+      "close_price": 1.8109,
+      "volume": 1259774.0,
+      "minutes_from_listing": 1315
+    },
+    {
+      "time_index": 264,
+      "timestamp": "2025-02-21T11:40:00+00:00",
+      "open_price": 1.8109,
+      "high_price": 1.8159,
+      "low_price": 1.7509,
+      "close_price": 1.7776,
+      "volume": 1905169.0,
+      "minutes_from_listing": 1320
+    },
+    {
+      "time_index": 265,
+      "timestamp": "2025-02-21T11:45:00+00:00",
+      "open_price": 1.7776,
+      "high_price": 1.8484,
+      "low_price": 1.7738,
+      "close_price": 1.8381,
+      "volume": 1186859.0,
+      "minutes_from_listing": 1325
+    },
+    {
+      "time_index": 266,
+      "timestamp": "2025-02-21T11:50:00+00:00",
+      "open_price": 1.8381,
+      "high_price": 1.8394,
+      "low_price": 1.8038,
+      "close_price": 1.8273,
+      "volume": 680539.0,
+      "minutes_from_listing": 1330
+    },
+    {
+      "time_index": 267,
+      "timestamp": "2025-02-21T11:55:00+00:00",
+      "open_price": 1.8273,
+      "high_price": 1.8373,
+      "low_price": 1.8111,
+      "close_price": 1.8225,
+      "volume": 536733.0,
+      "minutes_from_listing": 1335
+    },
+    {
+      "time_index": 268,
+      "timestamp": "2025-02-21T12:00:00+00:00",
+      "open_price": 1.8225,
+      "high_price": 1.8638,
+      "low_price": 1.7749,
+      "close_price": 1.7962,
+      "volume": 1937049.0,
+      "minutes_from_listing": 1340
+    },
+    {
+      "time_index": 269,
+      "timestamp": "2025-02-21T12:05:00+00:00",
+      "open_price": 1.7962,
+      "high_price": 1.7962,
+      "low_price": 1.7294,
+      "close_price": 1.7548,
+      "volume": 2827954.0,
+      "minutes_from_listing": 1345
+    },
+    {
+      "time_index": 270,
+      "timestamp": "2025-02-21T12:10:00+00:00",
+      "open_price": 1.7548,
+      "high_price": 1.7691,
+      "low_price": 1.722,
+      "close_price": 1.7613,
+      "volume": 1055429.0,
+      "minutes_from_listing": 1350
+    },
+    {
+      "time_index": 271,
+      "timestamp": "2025-02-21T12:15:00+00:00",
+      "open_price": 1.7613,
+      "high_price": 1.7821,
+      "low_price": 1.7397,
+      "close_price": 1.7594,
+      "volume": 1330080.0,
+      "minutes_from_listing": 1355
+    },
+    {
+      "time_index": 272,
+      "timestamp": "2025-02-21T12:20:00+00:00",
+      "open_price": 1.7594,
+      "high_price": 1.767,
+      "low_price": 1.6832,
+      "close_price": 1.7013,
+      "volume": 1800509.0,
+      "minutes_from_listing": 1360
+    },
+    {
+      "time_index": 273,
+      "timestamp": "2025-02-21T12:25:00+00:00",
+      "open_price": 1.7013,
+      "high_price": 1.74,
+      "low_price": 1.6967,
+      "close_price": 1.729,
+      "volume": 1253200.0,
+      "minutes_from_listing": 1365
+    },
+    {
+      "time_index": 274,
+      "timestamp": "2025-02-21T12:30:00+00:00",
+      "open_price": 1.729,
+      "high_price": 1.7698,
+      "low_price": 1.7278,
+      "close_price": 1.7452,
+      "volume": 1089939.0,
+      "minutes_from_listing": 1370
+    },
+    {
+      "time_index": 275,
+      "timestamp": "2025-02-21T12:35:00+00:00",
+      "open_price": 1.7452,
+      "high_price": 1.7981,
+      "low_price": 1.7216,
+      "close_price": 1.7741,
+      "volume": 1680137.0,
+      "minutes_from_listing": 1375
+    },
+    {
+      "time_index": 276,
+      "timestamp": "2025-02-21T12:40:00+00:00",
+      "open_price": 1.7741,
+      "high_price": 1.787,
+      "low_price": 1.7538,
+      "close_price": 1.7729,
+      "volume": 1031990.0,
+      "minutes_from_listing": 1380
+    },
+    {
+      "time_index": 277,
+      "timestamp": "2025-02-21T12:45:00+00:00",
+      "open_price": 1.7729,
+      "high_price": 1.8327,
+      "low_price": 1.7664,
+      "close_price": 1.8068,
+      "volume": 1960472.0,
+      "minutes_from_listing": 1385
+    },
+    {
+      "time_index": 278,
+      "timestamp": "2025-02-21T12:50:00+00:00",
+      "open_price": 1.8068,
+      "high_price": 1.8091,
+      "low_price": 1.7632,
+      "close_price": 1.7769,
+      "volume": 859354.0,
+      "minutes_from_listing": 1390
+    },
+    {
+      "time_index": 279,
+      "timestamp": "2025-02-21T12:55:00+00:00",
+      "open_price": 1.7769,
+      "high_price": 1.7774,
+      "low_price": 1.7451,
+      "close_price": 1.7708,
+      "volume": 836038.0,
+      "minutes_from_listing": 1395
+    },
+    {
+      "time_index": 280,
+      "timestamp": "2025-02-21T13:00:00+00:00",
+      "open_price": 1.7708,
+      "high_price": 1.7891,
+      "low_price": 1.7341,
+      "close_price": 1.7578,
+      "volume": 1149277.0,
+      "minutes_from_listing": 1400
+    },
+    {
+      "time_index": 281,
+      "timestamp": "2025-02-21T13:05:00+00:00",
+      "open_price": 1.7578,
+      "high_price": 1.7598,
+      "low_price": 1.7223,
+      "close_price": 1.7395,
+      "volume": 973791.0,
+      "minutes_from_listing": 1405
+    },
+    {
+      "time_index": 282,
+      "timestamp": "2025-02-21T13:10:00+00:00",
+      "open_price": 1.7395,
+      "high_price": 1.75,
+      "low_price": 1.711,
+      "close_price": 1.7386,
+      "volume": 1138810.0,
+      "minutes_from_listing": 1410
+    },
+    {
+      "time_index": 283,
+      "timestamp": "2025-02-21T13:15:00+00:00",
+      "open_price": 1.7386,
+      "high_price": 1.779,
+      "low_price": 1.7327,
+      "close_price": 1.7579,
+      "volume": 929982.0,
+      "minutes_from_listing": 1415
+    },
+    {
+      "time_index": 284,
+      "timestamp": "2025-02-21T13:20:00+00:00",
+      "open_price": 1.7579,
+      "high_price": 1.7867,
+      "low_price": 1.7489,
+      "close_price": 1.7807,
+      "volume": 768141.0,
+      "minutes_from_listing": 1420
+    },
+    {
+      "time_index": 285,
+      "timestamp": "2025-02-21T13:25:00+00:00",
+      "open_price": 1.7807,
+      "high_price": 1.7817,
+      "low_price": 1.7465,
+      "close_price": 1.7695,
+      "volume": 599853.0,
+      "minutes_from_listing": 1425
+    },
+    {
+      "time_index": 286,
+      "timestamp": "2025-02-21T13:30:00+00:00",
+      "open_price": 1.7695,
+      "high_price": 1.8041,
+      "low_price": 1.7486,
+      "close_price": 1.7917,
+      "volume": 848215.0,
+      "minutes_from_listing": 1430
+    },
+    {
+      "time_index": 287,
+      "timestamp": "2025-02-21T13:35:00+00:00",
+      "open_price": 1.7917,
+      "high_price": 1.797,
+      "low_price": 1.7674,
+      "close_price": 1.7719,
+      "volume": 671848.0,
+      "minutes_from_listing": 1435
+    },
+    {
+      "time_index": 288,
+      "timestamp": "2025-02-21T13:40:00+00:00",
+      "open_price": 1.7719,
+      "high_price": 1.8172,
+      "low_price": 1.7716,
+      "close_price": 1.8048,
+      "volume": 825179.0,
+      "minutes_from_listing": 1440
+    },
+    {
+      "time_index": 289,
+      "timestamp": "2025-02-21T13:45:00+00:00",
+      "open_price": 1.8048,
+      "high_price": 1.8252,
+      "low_price": 1.7837,
+      "close_price": 1.7922,
+      "volume": 1147326.0,
+      "minutes_from_listing": 1445
+    },
+    {
+      "time_index": 290,
+      "timestamp": "2025-02-21T13:50:00+00:00",
+      "open_price": 1.7922,
+      "high_price": 1.8142,
+      "low_price": 1.7859,
+      "close_price": 1.8055,
+      "volume": 677075.0,
+      "minutes_from_listing": 1450
+    },
+    {
+      "time_index": 291,
+      "timestamp": "2025-02-21T13:55:00+00:00",
+      "open_price": 1.8055,
+      "high_price": 1.8349,
+      "low_price": 1.7946,
+      "close_price": 1.8076,
+      "volume": 1045188.0,
+      "minutes_from_listing": 1455
+    },
+    {
+      "time_index": 292,
+      "timestamp": "2025-02-21T14:00:00+00:00",
+      "open_price": 1.8076,
+      "high_price": 1.8786,
+      "low_price": 1.8067,
+      "close_price": 1.8605,
+      "volume": 1906464.0,
+      "minutes_from_listing": 1460
+    },
+    {
+      "time_index": 293,
+      "timestamp": "2025-02-21T14:05:00+00:00",
+      "open_price": 1.8605,
+      "high_price": 1.8987,
+      "low_price": 1.8482,
+      "close_price": 1.8654,
+      "volume": 2436236.0,
+      "minutes_from_listing": 1465
+    },
+    {
+      "time_index": 294,
+      "timestamp": "2025-02-21T14:10:00+00:00",
+      "open_price": 1.8654,
+      "high_price": 1.8843,
+      "low_price": 1.8454,
+      "close_price": 1.8558,
+      "volume": 1495735.0,
+      "minutes_from_listing": 1470
+    },
+    {
+      "time_index": 295,
+      "timestamp": "2025-02-21T14:15:00+00:00",
+      "open_price": 1.8558,
+      "high_price": 1.9045,
+      "low_price": 1.8256,
+      "close_price": 1.8874,
+      "volume": 2420119.0,
+      "minutes_from_listing": 1475
+    },
+    {
+      "time_index": 296,
+      "timestamp": "2025-02-21T14:20:00+00:00",
+      "open_price": 1.8874,
+      "high_price": 1.9258,
+      "low_price": 1.8775,
+      "close_price": 1.9051,
+      "volume": 1863605.0,
+      "minutes_from_listing": 1480
+    },
+    {
+      "time_index": 297,
+      "timestamp": "2025-02-21T14:25:00+00:00",
+      "open_price": 1.9051,
+      "high_price": 1.9109,
+      "low_price": 1.8737,
+      "close_price": 1.8925,
+      "volume": 1294218.0,
+      "minutes_from_listing": 1485
+    },
+    {
+      "time_index": 298,
+      "timestamp": "2025-02-21T14:30:00+00:00",
+      "open_price": 1.8925,
+      "high_price": 1.8979,
+      "low_price": 1.8547,
+      "close_price": 1.8641,
+      "volume": 1736021.0,
+      "minutes_from_listing": 1490
+    },
+    {
+      "time_index": 299,
+      "timestamp": "2025-02-21T14:35:00+00:00",
+      "open_price": 1.8641,
+      "high_price": 1.8772,
+      "low_price": 1.8087,
+      "close_price": 1.8197,
+      "volume": 2035817.0,
+      "minutes_from_listing": 1495
+    },
+    {
+      "time_index": 300,
+      "timestamp": "2025-02-21T14:40:00+00:00",
+      "open_price": 1.8197,
+      "high_price": 1.8401,
+      "low_price": 1.7767,
+      "close_price": 1.8373,
+      "volume": 2925732.0,
+      "minutes_from_listing": 1500
+    },
+    {
+      "time_index": 301,
+      "timestamp": "2025-02-21T14:45:00+00:00",
+      "open_price": 1.8373,
+      "high_price": 1.8396,
+      "low_price": 1.7973,
+      "close_price": 1.8173,
+      "volume": 1165329.0,
+      "minutes_from_listing": 1505
+    },
+    {
+      "time_index": 302,
+      "timestamp": "2025-02-21T14:50:00+00:00",
+      "open_price": 1.8173,
+      "high_price": 1.8397,
+      "low_price": 1.7979,
+      "close_price": 1.8366,
+      "volume": 1106271.0,
+      "minutes_from_listing": 1510
+    },
+    {
+      "time_index": 303,
+      "timestamp": "2025-02-21T14:55:00+00:00",
+      "open_price": 1.8366,
+      "high_price": 1.8652,
+      "low_price": 1.828,
+      "close_price": 1.8465,
+      "volume": 1814770.0,
+      "minutes_from_listing": 1515
+    },
+    {
+      "time_index": 304,
+      "timestamp": "2025-02-21T15:00:00+00:00",
+      "open_price": 1.8465,
+      "high_price": 1.9022,
+      "low_price": 1.8402,
+      "close_price": 1.88,
+      "volume": 2456819.0,
+      "minutes_from_listing": 1520
+    },
+    {
+      "time_index": 305,
+      "timestamp": "2025-02-21T15:05:00+00:00",
+      "open_price": 1.88,
+      "high_price": 1.8973,
+      "low_price": 1.8642,
+      "close_price": 1.8785,
+      "volume": 1282036.0,
+      "minutes_from_listing": 1525
+    },
+    {
+      "time_index": 306,
+      "timestamp": "2025-02-21T15:10:00+00:00",
+      "open_price": 1.8785,
+      "high_price": 1.9,
+      "low_price": 1.8591,
+      "close_price": 1.8734,
+      "volume": 1511831.0,
+      "minutes_from_listing": 1530
+    },
+    {
+      "time_index": 307,
+      "timestamp": "2025-02-21T15:15:00+00:00",
+      "open_price": 1.8734,
+      "high_price": 2.13,
+      "low_price": 1.8734,
+      "close_price": 2.0491,
+      "volume": 8049537.0,
+      "minutes_from_listing": 1535
+    },
+    {
+      "time_index": 308,
+      "timestamp": "2025-02-21T15:20:00+00:00",
+      "open_price": 2.0491,
+      "high_price": 2.081,
+      "low_price": 1.9748,
+      "close_price": 2.0056,
+      "volume": 4516051.0,
+      "minutes_from_listing": 1540
+    },
+    {
+      "time_index": 309,
+      "timestamp": "2025-02-21T15:25:00+00:00",
+      "open_price": 2.0056,
+      "high_price": 2.0227,
+      "low_price": 1.8833,
+      "close_price": 1.9375,
+      "volume": 4988846.0,
+      "minutes_from_listing": 1545
+    },
+    {
+      "time_index": 310,
+      "timestamp": "2025-02-21T15:30:00+00:00",
+      "open_price": 1.9375,
+      "high_price": 1.9433,
+      "low_price": 1.8619,
+      "close_price": 1.8768,
+      "volume": 3521951.0,
+      "minutes_from_listing": 1550
+    },
+    {
+      "time_index": 311,
+      "timestamp": "2025-02-21T15:35:00+00:00",
+      "open_price": 1.8768,
+      "high_price": 1.8849,
+      "low_price": 1.7313,
+      "close_price": 1.7436,
+      "volume": 4579513.0,
+      "minutes_from_listing": 1555
+    },
+    {
+      "time_index": 312,
+      "timestamp": "2025-02-21T15:40:00+00:00",
+      "open_price": 1.7436,
+      "high_price": 1.7793,
+      "low_price": 1.6649,
+      "close_price": 1.7729,
+      "volume": 5069384.0,
+      "minutes_from_listing": 1560
+    },
+    {
+      "time_index": 313,
+      "timestamp": "2025-02-21T15:45:00+00:00",
+      "open_price": 1.7729,
+      "high_price": 1.8401,
+      "low_price": 1.7185,
+      "close_price": 1.7623,
+      "volume": 3877145.0,
+      "minutes_from_listing": 1565
+    },
+    {
+      "time_index": 314,
+      "timestamp": "2025-02-21T15:50:00+00:00",
+      "open_price": 1.7623,
+      "high_price": 1.8574,
+      "low_price": 1.7607,
+      "close_price": 1.8246,
+      "volume": 2301836.0,
+      "minutes_from_listing": 1570
+    },
+    {
+      "time_index": 315,
+      "timestamp": "2025-02-21T15:55:00+00:00",
+      "open_price": 1.8246,
+      "high_price": 1.825,
+      "low_price": 1.7765,
+      "close_price": 1.8079,
+      "volume": 1637817.0,
+      "minutes_from_listing": 1575
+    },
+    {
+      "time_index": 316,
+      "timestamp": "2025-02-21T16:00:00+00:00",
+      "open_price": 1.8079,
+      "high_price": 1.9028,
+      "low_price": 1.7846,
+      "close_price": 1.8717,
+      "volume": 3309311.0,
+      "minutes_from_listing": 1580
+    },
+    {
+      "time_index": 317,
+      "timestamp": "2025-02-21T16:05:00+00:00",
+      "open_price": 1.8717,
+      "high_price": 1.938,
+      "low_price": 1.863,
+      "close_price": 1.8815,
+      "volume": 2258415.0,
+      "minutes_from_listing": 1585
+    },
+    {
+      "time_index": 318,
+      "timestamp": "2025-02-21T16:10:00+00:00",
+      "open_price": 1.8815,
+      "high_price": 1.9437,
+      "low_price": 1.87,
+      "close_price": 1.9353,
+      "volume": 2024013.0,
+      "minutes_from_listing": 1590
+    },
+    {
+      "time_index": 319,
+      "timestamp": "2025-02-21T16:15:00+00:00",
+      "open_price": 1.9353,
+      "high_price": 1.9764,
+      "low_price": 1.8904,
+      "close_price": 1.9549,
+      "volume": 2505033.0,
+      "minutes_from_listing": 1595
+    },
+    {
+      "time_index": 320,
+      "timestamp": "2025-02-21T16:20:00+00:00",
+      "open_price": 1.9549,
+      "high_price": 1.9667,
+      "low_price": 1.8906,
+      "close_price": 1.9009,
+      "volume": 2339750.0,
+      "minutes_from_listing": 1600
+    },
+    {
+      "time_index": 321,
+      "timestamp": "2025-02-21T16:25:00+00:00",
+      "open_price": 1.9009,
+      "high_price": 1.9139,
+      "low_price": 1.8602,
+      "close_price": 1.8875,
+      "volume": 1423172.0,
+      "minutes_from_listing": 1605
+    },
+    {
+      "time_index": 322,
+      "timestamp": "2025-02-21T16:30:00+00:00",
+      "open_price": 1.8875,
+      "high_price": 1.9491,
+      "low_price": 1.8796,
+      "close_price": 1.9124,
+      "volume": 952531.0,
+      "minutes_from_listing": 1610
+    },
+    {
+      "time_index": 323,
+      "timestamp": "2025-02-21T16:35:00+00:00",
+      "open_price": 1.9124,
+      "high_price": 1.9306,
+      "low_price": 1.8813,
+      "close_price": 1.9198,
+      "volume": 756223.0,
+      "minutes_from_listing": 1615
+    },
+    {
+      "time_index": 324,
+      "timestamp": "2025-02-21T16:40:00+00:00",
+      "open_price": 1.9198,
+      "high_price": 1.932,
+      "low_price": 1.88,
+      "close_price": 1.926,
+      "volume": 743989.0,
+      "minutes_from_listing": 1620
+    },
+    {
+      "time_index": 325,
+      "timestamp": "2025-02-21T16:45:00+00:00",
+      "open_price": 1.926,
+      "high_price": 1.9392,
+      "low_price": 1.8481,
+      "close_price": 1.8543,
+      "volume": 1152923.0,
+      "minutes_from_listing": 1625
+    },
+    {
+      "time_index": 326,
+      "timestamp": "2025-02-21T16:50:00+00:00",
+      "open_price": 1.8543,
+      "high_price": 1.8969,
+      "low_price": 1.834,
+      "close_price": 1.8813,
+      "volume": 945044.0,
+      "minutes_from_listing": 1630
+    },
+    {
+      "time_index": 327,
+      "timestamp": "2025-02-21T16:55:00+00:00",
+      "open_price": 1.8813,
+      "high_price": 1.9193,
+      "low_price": 1.8754,
+      "close_price": 1.8841,
+      "volume": 745372.0,
+      "minutes_from_listing": 1635
+    },
+    {
+      "time_index": 328,
+      "timestamp": "2025-02-21T17:00:00+00:00",
+      "open_price": 1.8841,
+      "high_price": 1.8852,
+      "low_price": 1.839,
+      "close_price": 1.8716,
+      "volume": 993808.0,
+      "minutes_from_listing": 1640
+    },
+    {
+      "time_index": 329,
+      "timestamp": "2025-02-21T17:05:00+00:00",
+      "open_price": 1.8716,
+      "high_price": 1.8946,
+      "low_price": 1.8389,
+      "close_price": 1.8486,
+      "volume": 626290.0,
+      "minutes_from_listing": 1645
+    },
+    {
+      "time_index": 330,
+      "timestamp": "2025-02-21T17:10:00+00:00",
+      "open_price": 1.8486,
+      "high_price": 1.8516,
+      "low_price": 1.73,
+      "close_price": 1.7819,
+      "volume": 2595732.0,
+      "minutes_from_listing": 1650
+    },
+    {
+      "time_index": 331,
+      "timestamp": "2025-02-21T17:15:00+00:00",
+      "open_price": 1.7819,
+      "high_price": 1.8219,
+      "low_price": 1.7427,
+      "close_price": 1.8002,
+      "volume": 1397433.0,
+      "minutes_from_listing": 1655
+    },
+    {
+      "time_index": 332,
+      "timestamp": "2025-02-21T17:20:00+00:00",
+      "open_price": 1.8002,
+      "high_price": 1.8116,
+      "low_price": 1.772,
+      "close_price": 1.7949,
+      "volume": 703948.0,
+      "minutes_from_listing": 1660
+    },
+    {
+      "time_index": 333,
+      "timestamp": "2025-02-21T17:25:00+00:00",
+      "open_price": 1.7949,
+      "high_price": 1.835,
+      "low_price": 1.7931,
+      "close_price": 1.8098,
+      "volume": 735381.0,
+      "minutes_from_listing": 1665
+    },
+    {
+      "time_index": 334,
+      "timestamp": "2025-02-21T17:30:00+00:00",
+      "open_price": 1.8098,
+      "high_price": 1.8309,
+      "low_price": 1.7593,
+      "close_price": 1.7691,
+      "volume": 939735.0,
+      "minutes_from_listing": 1670
+    },
+    {
+      "time_index": 335,
+      "timestamp": "2025-02-21T17:35:00+00:00",
+      "open_price": 1.7691,
+      "high_price": 1.7819,
+      "low_price": 1.7344,
+      "close_price": 1.7388,
+      "volume": 968847.0,
+      "minutes_from_listing": 1675
+    },
+    {
+      "time_index": 336,
+      "timestamp": "2025-02-21T17:40:00+00:00",
+      "open_price": 1.7388,
+      "high_price": 1.7824,
+      "low_price": 1.7348,
+      "close_price": 1.771,
+      "volume": 769225.0,
+      "minutes_from_listing": 1680
+    },
+    {
+      "time_index": 337,
+      "timestamp": "2025-02-21T17:45:00+00:00",
+      "open_price": 1.771,
+      "high_price": 1.7712,
+      "low_price": 1.6858,
+      "close_price": 1.7235,
+      "volume": 1559330.0,
+      "minutes_from_listing": 1685
+    },
+    {
+      "time_index": 338,
+      "timestamp": "2025-02-21T17:50:00+00:00",
+      "open_price": 1.7235,
+      "high_price": 1.7593,
+      "low_price": 1.7095,
+      "close_price": 1.7485,
+      "volume": 921292.0,
+      "minutes_from_listing": 1690
+    },
+    {
+      "time_index": 339,
+      "timestamp": "2025-02-21T17:55:00+00:00",
+      "open_price": 1.7485,
+      "high_price": 1.7558,
+      "low_price": 1.7196,
+      "close_price": 1.7395,
+      "volume": 596966.0,
+      "minutes_from_listing": 1695
+    },
+    {
+      "time_index": 340,
+      "timestamp": "2025-02-21T18:00:00+00:00",
+      "open_price": 1.7395,
+      "high_price": 1.7497,
+      "low_price": 1.671,
+      "close_price": 1.7149,
+      "volume": 1021249.0,
+      "minutes_from_listing": 1700
+    },
+    {
+      "time_index": 341,
+      "timestamp": "2025-02-21T18:05:00+00:00",
+      "open_price": 1.7149,
+      "high_price": 1.7657,
+      "low_price": 1.711,
+      "close_price": 1.731,
+      "volume": 841313.0,
+      "minutes_from_listing": 1705
+    },
+    {
+      "time_index": 342,
+      "timestamp": "2025-02-21T18:10:00+00:00",
+      "open_price": 1.731,
+      "high_price": 1.7361,
+      "low_price": 1.7036,
+      "close_price": 1.7159,
+      "volume": 739246.0,
+      "minutes_from_listing": 1710
+    },
+    {
+      "time_index": 343,
+      "timestamp": "2025-02-21T18:15:00+00:00",
+      "open_price": 1.7159,
+      "high_price": 1.7499,
+      "low_price": 1.7142,
+      "close_price": 1.744,
+      "volume": 435222.0,
+      "minutes_from_listing": 1715
+    },
+    {
+      "time_index": 344,
+      "timestamp": "2025-02-21T18:20:00+00:00",
+      "open_price": 1.744,
+      "high_price": 1.8196,
+      "low_price": 1.744,
+      "close_price": 1.7802,
+      "volume": 1166460.0,
+      "minutes_from_listing": 1720
+    },
+    {
+      "time_index": 345,
+      "timestamp": "2025-02-21T18:25:00+00:00",
+      "open_price": 1.7802,
+      "high_price": 1.7835,
+      "low_price": 1.7537,
+      "close_price": 1.7573,
+      "volume": 506087.0,
+      "minutes_from_listing": 1725
+    },
+    {
+      "time_index": 346,
+      "timestamp": "2025-02-21T18:30:00+00:00",
+      "open_price": 1.7573,
+      "high_price": 1.7688,
+      "low_price": 1.7313,
+      "close_price": 1.7528,
+      "volume": 643948.0,
+      "minutes_from_listing": 1730
+    },
+    {
+      "time_index": 347,
+      "timestamp": "2025-02-21T18:35:00+00:00",
+      "open_price": 1.7528,
+      "high_price": 1.7544,
+      "low_price": 1.7236,
+      "close_price": 1.7346,
+      "volume": 450562.0,
+      "minutes_from_listing": 1735
+    },
+    {
+      "time_index": 348,
+      "timestamp": "2025-02-21T18:40:00+00:00",
+      "open_price": 1.7346,
+      "high_price": 1.7547,
+      "low_price": 1.7324,
+      "close_price": 1.747,
+      "volume": 194972.0,
+      "minutes_from_listing": 1740
+    },
+    {
+      "time_index": 349,
+      "timestamp": "2025-02-21T18:45:00+00:00",
+      "open_price": 1.747,
+      "high_price": 1.789,
+      "low_price": 1.746,
+      "close_price": 1.7733,
+      "volume": 544950.0,
+      "minutes_from_listing": 1745
+    },
+    {
+      "time_index": 350,
+      "timestamp": "2025-02-21T18:50:00+00:00",
+      "open_price": 1.7733,
+      "high_price": 1.7809,
+      "low_price": 1.7414,
+      "close_price": 1.7445,
+      "volume": 337269.0,
+      "minutes_from_listing": 1750
+    },
+    {
+      "time_index": 351,
+      "timestamp": "2025-02-21T18:55:00+00:00",
+      "open_price": 1.7445,
+      "high_price": 1.7566,
+      "low_price": 1.7241,
+      "close_price": 1.7291,
+      "volume": 404256.0,
+      "minutes_from_listing": 1755
+    },
+    {
+      "time_index": 352,
+      "timestamp": "2025-02-21T19:00:00+00:00",
+      "open_price": 1.7291,
+      "high_price": 1.7468,
+      "low_price": 1.683,
+      "close_price": 1.7222,
+      "volume": 935753.0,
+      "minutes_from_listing": 1760
+    },
+    {
+      "time_index": 353,
+      "timestamp": "2025-02-21T19:05:00+00:00",
+      "open_price": 1.7222,
+      "high_price": 1.7704,
+      "low_price": 1.7201,
+      "close_price": 1.7535,
+      "volume": 443264.0,
+      "minutes_from_listing": 1765
+    },
+    {
+      "time_index": 354,
+      "timestamp": "2025-02-21T19:10:00+00:00",
+      "open_price": 1.7535,
+      "high_price": 1.7648,
+      "low_price": 1.7259,
+      "close_price": 1.7291,
+      "volume": 406900.0,
+      "minutes_from_listing": 1770
+    },
+    {
+      "time_index": 355,
+      "timestamp": "2025-02-21T19:15:00+00:00",
+      "open_price": 1.7291,
+      "high_price": 1.7299,
+      "low_price": 1.7041,
+      "close_price": 1.7253,
+      "volume": 495608.0,
+      "minutes_from_listing": 1775
+    },
+    {
+      "time_index": 356,
+      "timestamp": "2025-02-21T19:20:00+00:00",
+      "open_price": 1.7253,
+      "high_price": 1.7421,
+      "low_price": 1.6992,
+      "close_price": 1.7219,
+      "volume": 442882.0,
+      "minutes_from_listing": 1780
+    },
+    {
+      "time_index": 357,
+      "timestamp": "2025-02-21T19:25:00+00:00",
+      "open_price": 1.7219,
+      "high_price": 1.7227,
+      "low_price": 1.6262,
+      "close_price": 1.6674,
+      "volume": 1731647.0,
+      "minutes_from_listing": 1785
+    },
+    {
+      "time_index": 358,
+      "timestamp": "2025-02-21T19:30:00+00:00",
+      "open_price": 1.6674,
+      "high_price": 1.6932,
+      "low_price": 1.6517,
+      "close_price": 1.6703,
+      "volume": 783803.0,
+      "minutes_from_listing": 1790
+    },
+    {
+      "time_index": 359,
+      "timestamp": "2025-02-21T19:35:00+00:00",
+      "open_price": 1.6703,
+      "high_price": 1.6703,
+      "low_price": 1.6091,
+      "close_price": 1.6332,
+      "volume": 1286907.0,
+      "minutes_from_listing": 1795
+    },
+    {
+      "time_index": 360,
+      "timestamp": "2025-02-21T19:40:00+00:00",
+      "open_price": 1.6332,
+      "high_price": 1.6515,
+      "low_price": 1.613,
+      "close_price": 1.6419,
+      "volume": 749072.0,
+      "minutes_from_listing": 1800
+    },
+    {
+      "time_index": 361,
+      "timestamp": "2025-02-21T19:45:00+00:00",
+      "open_price": 1.6419,
+      "high_price": 1.666,
+      "low_price": 1.6188,
+      "close_price": 1.6596,
+      "volume": 656950.0,
+      "minutes_from_listing": 1805
+    },
+    {
+      "time_index": 362,
+      "timestamp": "2025-02-21T19:50:00+00:00",
+      "open_price": 1.6596,
+      "high_price": 1.6843,
+      "low_price": 1.6482,
+      "close_price": 1.6643,
+      "volume": 724938.0,
+      "minutes_from_listing": 1810
+    },
+    {
+      "time_index": 363,
+      "timestamp": "2025-02-21T19:55:00+00:00",
+      "open_price": 1.6643,
+      "high_price": 1.6751,
+      "low_price": 1.6515,
+      "close_price": 1.6588,
+      "volume": 292463.0,
+      "minutes_from_listing": 1815
+    },
+    {
+      "time_index": 364,
+      "timestamp": "2025-02-21T20:00:00+00:00",
+      "open_price": 1.6588,
+      "high_price": 1.7137,
+      "low_price": 1.6473,
+      "close_price": 1.6969,
+      "volume": 606588.0,
+      "minutes_from_listing": 1820
+    },
+    {
+      "time_index": 365,
+      "timestamp": "2025-02-21T20:05:00+00:00",
+      "open_price": 1.6969,
+      "high_price": 1.6985,
+      "low_price": 1.6536,
+      "close_price": 1.6602,
+      "volume": 372772.0,
+      "minutes_from_listing": 1825
+    },
+    {
+      "time_index": 366,
+      "timestamp": "2025-02-21T20:10:00+00:00",
+      "open_price": 1.6602,
+      "high_price": 1.6607,
+      "low_price": 1.6254,
+      "close_price": 1.6334,
+      "volume": 536854.0,
+      "minutes_from_listing": 1830
+    },
+    {
+      "time_index": 367,
+      "timestamp": "2025-02-21T20:15:00+00:00",
+      "open_price": 1.6334,
+      "high_price": 1.6636,
+      "low_price": 1.6332,
+      "close_price": 1.6561,
+      "volume": 386659.0,
+      "minutes_from_listing": 1835
+    },
+    {
+      "time_index": 368,
+      "timestamp": "2025-02-21T20:20:00+00:00",
+      "open_price": 1.6561,
+      "high_price": 1.6597,
+      "low_price": 1.6177,
+      "close_price": 1.6378,
+      "volume": 424248.0,
+      "minutes_from_listing": 1840
+    },
+    {
+      "time_index": 369,
+      "timestamp": "2025-02-21T20:25:00+00:00",
+      "open_price": 1.6378,
+      "high_price": 1.6537,
+      "low_price": 1.6138,
+      "close_price": 1.646,
+      "volume": 511932.0,
+      "minutes_from_listing": 1845
+    },
+    {
+      "time_index": 370,
+      "timestamp": "2025-02-21T20:30:00+00:00",
+      "open_price": 1.646,
+      "high_price": 1.6844,
+      "low_price": 1.6372,
+      "close_price": 1.6794,
+      "volume": 493558.0,
+      "minutes_from_listing": 1850
+    },
+    {
+      "time_index": 371,
+      "timestamp": "2025-02-21T20:35:00+00:00",
+      "open_price": 1.6794,
+      "high_price": 1.7036,
+      "low_price": 1.6549,
+      "close_price": 1.6782,
+      "volume": 536968.0,
+      "minutes_from_listing": 1855
+    },
+    {
+      "time_index": 372,
+      "timestamp": "2025-02-21T20:40:00+00:00",
+      "open_price": 1.6782,
+      "high_price": 1.7484,
+      "low_price": 1.6587,
+      "close_price": 1.721,
+      "volume": 585223.0,
+      "minutes_from_listing": 1860
+    },
+    {
+      "time_index": 373,
+      "timestamp": "2025-02-21T20:45:00+00:00",
+      "open_price": 1.721,
+      "high_price": 1.7212,
+      "low_price": 1.67,
+      "close_price": 1.6856,
+      "volume": 476674.0,
+      "minutes_from_listing": 1865
+    },
+    {
+      "time_index": 374,
+      "timestamp": "2025-02-21T20:50:00+00:00",
+      "open_price": 1.6856,
+      "high_price": 1.7107,
+      "low_price": 1.6684,
+      "close_price": 1.6758,
+      "volume": 391167.0,
+      "minutes_from_listing": 1870
+    },
+    {
+      "time_index": 375,
+      "timestamp": "2025-02-21T20:55:00+00:00",
+      "open_price": 1.6758,
+      "high_price": 1.6954,
+      "low_price": 1.671,
+      "close_price": 1.6852,
+      "volume": 215416.0,
+      "minutes_from_listing": 1875
+    },
+    {
+      "time_index": 376,
+      "timestamp": "2025-02-21T21:00:00+00:00",
+      "open_price": 1.6852,
+      "high_price": 1.7206,
+      "low_price": 1.6823,
+      "close_price": 1.7141,
+      "volume": 442233.0,
+      "minutes_from_listing": 1880
+    },
+    {
+      "time_index": 377,
+      "timestamp": "2025-02-21T21:05:00+00:00",
+      "open_price": 1.7141,
+      "high_price": 1.7155,
+      "low_price": 1.6759,
+      "close_price": 1.6795,
+      "volume": 497969.0,
+      "minutes_from_listing": 1885
+    },
+    {
+      "time_index": 378,
+      "timestamp": "2025-02-21T21:10:00+00:00",
+      "open_price": 1.6795,
+      "high_price": 1.6991,
+      "low_price": 1.6581,
+      "close_price": 1.6715,
+      "volume": 344067.0,
+      "minutes_from_listing": 1890
+    },
+    {
+      "time_index": 379,
+      "timestamp": "2025-02-21T21:15:00+00:00",
+      "open_price": 1.6715,
+      "high_price": 1.6846,
+      "low_price": 1.6517,
+      "close_price": 1.6548,
+      "volume": 280878.0,
+      "minutes_from_listing": 1895
+    },
+    {
+      "time_index": 380,
+      "timestamp": "2025-02-21T21:20:00+00:00",
+      "open_price": 1.6548,
+      "high_price": 1.6741,
+      "low_price": 1.6366,
+      "close_price": 1.655,
+      "volume": 335154.0,
+      "minutes_from_listing": 1900
+    },
+    {
+      "time_index": 381,
+      "timestamp": "2025-02-21T21:25:00+00:00",
+      "open_price": 1.655,
+      "high_price": 1.6603,
+      "low_price": 1.6215,
+      "close_price": 1.6314,
+      "volume": 335914.0,
+      "minutes_from_listing": 1905
+    },
+    {
+      "time_index": 382,
+      "timestamp": "2025-02-21T21:30:00+00:00",
+      "open_price": 1.6314,
+      "high_price": 1.6648,
+      "low_price": 1.6161,
+      "close_price": 1.6345,
+      "volume": 663384.0,
+      "minutes_from_listing": 1910
+    },
+    {
+      "time_index": 383,
+      "timestamp": "2025-02-21T21:35:00+00:00",
+      "open_price": 1.6345,
+      "high_price": 1.6545,
+      "low_price": 1.6288,
+      "close_price": 1.6475,
+      "volume": 273393.0,
+      "minutes_from_listing": 1915
+    },
+    {
+      "time_index": 384,
+      "timestamp": "2025-02-21T21:40:00+00:00",
+      "open_price": 1.6475,
+      "high_price": 1.6598,
+      "low_price": 1.601,
+      "close_price": 1.6107,
+      "volume": 509397.0,
+      "minutes_from_listing": 1920
+    },
+    {
+      "time_index": 385,
+      "timestamp": "2025-02-21T21:45:00+00:00",
+      "open_price": 1.6107,
+      "high_price": 1.6229,
+      "low_price": 1.5858,
+      "close_price": 1.6103,
+      "volume": 692901.0,
+      "minutes_from_listing": 1925
+    },
+    {
+      "time_index": 386,
+      "timestamp": "2025-02-21T21:50:00+00:00",
+      "open_price": 1.6103,
+      "high_price": 1.64,
+      "low_price": 1.5978,
+      "close_price": 1.6376,
+      "volume": 302497.0,
+      "minutes_from_listing": 1930
+    },
+    {
+      "time_index": 387,
+      "timestamp": "2025-02-21T21:55:00+00:00",
+      "open_price": 1.6376,
+      "high_price": 1.6556,
+      "low_price": 1.6301,
+      "close_price": 1.6474,
+      "volume": 298848.0,
+      "minutes_from_listing": 1935
+    },
+    {
+      "time_index": 388,
+      "timestamp": "2025-02-21T22:00:00+00:00",
+      "open_price": 1.6474,
+      "high_price": 1.6661,
+      "low_price": 1.6376,
+      "close_price": 1.6475,
+      "volume": 430475.0,
+      "minutes_from_listing": 1940
+    },
+    {
+      "time_index": 389,
+      "timestamp": "2025-02-21T22:05:00+00:00",
+      "open_price": 1.6475,
+      "high_price": 1.6544,
+      "low_price": 1.6269,
+      "close_price": 1.636,
+      "volume": 187031.0,
+      "minutes_from_listing": 1945
+    },
+    {
+      "time_index": 390,
+      "timestamp": "2025-02-21T22:10:00+00:00",
+      "open_price": 1.636,
+      "high_price": 1.6411,
+      "low_price": 1.6214,
+      "close_price": 1.6404,
+      "volume": 264937.0,
+      "minutes_from_listing": 1950
+    },
+    {
+      "time_index": 391,
+      "timestamp": "2025-02-21T22:15:00+00:00",
+      "open_price": 1.6404,
+      "high_price": 1.653,
+      "low_price": 1.6211,
+      "close_price": 1.6239,
+      "volume": 305514.0,
+      "minutes_from_listing": 1955
+    },
+    {
+      "time_index": 392,
+      "timestamp": "2025-02-21T22:20:00+00:00",
+      "open_price": 1.6239,
+      "high_price": 1.6239,
+      "low_price": 1.5652,
+      "close_price": 1.5855,
+      "volume": 838462.0,
+      "minutes_from_listing": 1960
+    },
+    {
+      "time_index": 393,
+      "timestamp": "2025-02-21T22:25:00+00:00",
+      "open_price": 1.5855,
+      "high_price": 1.6084,
+      "low_price": 1.5802,
+      "close_price": 1.6004,
+      "volume": 339246.0,
+      "minutes_from_listing": 1965
+    },
+    {
+      "time_index": 394,
+      "timestamp": "2025-02-21T22:30:00+00:00",
+      "open_price": 1.6004,
+      "high_price": 1.6138,
+      "low_price": 1.5976,
+      "close_price": 1.6097,
+      "volume": 803400.0,
+      "minutes_from_listing": 1970
+    },
+    {
+      "time_index": 395,
+      "timestamp": "2025-02-21T22:35:00+00:00",
+      "open_price": 1.6097,
+      "high_price": 1.61,
+      "low_price": 1.5607,
+      "close_price": 1.5656,
+      "volume": 1269434.0,
+      "minutes_from_listing": 1975
+    },
+    {
+      "time_index": 396,
+      "timestamp": "2025-02-21T22:40:00+00:00",
+      "open_price": 1.5656,
+      "high_price": 1.5778,
+      "low_price": 1.5412,
+      "close_price": 1.5652,
+      "volume": 704411.0,
+      "minutes_from_listing": 1980
+    },
+    {
+      "time_index": 397,
+      "timestamp": "2025-02-21T22:45:00+00:00",
+      "open_price": 1.5652,
+      "high_price": 1.5926,
+      "low_price": 1.5643,
+      "close_price": 1.5719,
+      "volume": 254386.0,
+      "minutes_from_listing": 1985
+    },
+    {
+      "time_index": 398,
+      "timestamp": "2025-02-21T22:50:00+00:00",
+      "open_price": 1.5719,
+      "high_price": 1.6003,
+      "low_price": 1.5719,
+      "close_price": 1.5792,
+      "volume": 329004.0,
+      "minutes_from_listing": 1990
+    },
+    {
+      "time_index": 399,
+      "timestamp": "2025-02-21T22:55:00+00:00",
+      "open_price": 1.5792,
+      "high_price": 1.5841,
+      "low_price": 1.5633,
+      "close_price": 1.5685,
+      "volume": 295095.0,
+      "minutes_from_listing": 1995
+    },
+    {
+      "time_index": 400,
+      "timestamp": "2025-02-21T23:00:00+00:00",
+      "open_price": 1.5685,
+      "high_price": 1.5866,
+      "low_price": 1.5679,
+      "close_price": 1.5756,
+      "volume": 346708.0,
+      "minutes_from_listing": 2000
+    },
+    {
+      "time_index": 401,
+      "timestamp": "2025-02-21T23:05:00+00:00",
+      "open_price": 1.5756,
+      "high_price": 1.5767,
+      "low_price": 1.5207,
+      "close_price": 1.5318,
+      "volume": 1032628.0,
+      "minutes_from_listing": 2005
+    },
+    {
+      "time_index": 402,
+      "timestamp": "2025-02-21T23:10:00+00:00",
+      "open_price": 1.5318,
+      "high_price": 1.5479,
+      "low_price": 1.5308,
+      "close_price": 1.5412,
+      "volume": 441826.0,
+      "minutes_from_listing": 2010
+    },
+    {
+      "time_index": 403,
+      "timestamp": "2025-02-21T23:15:00+00:00",
+      "open_price": 1.5412,
+      "high_price": 1.5435,
+      "low_price": 1.482,
+      "close_price": 1.4931,
+      "volume": 956285.0,
+      "minutes_from_listing": 2015
+    },
+    {
+      "time_index": 404,
+      "timestamp": "2025-02-21T23:20:00+00:00",
+      "open_price": 1.4931,
+      "high_price": 1.5091,
+      "low_price": 1.469,
+      "close_price": 1.4765,
+      "volume": 679732.0,
+      "minutes_from_listing": 2020
+    },
+    {
+      "time_index": 405,
+      "timestamp": "2025-02-21T23:25:00+00:00",
+      "open_price": 1.4765,
+      "high_price": 1.4855,
+      "low_price": 1.4576,
+      "close_price": 1.464,
+      "volume": 605612.0,
+      "minutes_from_listing": 2025
+    },
+    {
+      "time_index": 406,
+      "timestamp": "2025-02-21T23:30:00+00:00",
+      "open_price": 1.464,
+      "high_price": 1.5136,
+      "low_price": 1.4511,
+      "close_price": 1.4913,
+      "volume": 667642.0,
+      "minutes_from_listing": 2030
+    },
+    {
+      "time_index": 407,
+      "timestamp": "2025-02-21T23:35:00+00:00",
+      "open_price": 1.4913,
+      "high_price": 1.5031,
+      "low_price": 1.4752,
+      "close_price": 1.4775,
+      "volume": 579008.0,
+      "minutes_from_listing": 2035
+    },
+    {
+      "time_index": 408,
+      "timestamp": "2025-02-21T23:40:00+00:00",
+      "open_price": 1.4775,
+      "high_price": 1.4957,
+      "low_price": 1.4775,
+      "close_price": 1.4879,
+      "volume": 206934.0,
+      "minutes_from_listing": 2040
+    },
+    {
+      "time_index": 409,
+      "timestamp": "2025-02-21T23:45:00+00:00",
+      "open_price": 1.4879,
+      "high_price": 1.5155,
+      "low_price": 1.4701,
+      "close_price": 1.4821,
+      "volume": 492620.0,
+      "minutes_from_listing": 2045
+    },
+    {
+      "time_index": 410,
+      "timestamp": "2025-02-21T23:50:00+00:00",
+      "open_price": 1.4821,
+      "high_price": 1.4831,
+      "low_price": 1.4363,
+      "close_price": 1.4423,
+      "volume": 550891.0,
+      "minutes_from_listing": 2050
+    },
+    {
+      "time_index": 411,
+      "timestamp": "2025-02-21T23:55:00+00:00",
+      "open_price": 1.4423,
+      "high_price": 1.4441,
+      "low_price": 1.4123,
+      "close_price": 1.424,
+      "volume": 951274.0,
+      "minutes_from_listing": 2055
+    },
+    {
+      "time_index": 412,
+      "timestamp": "2025-02-22T00:00:00+00:00",
+      "open_price": 1.424,
+      "high_price": 1.4406,
+      "low_price": 1.3634,
+      "close_price": 1.3711,
+      "volume": 1186913.0,
+      "minutes_from_listing": 2060
+    },
+    {
+      "time_index": 413,
+      "timestamp": "2025-02-22T00:05:00+00:00",
+      "open_price": 1.3711,
+      "high_price": 1.4059,
+      "low_price": 1.3518,
+      "close_price": 1.3951,
+      "volume": 819213.0,
+      "minutes_from_listing": 2065
+    },
+    {
+      "time_index": 414,
+      "timestamp": "2025-02-22T00:10:00+00:00",
+      "open_price": 1.3951,
+      "high_price": 1.4617,
+      "low_price": 1.3854,
+      "close_price": 1.4428,
+      "volume": 878831.0,
+      "minutes_from_listing": 2070
+    },
+    {
+      "time_index": 415,
+      "timestamp": "2025-02-22T00:15:00+00:00",
+      "open_price": 1.4428,
+      "high_price": 1.4855,
+      "low_price": 1.4343,
+      "close_price": 1.4624,
+      "volume": 806966.0,
+      "minutes_from_listing": 2075
+    },
+    {
+      "time_index": 416,
+      "timestamp": "2025-02-22T00:20:00+00:00",
+      "open_price": 1.4624,
+      "high_price": 1.4699,
+      "low_price": 1.4364,
+      "close_price": 1.4387,
+      "volume": 343606.0,
+      "minutes_from_listing": 2080
+    },
+    {
+      "time_index": 417,
+      "timestamp": "2025-02-22T00:25:00+00:00",
+      "open_price": 1.4387,
+      "high_price": 1.5544,
+      "low_price": 1.4375,
+      "close_price": 1.5212,
+      "volume": 1288895.0,
+      "minutes_from_listing": 2085
+    },
+    {
+      "time_index": 418,
+      "timestamp": "2025-02-22T00:30:00+00:00",
+      "open_price": 1.5212,
+      "high_price": 1.559,
+      "low_price": 1.5006,
+      "close_price": 1.5149,
+      "volume": 939959.0,
+      "minutes_from_listing": 2090
+    },
+    {
+      "time_index": 419,
+      "timestamp": "2025-02-22T00:35:00+00:00",
+      "open_price": 1.5149,
+      "high_price": 1.5393,
+      "low_price": 1.504,
+      "close_price": 1.5135,
+      "volume": 581782.0,
+      "minutes_from_listing": 2095
+    },
+    {
+      "time_index": 420,
+      "timestamp": "2025-02-22T00:40:00+00:00",
+      "open_price": 1.5135,
+      "high_price": 1.578,
+      "low_price": 1.5128,
+      "close_price": 1.5646,
+      "volume": 645157.0,
+      "minutes_from_listing": 2100
+    },
+    {
+      "time_index": 421,
+      "timestamp": "2025-02-22T00:45:00+00:00",
+      "open_price": 1.5646,
+      "high_price": 1.5646,
+      "low_price": 1.5241,
+      "close_price": 1.5287,
+      "volume": 389407.0,
+      "minutes_from_listing": 2105
+    },
+    {
+      "time_index": 422,
+      "timestamp": "2025-02-22T00:50:00+00:00",
+      "open_price": 1.5287,
+      "high_price": 1.6849,
+      "low_price": 1.5217,
+      "close_price": 1.6763,
+      "volume": 2546056.0,
+      "minutes_from_listing": 2110
+    },
+    {
+      "time_index": 423,
+      "timestamp": "2025-02-22T00:55:00+00:00",
+      "open_price": 1.6763,
+      "high_price": 1.7063,
+      "low_price": 1.6426,
+      "close_price": 1.6832,
+      "volume": 1623273.0,
+      "minutes_from_listing": 2115
+    },
+    {
+      "time_index": 424,
+      "timestamp": "2025-02-22T01:00:00+00:00",
+      "open_price": 1.6832,
+      "high_price": 1.75,
+      "low_price": 1.6542,
+      "close_price": 1.6872,
+      "volume": 1627469.0,
+      "minutes_from_listing": 2120
+    },
+    {
+      "time_index": 425,
+      "timestamp": "2025-02-22T01:05:00+00:00",
+      "open_price": 1.6872,
+      "high_price": 1.697,
+      "low_price": 1.6368,
+      "close_price": 1.6497,
+      "volume": 973773.0,
+      "minutes_from_listing": 2125
+    },
+    {
+      "time_index": 426,
+      "timestamp": "2025-02-22T01:10:00+00:00",
+      "open_price": 1.6497,
+      "high_price": 1.6778,
+      "low_price": 1.6486,
+      "close_price": 1.6612,
+      "volume": 437875.0,
+      "minutes_from_listing": 2130
+    },
+    {
+      "time_index": 427,
+      "timestamp": "2025-02-22T01:15:00+00:00",
+      "open_price": 1.6612,
+      "high_price": 1.7024,
+      "low_price": 1.6535,
+      "close_price": 1.6714,
+      "volume": 343558.0,
+      "minutes_from_listing": 2135
+    },
+    {
+      "time_index": 428,
+      "timestamp": "2025-02-22T01:20:00+00:00",
+      "open_price": 1.6714,
+      "high_price": 1.7034,
+      "low_price": 1.6624,
+      "close_price": 1.6864,
+      "volume": 353515.0,
+      "minutes_from_listing": 2140
+    },
+    {
+      "time_index": 429,
+      "timestamp": "2025-02-22T01:25:00+00:00",
+      "open_price": 1.6864,
+      "high_price": 1.7822,
+      "low_price": 1.6653,
+      "close_price": 1.7456,
+      "volume": 1151182.0,
+      "minutes_from_listing": 2145
+    },
+    {
+      "time_index": 430,
+      "timestamp": "2025-02-22T01:30:00+00:00",
+      "open_price": 1.7456,
+      "high_price": 1.7515,
+      "low_price": 1.7028,
+      "close_price": 1.7047,
+      "volume": 468119.0,
+      "minutes_from_listing": 2150
+    },
+    {
+      "time_index": 431,
+      "timestamp": "2025-02-22T01:35:00+00:00",
+      "open_price": 1.7047,
+      "high_price": 1.7326,
+      "low_price": 1.7008,
+      "close_price": 1.7128,
+      "volume": 563990.0,
+      "minutes_from_listing": 2155
+    },
+    {
+      "time_index": 432,
+      "timestamp": "2025-02-22T01:40:00+00:00",
+      "open_price": 1.7128,
+      "high_price": 1.7735,
+      "low_price": 1.7128,
+      "close_price": 1.7482,
+      "volume": 621061.0,
+      "minutes_from_listing": 2160
+    },
+    {
+      "time_index": 433,
+      "timestamp": "2025-02-22T01:45:00+00:00",
+      "open_price": 1.7482,
+      "high_price": 1.7885,
+      "low_price": 1.7236,
+      "close_price": 1.7879,
+      "volume": 614990.0,
+      "minutes_from_listing": 2165
+    },
+    {
+      "time_index": 434,
+      "timestamp": "2025-02-22T01:50:00+00:00",
+      "open_price": 1.7879,
+      "high_price": 1.8343,
+      "low_price": 1.7604,
+      "close_price": 1.8066,
+      "volume": 906463.0,
+      "minutes_from_listing": 2170
+    },
+    {
+      "time_index": 435,
+      "timestamp": "2025-02-22T01:55:00+00:00",
+      "open_price": 1.8066,
+      "high_price": 1.8179,
+      "low_price": 1.755,
+      "close_price": 1.7632,
+      "volume": 767942.0,
+      "minutes_from_listing": 2175
+    },
+    {
+      "time_index": 436,
+      "timestamp": "2025-02-22T02:00:00+00:00",
+      "open_price": 1.7632,
+      "high_price": 1.7729,
+      "low_price": 1.7156,
+      "close_price": 1.7484,
+      "volume": 1095569.0,
+      "minutes_from_listing": 2180
+    },
+    {
+      "time_index": 437,
+      "timestamp": "2025-02-22T02:05:00+00:00",
+      "open_price": 1.7484,
+      "high_price": 1.7534,
+      "low_price": 1.7193,
+      "close_price": 1.7249,
+      "volume": 450102.0,
+      "minutes_from_listing": 2185
+    },
+    {
+      "time_index": 438,
+      "timestamp": "2025-02-22T02:10:00+00:00",
+      "open_price": 1.7249,
+      "high_price": 1.7464,
+      "low_price": 1.723,
+      "close_price": 1.7383,
+      "volume": 238250.0,
+      "minutes_from_listing": 2190
+    },
+    {
+      "time_index": 439,
+      "timestamp": "2025-02-22T02:15:00+00:00",
+      "open_price": 1.7383,
+      "high_price": 1.7478,
+      "low_price": 1.6825,
+      "close_price": 1.7,
+      "volume": 1076699.0,
+      "minutes_from_listing": 2195
+    },
+    {
+      "time_index": 440,
+      "timestamp": "2025-02-22T02:20:00+00:00",
+      "open_price": 1.7,
+      "high_price": 1.7094,
+      "low_price": 1.6728,
+      "close_price": 1.6886,
+      "volume": 575479.0,
+      "minutes_from_listing": 2200
+    },
+    {
+      "time_index": 441,
+      "timestamp": "2025-02-22T02:25:00+00:00",
+      "open_price": 1.6886,
+      "high_price": 1.6917,
+      "low_price": 1.6581,
+      "close_price": 1.6765,
+      "volume": 537596.0,
+      "minutes_from_listing": 2205
+    },
+    {
+      "time_index": 442,
+      "timestamp": "2025-02-22T02:30:00+00:00",
+      "open_price": 1.6765,
+      "high_price": 1.707,
+      "low_price": 1.6699,
+      "close_price": 1.7062,
+      "volume": 346769.0,
+      "minutes_from_listing": 2210
+    },
+    {
+      "time_index": 443,
+      "timestamp": "2025-02-22T02:35:00+00:00",
+      "open_price": 1.7062,
+      "high_price": 1.7244,
+      "low_price": 1.6853,
+      "close_price": 1.7011,
+      "volume": 268468.0,
+      "minutes_from_listing": 2215
+    },
+    {
+      "time_index": 444,
+      "timestamp": "2025-02-22T02:40:00+00:00",
+      "open_price": 1.7011,
+      "high_price": 1.7018,
+      "low_price": 1.6874,
+      "close_price": 1.6983,
+      "volume": 129997.0,
+      "minutes_from_listing": 2220
+    },
+    {
+      "time_index": 445,
+      "timestamp": "2025-02-22T02:45:00+00:00",
+      "open_price": 1.6983,
+      "high_price": 1.7011,
+      "low_price": 1.6723,
+      "close_price": 1.6787,
+      "volume": 279943.0,
+      "minutes_from_listing": 2225
+    },
+    {
+      "time_index": 446,
+      "timestamp": "2025-02-22T02:50:00+00:00",
+      "open_price": 1.6787,
+      "high_price": 1.6849,
+      "low_price": 1.663,
+      "close_price": 1.6804,
+      "volume": 238453.0,
+      "minutes_from_listing": 2230
+    },
+    {
+      "time_index": 447,
+      "timestamp": "2025-02-22T02:55:00+00:00",
+      "open_price": 1.6804,
+      "high_price": 1.7154,
+      "low_price": 1.6712,
+      "close_price": 1.6976,
+      "volume": 356551.0,
+      "minutes_from_listing": 2235
+    },
+    {
+      "time_index": 448,
+      "timestamp": "2025-02-22T03:00:00+00:00",
+      "open_price": 1.6976,
+      "high_price": 1.7013,
+      "low_price": 1.6761,
+      "close_price": 1.679,
+      "volume": 256231.0,
+      "minutes_from_listing": 2240
+    },
+    {
+      "time_index": 449,
+      "timestamp": "2025-02-22T03:05:00+00:00",
+      "open_price": 1.679,
+      "high_price": 1.679,
+      "low_price": 1.623,
+      "close_price": 1.6672,
+      "volume": 902703.0,
+      "minutes_from_listing": 2245
+    },
+    {
+      "time_index": 450,
+      "timestamp": "2025-02-22T03:10:00+00:00",
+      "open_price": 1.6672,
+      "high_price": 1.7173,
+      "low_price": 1.667,
+      "close_price": 1.7095,
+      "volume": 476655.0,
+      "minutes_from_listing": 2250
+    },
+    {
+      "time_index": 451,
+      "timestamp": "2025-02-22T03:15:00+00:00",
+      "open_price": 1.7095,
+      "high_price": 1.7333,
+      "low_price": 1.6945,
+      "close_price": 1.7275,
+      "volume": 458207.0,
+      "minutes_from_listing": 2255
+    },
+    {
+      "time_index": 452,
+      "timestamp": "2025-02-22T03:20:00+00:00",
+      "open_price": 1.7275,
+      "high_price": 1.7726,
+      "low_price": 1.7212,
+      "close_price": 1.7421,
+      "volume": 1261544.0,
+      "minutes_from_listing": 2260
+    },
+    {
+      "time_index": 453,
+      "timestamp": "2025-02-22T03:25:00+00:00",
+      "open_price": 1.7421,
+      "high_price": 1.7613,
+      "low_price": 1.7283,
+      "close_price": 1.73,
+      "volume": 493779.0,
+      "minutes_from_listing": 2265
+    },
+    {
+      "time_index": 454,
+      "timestamp": "2025-02-22T03:30:00+00:00",
+      "open_price": 1.73,
+      "high_price": 1.7486,
+      "low_price": 1.7097,
+      "close_price": 1.7138,
+      "volume": 324627.0,
+      "minutes_from_listing": 2270
+    },
+    {
+      "time_index": 455,
+      "timestamp": "2025-02-22T03:35:00+00:00",
+      "open_price": 1.7138,
+      "high_price": 1.7494,
+      "low_price": 1.7135,
+      "close_price": 1.7427,
+      "volume": 308042.0,
+      "minutes_from_listing": 2275
+    },
+    {
+      "time_index": 456,
+      "timestamp": "2025-02-22T03:40:00+00:00",
+      "open_price": 1.7427,
+      "high_price": 1.7467,
+      "low_price": 1.7213,
+      "close_price": 1.7281,
+      "volume": 301761.0,
+      "minutes_from_listing": 2280
+    },
+    {
+      "time_index": 457,
+      "timestamp": "2025-02-22T03:45:00+00:00",
+      "open_price": 1.7281,
+      "high_price": 1.7284,
+      "low_price": 1.6718,
+      "close_price": 1.6901,
+      "volume": 838739.0,
+      "minutes_from_listing": 2285
+    },
+    {
+      "time_index": 458,
+      "timestamp": "2025-02-22T03:50:00+00:00",
+      "open_price": 1.6901,
+      "high_price": 1.6996,
+      "low_price": 1.6703,
+      "close_price": 1.6897,
+      "volume": 532223.0,
+      "minutes_from_listing": 2290
+    },
+    {
+      "time_index": 459,
+      "timestamp": "2025-02-22T03:55:00+00:00",
+      "open_price": 1.6897,
+      "high_price": 1.7088,
+      "low_price": 1.6882,
+      "close_price": 1.7035,
+      "volume": 349351.0,
+      "minutes_from_listing": 2295
+    },
+    {
+      "time_index": 460,
+      "timestamp": "2025-02-22T04:00:00+00:00",
+      "open_price": 1.7035,
+      "high_price": 1.7051,
+      "low_price": 1.6741,
+      "close_price": 1.6904,
+      "volume": 493908.0,
+      "minutes_from_listing": 2300
+    },
+    {
+      "time_index": 461,
+      "timestamp": "2025-02-22T04:05:00+00:00",
+      "open_price": 1.6904,
+      "high_price": 1.7241,
+      "low_price": 1.6773,
+      "close_price": 1.7132,
+      "volume": 585302.0,
+      "minutes_from_listing": 2305
+    },
+    {
+      "time_index": 462,
+      "timestamp": "2025-02-22T04:10:00+00:00",
+      "open_price": 1.7132,
+      "high_price": 1.7142,
+      "low_price": 1.6825,
+      "close_price": 1.6932,
+      "volume": 414028.0,
+      "minutes_from_listing": 2310
+    },
+    {
+      "time_index": 463,
+      "timestamp": "2025-02-22T04:15:00+00:00",
+      "open_price": 1.6932,
+      "high_price": 1.6937,
+      "low_price": 1.6596,
+      "close_price": 1.678,
+      "volume": 532215.0,
+      "minutes_from_listing": 2315
+    },
+    {
+      "time_index": 464,
+      "timestamp": "2025-02-22T04:20:00+00:00",
+      "open_price": 1.678,
+      "high_price": 1.6998,
+      "low_price": 1.668,
+      "close_price": 1.6976,
+      "volume": 320427.0,
+      "minutes_from_listing": 2320
+    },
+    {
+      "time_index": 465,
+      "timestamp": "2025-02-22T04:25:00+00:00",
+      "open_price": 1.6976,
+      "high_price": 1.7201,
+      "low_price": 1.6908,
+      "close_price": 1.71,
+      "volume": 465034.0,
+      "minutes_from_listing": 2325
+    },
+    {
+      "time_index": 466,
+      "timestamp": "2025-02-22T04:30:00+00:00",
+      "open_price": 1.71,
+      "high_price": 1.7127,
+      "low_price": 1.6801,
+      "close_price": 1.681,
+      "volume": 358922.0,
+      "minutes_from_listing": 2330
+    },
+    {
+      "time_index": 467,
+      "timestamp": "2025-02-22T04:35:00+00:00",
+      "open_price": 1.681,
+      "high_price": 1.6935,
+      "low_price": 1.674,
+      "close_price": 1.6893,
+      "volume": 365263.0,
+      "minutes_from_listing": 2335
+    },
+    {
+      "time_index": 468,
+      "timestamp": "2025-02-22T04:40:00+00:00",
+      "open_price": 1.6893,
+      "high_price": 1.7149,
+      "low_price": 1.6822,
+      "close_price": 1.7027,
+      "volume": 329921.0,
+      "minutes_from_listing": 2340
+    },
+    {
+      "time_index": 469,
+      "timestamp": "2025-02-22T04:45:00+00:00",
+      "open_price": 1.7027,
+      "high_price": 1.7265,
+      "low_price": 1.6934,
+      "close_price": 1.719,
+      "volume": 492186.0,
+      "minutes_from_listing": 2345
+    },
+    {
+      "time_index": 470,
+      "timestamp": "2025-02-22T04:50:00+00:00",
+      "open_price": 1.719,
+      "high_price": 1.7252,
+      "low_price": 1.7052,
+      "close_price": 1.7212,
+      "volume": 304113.0,
+      "minutes_from_listing": 2350
+    },
+    {
+      "time_index": 471,
+      "timestamp": "2025-02-22T04:55:00+00:00",
+      "open_price": 1.7212,
+      "high_price": 1.7221,
+      "low_price": 1.6846,
+      "close_price": 1.6872,
+      "volume": 535781.0,
+      "minutes_from_listing": 2355
+    },
+    {
+      "time_index": 472,
+      "timestamp": "2025-02-22T05:00:00+00:00",
+      "open_price": 1.6872,
+      "high_price": 1.7134,
+      "low_price": 1.686,
+      "close_price": 1.7116,
+      "volume": 421918.0,
+      "minutes_from_listing": 2360
+    },
+    {
+      "time_index": 473,
+      "timestamp": "2025-02-22T05:05:00+00:00",
+      "open_price": 1.7116,
+      "high_price": 1.723,
+      "low_price": 1.7039,
+      "close_price": 1.7124,
+      "volume": 241081.0,
+      "minutes_from_listing": 2365
+    },
+    {
+      "time_index": 474,
+      "timestamp": "2025-02-22T05:10:00+00:00",
+      "open_price": 1.7124,
+      "high_price": 1.7265,
+      "low_price": 1.705,
+      "close_price": 1.7117,
+      "volume": 263837.0,
+      "minutes_from_listing": 2370
+    },
+    {
+      "time_index": 475,
+      "timestamp": "2025-02-22T05:15:00+00:00",
+      "open_price": 1.7117,
+      "high_price": 1.7265,
+      "low_price": 1.7029,
+      "close_price": 1.7056,
+      "volume": 344345.0,
+      "minutes_from_listing": 2375
+    },
+    {
+      "time_index": 476,
+      "timestamp": "2025-02-22T05:20:00+00:00",
+      "open_price": 1.7056,
+      "high_price": 1.716,
+      "low_price": 1.6943,
+      "close_price": 1.6988,
+      "volume": 393311.0,
+      "minutes_from_listing": 2380
+    },
+    {
+      "time_index": 477,
+      "timestamp": "2025-02-22T05:25:00+00:00",
+      "open_price": 1.6988,
+      "high_price": 1.7154,
+      "low_price": 1.6946,
+      "close_price": 1.711,
+      "volume": 335737.0,
+      "minutes_from_listing": 2385
+    },
+    {
+      "time_index": 478,
+      "timestamp": "2025-02-22T05:30:00+00:00",
+      "open_price": 1.711,
+      "high_price": 1.7494,
+      "low_price": 1.707,
+      "close_price": 1.7422,
+      "volume": 681758.0,
+      "minutes_from_listing": 2390
+    },
+    {
+      "time_index": 479,
+      "timestamp": "2025-02-22T05:35:00+00:00",
+      "open_price": 1.7422,
+      "high_price": 1.7552,
+      "low_price": 1.7274,
+      "close_price": 1.7303,
+      "volume": 541618.0,
+      "minutes_from_listing": 2395
+    },
+    {
+      "time_index": 480,
+      "timestamp": "2025-02-22T05:40:00+00:00",
+      "open_price": 1.7303,
+      "high_price": 1.7517,
+      "low_price": 1.7246,
+      "close_price": 1.7366,
+      "volume": 311439.0,
+      "minutes_from_listing": 2400
+    },
+    {
+      "time_index": 481,
+      "timestamp": "2025-02-22T05:45:00+00:00",
+      "open_price": 1.7366,
+      "high_price": 1.7683,
+      "low_price": 1.73,
+      "close_price": 1.7581,
+      "volume": 729101.0,
+      "minutes_from_listing": 2405
+    },
+    {
+      "time_index": 482,
+      "timestamp": "2025-02-22T05:50:00+00:00",
+      "open_price": 1.7581,
+      "high_price": 1.7627,
+      "low_price": 1.7451,
+      "close_price": 1.7453,
+      "volume": 261389.0,
+      "minutes_from_listing": 2410
+    },
+    {
+      "time_index": 483,
+      "timestamp": "2025-02-22T05:55:00+00:00",
+      "open_price": 1.7453,
+      "high_price": 1.7781,
+      "low_price": 1.74,
+      "close_price": 1.7577,
+      "volume": 471956.0,
+      "minutes_from_listing": 2415
+    },
+    {
+      "time_index": 484,
+      "timestamp": "2025-02-22T06:00:00+00:00",
+      "open_price": 1.7577,
+      "high_price": 1.7993,
+      "low_price": 1.745,
+      "close_price": 1.7585,
+      "volume": 923281.0,
+      "minutes_from_listing": 2420
+    },
+    {
+      "time_index": 485,
+      "timestamp": "2025-02-22T06:05:00+00:00",
+      "open_price": 1.7585,
+      "high_price": 1.7585,
+      "low_price": 1.7283,
+      "close_price": 1.7351,
+      "volume": 548692.0,
+      "minutes_from_listing": 2425
+    },
+    {
+      "time_index": 486,
+      "timestamp": "2025-02-22T06:10:00+00:00",
+      "open_price": 1.7351,
+      "high_price": 1.7499,
+      "low_price": 1.7309,
+      "close_price": 1.7402,
+      "volume": 284297.0,
+      "minutes_from_listing": 2430
+    },
+    {
+      "time_index": 487,
+      "timestamp": "2025-02-22T06:15:00+00:00",
+      "open_price": 1.7402,
+      "high_price": 1.7608,
+      "low_price": 1.7164,
+      "close_price": 1.7202,
+      "volume": 574950.0,
+      "minutes_from_listing": 2435
+    },
+    {
+      "time_index": 488,
+      "timestamp": "2025-02-22T06:20:00+00:00",
+      "open_price": 1.7202,
+      "high_price": 1.7234,
+      "low_price": 1.7014,
+      "close_price": 1.7109,
+      "volume": 855162.0,
+      "minutes_from_listing": 2440
+    },
+    {
+      "time_index": 489,
+      "timestamp": "2025-02-22T06:25:00+00:00",
+      "open_price": 1.7109,
+      "high_price": 1.73,
+      "low_price": 1.7008,
+      "close_price": 1.7077,
+      "volume": 469031.0,
+      "minutes_from_listing": 2445
+    },
+    {
+      "time_index": 490,
+      "timestamp": "2025-02-22T06:30:00+00:00",
+      "open_price": 1.7077,
+      "high_price": 1.7146,
+      "low_price": 1.6848,
+      "close_price": 1.6913,
+      "volume": 653388.0,
+      "minutes_from_listing": 2450
+    },
+    {
+      "time_index": 491,
+      "timestamp": "2025-02-22T06:35:00+00:00",
+      "open_price": 1.6913,
+      "high_price": 1.7053,
+      "low_price": 1.6882,
+      "close_price": 1.6945,
+      "volume": 419482.0,
+      "minutes_from_listing": 2455
+    },
+    {
+      "time_index": 492,
+      "timestamp": "2025-02-22T06:40:00+00:00",
+      "open_price": 1.6945,
+      "high_price": 1.703,
+      "low_price": 1.6593,
+      "close_price": 1.6777,
+      "volume": 949958.0,
+      "minutes_from_listing": 2460
+    },
+    {
+      "time_index": 493,
+      "timestamp": "2025-02-22T06:45:00+00:00",
+      "open_price": 1.6777,
+      "high_price": 1.69,
+      "low_price": 1.6705,
+      "close_price": 1.6892,
+      "volume": 408119.0,
+      "minutes_from_listing": 2465
+    },
+    {
+      "time_index": 494,
+      "timestamp": "2025-02-22T06:50:00+00:00",
+      "open_price": 1.6892,
+      "high_price": 1.6962,
+      "low_price": 1.6758,
+      "close_price": 1.6943,
+      "volume": 275767.0,
+      "minutes_from_listing": 2470
+    },
+    {
+      "time_index": 495,
+      "timestamp": "2025-02-22T06:55:00+00:00",
+      "open_price": 1.6943,
+      "high_price": 1.6943,
+      "low_price": 1.679,
+      "close_price": 1.6886,
+      "volume": 288363.0,
+      "minutes_from_listing": 2475
+    },
+    {
+      "time_index": 496,
+      "timestamp": "2025-02-22T07:00:00+00:00",
+      "open_price": 1.6886,
+      "high_price": 1.695,
+      "low_price": 1.6496,
+      "close_price": 1.6611,
+      "volume": 753705.0,
+      "minutes_from_listing": 2480
+    },
+    {
+      "time_index": 497,
+      "timestamp": "2025-02-22T07:05:00+00:00",
+      "open_price": 1.6611,
+      "high_price": 1.6836,
+      "low_price": 1.6608,
+      "close_price": 1.6784,
+      "volume": 480869.0,
+      "minutes_from_listing": 2485
+    },
+    {
+      "time_index": 498,
+      "timestamp": "2025-02-22T07:10:00+00:00",
+      "open_price": 1.6784,
+      "high_price": 1.6897,
+      "low_price": 1.6728,
+      "close_price": 1.6746,
+      "volume": 338861.0,
+      "minutes_from_listing": 2490
+    },
+    {
+      "time_index": 499,
+      "timestamp": "2025-02-22T07:15:00+00:00",
+      "open_price": 1.6746,
+      "high_price": 1.69,
+      "low_price": 1.6647,
+      "close_price": 1.6846,
+      "volume": 355769.0,
+      "minutes_from_listing": 2495
+    },
+    {
+      "time_index": 500,
+      "timestamp": "2025-02-22T07:20:00+00:00",
+      "open_price": 1.6846,
+      "high_price": 1.6906,
+      "low_price": 1.6745,
+      "close_price": 1.6799,
+      "volume": 390477.0,
+      "minutes_from_listing": 2500
+    },
+    {
+      "time_index": 501,
+      "timestamp": "2025-02-22T07:25:00+00:00",
+      "open_price": 1.6799,
+      "high_price": 1.6989,
+      "low_price": 1.6759,
+      "close_price": 1.6934,
+      "volume": 268600.0,
+      "minutes_from_listing": 2505
+    },
+    {
+      "time_index": 502,
+      "timestamp": "2025-02-22T07:30:00+00:00",
+      "open_price": 1.6934,
+      "high_price": 1.6968,
+      "low_price": 1.6665,
+      "close_price": 1.679,
+      "volume": 487107.0,
+      "minutes_from_listing": 2510
+    },
+    {
+      "time_index": 503,
+      "timestamp": "2025-02-22T07:35:00+00:00",
+      "open_price": 1.679,
+      "high_price": 1.6925,
+      "low_price": 1.6731,
+      "close_price": 1.6912,
+      "volume": 265473.0,
+      "minutes_from_listing": 2515
+    },
+    {
+      "time_index": 504,
+      "timestamp": "2025-02-22T07:40:00+00:00",
+      "open_price": 1.6912,
+      "high_price": 1.6924,
+      "low_price": 1.6826,
+      "close_price": 1.6893,
+      "volume": 157494.0,
+      "minutes_from_listing": 2520
+    },
+    {
+      "time_index": 505,
+      "timestamp": "2025-02-22T07:45:00+00:00",
+      "open_price": 1.6893,
+      "high_price": 1.7168,
+      "low_price": 1.677,
+      "close_price": 1.6992,
+      "volume": 656967.0,
+      "minutes_from_listing": 2525
+    },
+    {
+      "time_index": 506,
+      "timestamp": "2025-02-22T07:50:00+00:00",
+      "open_price": 1.6992,
+      "high_price": 1.7137,
+      "low_price": 1.6944,
+      "close_price": 1.7113,
+      "volume": 244529.0,
+      "minutes_from_listing": 2530
+    },
+    {
+      "time_index": 507,
+      "timestamp": "2025-02-22T07:55:00+00:00",
+      "open_price": 1.7113,
+      "high_price": 1.7269,
+      "low_price": 1.707,
+      "close_price": 1.7109,
+      "volume": 467910.0,
+      "minutes_from_listing": 2535
+    },
+    {
+      "time_index": 508,
+      "timestamp": "2025-02-22T08:00:00+00:00",
+      "open_price": 1.7109,
+      "high_price": 1.752,
+      "low_price": 1.7064,
+      "close_price": 1.7139,
+      "volume": 724362.0,
+      "minutes_from_listing": 2540
+    },
+    {
+      "time_index": 509,
+      "timestamp": "2025-02-22T08:05:00+00:00",
+      "open_price": 1.7139,
+      "high_price": 1.7164,
+      "low_price": 1.6927,
+      "close_price": 1.7053,
+      "volume": 313993.0,
+      "minutes_from_listing": 2545
+    },
+    {
+      "time_index": 510,
+      "timestamp": "2025-02-22T08:10:00+00:00",
+      "open_price": 1.7053,
+      "high_price": 1.7298,
+      "low_price": 1.7053,
+      "close_price": 1.7186,
+      "volume": 631145.0,
+      "minutes_from_listing": 2550
+    },
+    {
+      "time_index": 511,
+      "timestamp": "2025-02-22T08:15:00+00:00",
+      "open_price": 1.7186,
+      "high_price": 1.7325,
+      "low_price": 1.7161,
+      "close_price": 1.7286,
+      "volume": 327429.0,
+      "minutes_from_listing": 2555
+    },
+    {
+      "time_index": 512,
+      "timestamp": "2025-02-22T08:20:00+00:00",
+      "open_price": 1.7286,
+      "high_price": 1.7419,
+      "low_price": 1.7175,
+      "close_price": 1.7217,
+      "volume": 434268.0,
+      "minutes_from_listing": 2560
+    },
+    {
+      "time_index": 513,
+      "timestamp": "2025-02-22T08:25:00+00:00",
+      "open_price": 1.7217,
+      "high_price": 1.725,
+      "low_price": 1.707,
+      "close_price": 1.7242,
+      "volume": 249685.0,
+      "minutes_from_listing": 2565
+    },
+    {
+      "time_index": 514,
+      "timestamp": "2025-02-22T08:30:00+00:00",
+      "open_price": 1.7242,
+      "high_price": 1.7257,
+      "low_price": 1.7055,
+      "close_price": 1.7119,
+      "volume": 310608.0,
+      "minutes_from_listing": 2570
+    },
+    {
+      "time_index": 515,
+      "timestamp": "2025-02-22T08:35:00+00:00",
+      "open_price": 1.7119,
+      "high_price": 1.7121,
+      "low_price": 1.6873,
+      "close_price": 1.6981,
+      "volume": 490664.0,
+      "minutes_from_listing": 2575
+    },
+    {
+      "time_index": 516,
+      "timestamp": "2025-02-22T08:40:00+00:00",
+      "open_price": 1.6981,
+      "high_price": 1.6984,
+      "low_price": 1.6786,
+      "close_price": 1.6849,
+      "volume": 332890.0,
+      "minutes_from_listing": 2580
+    },
+    {
+      "time_index": 517,
+      "timestamp": "2025-02-22T08:45:00+00:00",
+      "open_price": 1.6849,
+      "high_price": 1.6895,
+      "low_price": 1.668,
+      "close_price": 1.6763,
+      "volume": 344357.0,
+      "minutes_from_listing": 2585
+    },
+    {
+      "time_index": 518,
+      "timestamp": "2025-02-22T08:50:00+00:00",
+      "open_price": 1.6763,
+      "high_price": 1.6856,
+      "low_price": 1.6623,
+      "close_price": 1.6836,
+      "volume": 455569.0,
+      "minutes_from_listing": 2590
+    },
+    {
+      "time_index": 519,
+      "timestamp": "2025-02-22T08:55:00+00:00",
+      "open_price": 1.6836,
+      "high_price": 1.6971,
+      "low_price": 1.6761,
+      "close_price": 1.6909,
+      "volume": 371905.0,
+      "minutes_from_listing": 2595
+    },
+    {
+      "time_index": 520,
+      "timestamp": "2025-02-22T09:00:00+00:00",
+      "open_price": 1.6909,
+      "high_price": 1.7018,
+      "low_price": 1.6853,
+      "close_price": 1.696,
+      "volume": 295024.0,
+      "minutes_from_listing": 2600
+    },
+    {
+      "time_index": 521,
+      "timestamp": "2025-02-22T09:05:00+00:00",
+      "open_price": 1.696,
+      "high_price": 1.7,
+      "low_price": 1.6814,
+      "close_price": 1.6867,
+      "volume": 268867.0,
+      "minutes_from_listing": 2605
+    },
+    {
+      "time_index": 522,
+      "timestamp": "2025-02-22T09:10:00+00:00",
+      "open_price": 1.6867,
+      "high_price": 1.6919,
+      "low_price": 1.6761,
+      "close_price": 1.6863,
+      "volume": 349397.0,
+      "minutes_from_listing": 2610
+    },
+    {
+      "time_index": 523,
+      "timestamp": "2025-02-22T09:15:00+00:00",
+      "open_price": 1.6863,
+      "high_price": 1.6944,
+      "low_price": 1.6733,
+      "close_price": 1.6931,
+      "volume": 324452.0,
+      "minutes_from_listing": 2615
+    },
+    {
+      "time_index": 524,
+      "timestamp": "2025-02-22T09:20:00+00:00",
+      "open_price": 1.6931,
+      "high_price": 1.7096,
+      "low_price": 1.6911,
+      "close_price": 1.6979,
+      "volume": 336264.0,
+      "minutes_from_listing": 2620
+    },
+    {
+      "time_index": 525,
+      "timestamp": "2025-02-22T09:25:00+00:00",
+      "open_price": 1.6979,
+      "high_price": 1.702,
+      "low_price": 1.6866,
+      "close_price": 1.6873,
+      "volume": 184132.0,
+      "minutes_from_listing": 2625
+    },
+    {
+      "time_index": 526,
+      "timestamp": "2025-02-22T09:30:00+00:00",
+      "open_price": 1.6873,
+      "high_price": 1.6944,
+      "low_price": 1.67,
+      "close_price": 1.67,
+      "volume": 320245.0,
+      "minutes_from_listing": 2630
+    },
+    {
+      "time_index": 527,
+      "timestamp": "2025-02-22T09:35:00+00:00",
+      "open_price": 1.67,
+      "high_price": 1.6809,
+      "low_price": 1.6241,
+      "close_price": 1.6482,
+      "volume": 1107141.0,
+      "minutes_from_listing": 2635
+    },
+    {
+      "time_index": 528,
+      "timestamp": "2025-02-22T09:40:00+00:00",
+      "open_price": 1.6482,
+      "high_price": 1.6535,
+      "low_price": 1.633,
+      "close_price": 1.6383,
+      "volume": 686896.0,
+      "minutes_from_listing": 2640
+    },
+    {
+      "time_index": 529,
+      "timestamp": "2025-02-22T09:45:00+00:00",
+      "open_price": 1.6383,
+      "high_price": 1.65,
+      "low_price": 1.6053,
+      "close_price": 1.6199,
+      "volume": 897027.0,
+      "minutes_from_listing": 2645
+    },
+    {
+      "time_index": 530,
+      "timestamp": "2025-02-22T09:50:00+00:00",
+      "open_price": 1.6199,
+      "high_price": 1.6351,
+      "low_price": 1.6181,
+      "close_price": 1.6286,
+      "volume": 382637.0,
+      "minutes_from_listing": 2650
+    },
+    {
+      "time_index": 531,
+      "timestamp": "2025-02-22T09:55:00+00:00",
+      "open_price": 1.6286,
+      "high_price": 1.6329,
+      "low_price": 1.6128,
+      "close_price": 1.6216,
+      "volume": 478123.0,
+      "minutes_from_listing": 2655
+    },
+    {
+      "time_index": 532,
+      "timestamp": "2025-02-22T10:00:00+00:00",
+      "open_price": 1.6216,
+      "high_price": 1.6287,
+      "low_price": 1.5723,
+      "close_price": 1.5958,
+      "volume": 1333647.0,
+      "minutes_from_listing": 2660
+    },
+    {
+      "time_index": 533,
+      "timestamp": "2025-02-22T10:05:00+00:00",
+      "open_price": 1.5958,
+      "high_price": 1.6323,
+      "low_price": 1.5946,
+      "close_price": 1.6216,
+      "volume": 632261.0,
+      "minutes_from_listing": 2665
+    },
+    {
+      "time_index": 534,
+      "timestamp": "2025-02-22T10:10:00+00:00",
+      "open_price": 1.6216,
+      "high_price": 1.6303,
+      "low_price": 1.6162,
+      "close_price": 1.6298,
+      "volume": 284767.0,
+      "minutes_from_listing": 2670
+    },
+    {
+      "time_index": 535,
+      "timestamp": "2025-02-22T10:15:00+00:00",
+      "open_price": 1.6298,
+      "high_price": 1.6453,
+      "low_price": 1.6197,
+      "close_price": 1.6317,
+      "volume": 511996.0,
+      "minutes_from_listing": 2675
+    },
+    {
+      "time_index": 536,
+      "timestamp": "2025-02-22T10:20:00+00:00",
+      "open_price": 1.6317,
+      "high_price": 1.6318,
+      "low_price": 1.6065,
+      "close_price": 1.6194,
+      "volume": 374744.0,
+      "minutes_from_listing": 2680
+    },
+    {
+      "time_index": 537,
+      "timestamp": "2025-02-22T10:25:00+00:00",
+      "open_price": 1.6194,
+      "high_price": 1.6253,
+      "low_price": 1.6106,
+      "close_price": 1.6186,
+      "volume": 224826.0,
+      "minutes_from_listing": 2685
+    },
+    {
+      "time_index": 538,
+      "timestamp": "2025-02-22T10:30:00+00:00",
+      "open_price": 1.6186,
+      "high_price": 1.6186,
+      "low_price": 1.5972,
+      "close_price": 1.6049,
+      "volume": 403015.0,
+      "minutes_from_listing": 2690
+    },
+    {
+      "time_index": 539,
+      "timestamp": "2025-02-22T10:35:00+00:00",
+      "open_price": 1.6049,
+      "high_price": 1.6143,
+      "low_price": 1.6015,
+      "close_price": 1.6064,
+      "volume": 188854.0,
+      "minutes_from_listing": 2695
+    },
+    {
+      "time_index": 540,
+      "timestamp": "2025-02-22T10:40:00+00:00",
+      "open_price": 1.6064,
+      "high_price": 1.6131,
+      "low_price": 1.591,
+      "close_price": 1.6023,
+      "volume": 283257.0,
+      "minutes_from_listing": 2700
+    },
+    {
+      "time_index": 541,
+      "timestamp": "2025-02-22T10:45:00+00:00",
+      "open_price": 1.6023,
+      "high_price": 1.6169,
+      "low_price": 1.5994,
+      "close_price": 1.6085,
+      "volume": 249270.0,
+      "minutes_from_listing": 2705
+    },
+    {
+      "time_index": 542,
+      "timestamp": "2025-02-22T10:50:00+00:00",
+      "open_price": 1.6085,
+      "high_price": 1.6089,
+      "low_price": 1.5831,
+      "close_price": 1.5869,
+      "volume": 394185.0,
+      "minutes_from_listing": 2710
+    },
+    {
+      "time_index": 543,
+      "timestamp": "2025-02-22T10:55:00+00:00",
+      "open_price": 1.5869,
+      "high_price": 1.5872,
+      "low_price": 1.5619,
+      "close_price": 1.5787,
+      "volume": 592849.0,
+      "minutes_from_listing": 2715
+    },
+    {
+      "time_index": 544,
+      "timestamp": "2025-02-22T11:00:00+00:00",
+      "open_price": 1.5787,
+      "high_price": 1.5955,
+      "low_price": 1.5763,
+      "close_price": 1.5875,
+      "volume": 427124.0,
+      "minutes_from_listing": 2720
+    },
+    {
+      "time_index": 545,
+      "timestamp": "2025-02-22T11:05:00+00:00",
+      "open_price": 1.5875,
+      "high_price": 1.5932,
+      "low_price": 1.5823,
+      "close_price": 1.5831,
+      "volume": 174972.0,
+      "minutes_from_listing": 2725
+    },
+    {
+      "time_index": 546,
+      "timestamp": "2025-02-22T11:10:00+00:00",
+      "open_price": 1.5831,
+      "high_price": 1.5886,
+      "low_price": 1.5294,
+      "close_price": 1.5467,
+      "volume": 1016333.0,
+      "minutes_from_listing": 2730
+    },
+    {
+      "time_index": 547,
+      "timestamp": "2025-02-22T11:15:00+00:00",
+      "open_price": 1.5467,
+      "high_price": 1.5634,
+      "low_price": 1.521,
+      "close_price": 1.5616,
+      "volume": 852450.0,
+      "minutes_from_listing": 2735
+    },
+    {
+      "time_index": 548,
+      "timestamp": "2025-02-22T11:20:00+00:00",
+      "open_price": 1.5616,
+      "high_price": 1.5652,
+      "low_price": 1.5523,
+      "close_price": 1.5599,
+      "volume": 298324.0,
+      "minutes_from_listing": 2740
+    },
+    {
+      "time_index": 549,
+      "timestamp": "2025-02-22T11:25:00+00:00",
+      "open_price": 1.5599,
+      "high_price": 1.5657,
+      "low_price": 1.5481,
+      "close_price": 1.5607,
+      "volume": 281007.0,
+      "minutes_from_listing": 2745
+    },
+    {
+      "time_index": 550,
+      "timestamp": "2025-02-22T11:30:00+00:00",
+      "open_price": 1.5607,
+      "high_price": 1.616,
+      "low_price": 1.5567,
+      "close_price": 1.5928,
+      "volume": 945093.0,
+      "minutes_from_listing": 2750
+    },
+    {
+      "time_index": 551,
+      "timestamp": "2025-02-22T11:35:00+00:00",
+      "open_price": 1.5928,
+      "high_price": 1.6047,
+      "low_price": 1.5909,
+      "close_price": 1.594,
+      "volume": 301927.0,
+      "minutes_from_listing": 2755
+    },
+    {
+      "time_index": 552,
+      "timestamp": "2025-02-22T11:40:00+00:00",
+      "open_price": 1.594,
+      "high_price": 1.6047,
+      "low_price": 1.5855,
+      "close_price": 1.6016,
+      "volume": 331000.0,
+      "minutes_from_listing": 2760
+    },
+    {
+      "time_index": 553,
+      "timestamp": "2025-02-22T11:45:00+00:00",
+      "open_price": 1.6016,
+      "high_price": 1.6117,
+      "low_price": 1.5826,
+      "close_price": 1.5988,
+      "volume": 379744.0,
+      "minutes_from_listing": 2765
+    },
+    {
+      "time_index": 554,
+      "timestamp": "2025-02-22T11:50:00+00:00",
+      "open_price": 1.5988,
+      "high_price": 1.6022,
+      "low_price": 1.59,
+      "close_price": 1.5978,
+      "volume": 179330.0,
+      "minutes_from_listing": 2770
+    },
+    {
+      "time_index": 555,
+      "timestamp": "2025-02-22T11:55:00+00:00",
+      "open_price": 1.5978,
+      "high_price": 1.6332,
+      "low_price": 1.5966,
+      "close_price": 1.6117,
+      "volume": 852692.0,
+      "minutes_from_listing": 2775
+    },
+    {
+      "time_index": 556,
+      "timestamp": "2025-02-22T12:00:00+00:00",
+      "open_price": 1.6117,
+      "high_price": 1.618,
+      "low_price": 1.5948,
+      "close_price": 1.6021,
+      "volume": 521702.0,
+      "minutes_from_listing": 2780
+    },
+    {
+      "time_index": 557,
+      "timestamp": "2025-02-22T12:05:00+00:00",
+      "open_price": 1.6021,
+      "high_price": 1.6127,
+      "low_price": 1.5835,
+      "close_price": 1.5935,
+      "volume": 307065.0,
+      "minutes_from_listing": 2785
+    },
+    {
+      "time_index": 558,
+      "timestamp": "2025-02-22T12:10:00+00:00",
+      "open_price": 1.5935,
+      "high_price": 1.6063,
+      "low_price": 1.593,
+      "close_price": 1.6049,
+      "volume": 235393.0,
+      "minutes_from_listing": 2790
+    },
+    {
+      "time_index": 559,
+      "timestamp": "2025-02-22T12:15:00+00:00",
+      "open_price": 1.6049,
+      "high_price": 1.627,
+      "low_price": 1.5983,
+      "close_price": 1.6218,
+      "volume": 421145.0,
+      "minutes_from_listing": 2795
+    },
+    {
+      "time_index": 560,
+      "timestamp": "2025-02-22T12:20:00+00:00",
+      "open_price": 1.6218,
+      "high_price": 1.627,
+      "low_price": 1.6128,
+      "close_price": 1.6235,
+      "volume": 310207.0,
+      "minutes_from_listing": 2800
+    },
+    {
+      "time_index": 561,
+      "timestamp": "2025-02-22T12:25:00+00:00",
+      "open_price": 1.6235,
+      "high_price": 1.6449,
+      "low_price": 1.6153,
+      "close_price": 1.6311,
+      "volume": 500542.0,
+      "minutes_from_listing": 2805
+    },
+    {
+      "time_index": 562,
+      "timestamp": "2025-02-22T12:30:00+00:00",
+      "open_price": 1.6311,
+      "high_price": 1.6775,
+      "low_price": 1.6271,
+      "close_price": 1.6631,
+      "volume": 970753.0,
+      "minutes_from_listing": 2810
+    },
+    {
+      "time_index": 563,
+      "timestamp": "2025-02-22T12:35:00+00:00",
+      "open_price": 1.6631,
+      "high_price": 1.6888,
+      "low_price": 1.6585,
+      "close_price": 1.6765,
+      "volume": 650473.0,
+      "minutes_from_listing": 2815
+    },
+    {
+      "time_index": 564,
+      "timestamp": "2025-02-22T12:40:00+00:00",
+      "open_price": 1.6765,
+      "high_price": 1.7038,
+      "low_price": 1.6661,
+      "close_price": 1.6674,
+      "volume": 1037880.0,
+      "minutes_from_listing": 2820
+    },
+    {
+      "time_index": 565,
+      "timestamp": "2025-02-22T12:45:00+00:00",
+      "open_price": 1.6674,
+      "high_price": 1.69,
+      "low_price": 1.6652,
+      "close_price": 1.6828,
+      "volume": 379634.0,
+      "minutes_from_listing": 2825
+    },
+    {
+      "time_index": 566,
+      "timestamp": "2025-02-22T12:50:00+00:00",
+      "open_price": 1.6828,
+      "high_price": 1.69,
+      "low_price": 1.6694,
+      "close_price": 1.6755,
+      "volume": 389251.0,
+      "minutes_from_listing": 2830
+    },
+    {
+      "time_index": 567,
+      "timestamp": "2025-02-22T12:55:00+00:00",
+      "open_price": 1.6755,
+      "high_price": 1.6812,
+      "low_price": 1.6583,
+      "close_price": 1.6682,
+      "volume": 445436.0,
+      "minutes_from_listing": 2835
+    },
+    {
+      "time_index": 568,
+      "timestamp": "2025-02-22T13:00:00+00:00",
+      "open_price": 1.6682,
+      "high_price": 1.6885,
+      "low_price": 1.6561,
+      "close_price": 1.6633,
+      "volume": 372315.0,
+      "minutes_from_listing": 2840
+    },
+    {
+      "time_index": 569,
+      "timestamp": "2025-02-22T13:05:00+00:00",
+      "open_price": 1.6633,
+      "high_price": 1.6665,
+      "low_price": 1.6502,
+      "close_price": 1.6537,
+      "volume": 378840.0,
+      "minutes_from_listing": 2845
+    },
+    {
+      "time_index": 570,
+      "timestamp": "2025-02-22T13:10:00+00:00",
+      "open_price": 1.6537,
+      "high_price": 1.6637,
+      "low_price": 1.6468,
+      "close_price": 1.6547,
+      "volume": 402958.0,
+      "minutes_from_listing": 2850
+    },
+    {
+      "time_index": 571,
+      "timestamp": "2025-02-22T13:15:00+00:00",
+      "open_price": 1.6547,
+      "high_price": 1.6568,
+      "low_price": 1.6298,
+      "close_price": 1.6401,
+      "volume": 838377.0,
+      "minutes_from_listing": 2855
+    },
+    {
+      "time_index": 572,
+      "timestamp": "2025-02-22T13:20:00+00:00",
+      "open_price": 1.6401,
+      "high_price": 1.642,
+      "low_price": 1.6194,
+      "close_price": 1.6272,
+      "volume": 749503.0,
+      "minutes_from_listing": 2860
+    },
+    {
+      "time_index": 573,
+      "timestamp": "2025-02-22T13:25:00+00:00",
+      "open_price": 1.6272,
+      "high_price": 1.63,
+      "low_price": 1.614,
+      "close_price": 1.6198,
+      "volume": 434551.0,
+      "minutes_from_listing": 2865
+    },
+    {
+      "time_index": 574,
+      "timestamp": "2025-02-22T13:30:00+00:00",
+      "open_price": 1.6198,
+      "high_price": 1.6325,
+      "low_price": 1.5917,
+      "close_price": 1.6018,
+      "volume": 739855.0,
+      "minutes_from_listing": 2870
+    },
+    {
+      "time_index": 575,
+      "timestamp": "2025-02-22T13:35:00+00:00",
+      "open_price": 1.6018,
+      "high_price": 1.6179,
+      "low_price": 1.6013,
+      "close_price": 1.6118,
+      "volume": 380374.0,
+      "minutes_from_listing": 2875
+    }
+  ]
+}

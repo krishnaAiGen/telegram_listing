@@ -14,7 +14,7 @@ class CryptoBacktester:
     
     def load_coin_data(self, symbol: str) -> Optional[Dict]:
         """Load price data for a specific coin"""
-        symbol = symbol + "USDT"
+        symbol = symbol + 'USDT'
         filename = f"{symbol}.json"
         filepath = os.path.join(self.price_data_folder, filename)
         
@@ -76,8 +76,14 @@ class CryptoBacktester:
     
     def update_capital(self, pnl_percent: float, trade_amount: float) -> float:
         """Update capital based on trade P&L"""
-        pnl_amount = trade_amount * (pnl_percent / 100)
-        self.current_capital = trade_amount + pnl_amount
+        # Store old capital for calculating PnL amount
+        old_capital = self.current_capital
+        
+        # Apply percentage gain/loss to current capital (proper compounding)
+        self.current_capital = self.current_capital * (1 + pnl_percent / 100)
+        
+        # Calculate actual PnL amount for reporting
+        pnl_amount = self.current_capital - old_capital
         
         # Record capital history
         self.capital_history.append({
@@ -96,13 +102,15 @@ class CryptoBacktester:
             return ((entry_price - exit_price) / entry_price) * 100
     
     def backtest_coin(self, symbol: str, is_long: bool, profit_target_pct: float, 
-                     stop_loss_pct: float, max_hold_hours: int, first_message_timestamp: str = None) -> Dict:
+                     stop_loss_pct: float, max_hold_hours: int, first_message_timestamp: str = None,
+                     csv_row_index: int = None) -> Dict:
         """Backtest a single coin with given parameters"""
         
         # Load coin data
         coin_data = self.load_coin_data(symbol)
         if not coin_data:
             return {
+                'csv_row_index': csv_row_index,
                 'symbol': symbol,
                 'error': 'failed_to_load_data',
                 'first_message_timestamp': first_message_timestamp
@@ -111,6 +119,7 @@ class CryptoBacktester:
         price_history = coin_data['price_history']
         if not price_history:
             return {
+                'csv_row_index': csv_row_index,
                 'symbol': symbol,
                 'error': 'no_price_data',
                 'first_message_timestamp': first_message_timestamp
@@ -133,7 +142,7 @@ class CryptoBacktester:
         max_intervals = (max_hold_hours * 60) // 5
         max_exit_index = min(len(price_history) - 1, max_intervals)
         
-        print(f"\n{symbol} - {'LONG' if is_long else 'SHORT'} Trade:")
+        print(f"\n{symbol} - {'LONG' if is_long else 'SHORT'} Trade (CSV Row {csv_row_index + 1 if csv_row_index is not None else 'N/A'}):")
         if first_message_timestamp:
             print(f"  First mentioned: {first_message_timestamp}")
         print(f"  Capital Available: ${self.current_capital:.2f}")
@@ -199,6 +208,7 @@ class CryptoBacktester:
         print(f"  New Capital: ${self.current_capital:.2f}")
         
         return {
+            'csv_row_index': csv_row_index,
             'symbol': symbol,
             'trade_type': 'LONG' if is_long else 'SHORT',
             'first_message_timestamp': first_message_timestamp,
@@ -229,9 +239,140 @@ class CryptoBacktester:
             'total_data_points': len(price_history)
         }
     
+    def run_backtest_from_csv(self, coin_analysis_csv: str, is_long: bool, profit_target_pct: float,
+                             stop_loss_pct: float, max_hold_hours: int, 
+                             start_date: str = None, end_date: str = None) -> pd.DataFrame:
+        """Run backtest using symbols from coin price analysis CSV in the exact same order"""
+        
+        # Load the coin analysis CSV
+        try:
+            coin_df = pd.read_csv(coin_analysis_csv)
+            print(f"Loaded {len(coin_df)} rows from coin analysis CSV")
+        except Exception as e:
+            print(f"Error loading coin analysis CSV: {e}")
+            return pd.DataFrame()
+        
+        # Filter by date if specified
+        if start_date or end_date:
+            # Convert timestamp column to datetime
+            if 'timestamp' in coin_df.columns:
+                coin_df['timestamp'] = pd.to_datetime(coin_df['timestamp'])
+                original_count = len(coin_df)
+                
+                if start_date:
+                    start_dt = pd.to_datetime(start_date).tz_localize('UTC')  # Make timezone-aware
+                    coin_df = coin_df[coin_df['timestamp'] >= start_dt]
+                    print(f"Filtered by start_date {start_date}: {len(coin_df)} rows remaining")
+                
+                if end_date:
+                    end_dt = pd.to_datetime(end_date).tz_localize('UTC')  # Make timezone-aware
+                    coin_df = coin_df[coin_df['timestamp'] <= end_dt]
+                    print(f"Filtered by end_date {end_date}: {len(coin_df)} rows remaining")
+                
+                print(f"Date filtering: {original_count} → {len(coin_df)} rows")
+        
+        # Reset capital for new backtest
+        self.current_capital = self.initial_capital
+        self.capital_history = []
+        
+        print(f"\n{'='*60}")
+        print(f"BACKTESTING CONFIGURATION")
+        print(f"{'='*60}")
+        print(f"Initial Capital: ${self.initial_capital:,.2f}")
+        print(f"Trade Type: {'LONG' if is_long else 'SHORT'}")
+        print(f"Profit Target: {profit_target_pct}%")
+        print(f"Stop Loss: {stop_loss_pct}%")
+        print(f"Max Hold Time: {max_hold_hours} hours")
+        print(f"Symbols to test: {len(coin_df)}")
+        print(f"Processing in CSV order (matching coin price analysis)")
+        print(f"{'='*60}")
+        
+        results = []
+        successful_trades = 0
+        
+        # Process each row in the exact order as the CSV
+        for csv_index, row in coin_df.iterrows():
+            symbol = row.get('coin_name', '')  # Assuming coin_name column contains the symbol
+            timestamp = row.get('timestamp', '')
+            
+            # Handle different possible column names for the symbol
+            if not symbol and 'symbol' in row:
+                symbol = row['symbol']
+            if not symbol and 'coin_symbol' in row:
+                symbol = row['coin_symbol']
+            
+            if not symbol:
+                print(f"Warning: No symbol found in row {csv_index}")
+                continue
+            
+            # Remove 'USDT' suffix if present (will be added back in load_coin_data)
+            if symbol.endswith('USDT'):
+                symbol = symbol[:-4]
+            
+            print(f"\nProcessing CSV row {csv_index + 1}/{len(coin_df)}: {symbol}")
+            
+            result = self.backtest_coin(
+                symbol=symbol, 
+                is_long=is_long, 
+                profit_target_pct=profit_target_pct, 
+                stop_loss_pct=stop_loss_pct, 
+                max_hold_hours=max_hold_hours, 
+                first_message_timestamp=str(timestamp),
+                csv_row_index=csv_index
+            )
+            
+            if 'error' not in result:
+                successful_trades += 1
+            
+            results.append(result)
+        
+        # Convert to DataFrame for analysis
+        df = pd.DataFrame(results)
+        
+        # Print summary
+        print(f"\n{'='*60}")
+        print(f"BACKTEST SUMMARY")
+        print(f"{'='*60}")
+        print(f"Initial Capital: ${self.initial_capital:,.2f}")
+        print(f"Final Capital: ${self.current_capital:,.2f}")
+        print(f"Total Return: ${self.current_capital - self.initial_capital:+,.2f}")
+        print(f"Total Return %: {((self.current_capital - self.initial_capital) / self.initial_capital * 100):+.2f}%")
+        print(f"Total symbols tested: {len(coin_df)}")
+        print(f"Successful trades: {successful_trades}")
+        print(f"Failed to load: {len(coin_df) - successful_trades}")
+        
+        if successful_trades > 0:
+            valid_results = df[df['pnl_percent'].notna()] if 'pnl_percent' in df.columns else pd.DataFrame()
+            if len(valid_results) > 0:
+                target_hits = len(valid_results[valid_results['exit_reason'] == 'target_hit'])
+                stop_hits = len(valid_results[valid_results['exit_reason'] == 'stop_loss_hit'])
+                time_exits = len(valid_results[valid_results['exit_reason'] == 'time_limit'])
+                
+                print(f"\nExit Reasons:")
+                print(f"  Target Hit: {target_hits} ({target_hits/successful_trades*100:.1f}%)")
+                print(f"  Stop Loss Hit: {stop_hits} ({stop_hits/successful_trades*100:.1f}%)")
+                print(f"  Time Limit: {time_exits} ({time_exits/successful_trades*100:.1f}%)")
+                
+                print(f"\nPerformance Metrics:")
+                print(f"  Average P&L %: {valid_results['pnl_percent'].mean():.2f}%")
+                print(f"  Median P&L %: {valid_results['pnl_percent'].median():.2f}%")
+                print(f"  Best Trade %: {valid_results['pnl_percent'].max():.2f}%")
+                print(f"  Worst Trade %: {valid_results['pnl_percent'].min():.2f}%")
+                print(f"  Best Trade $: ${valid_results['pnl_amount'].max():,.2f}")
+                print(f"  Worst Trade $: ${valid_results['pnl_amount'].min():,.2f}")
+                print(f"  Win Rate: {len(valid_results[valid_results['pnl_percent'] > 0])/successful_trades*100:.1f}%")
+                print(f"  Average Hold Time: {valid_results['hold_time_hours'].mean():.2f} hours")
+                
+                # Calculate compound growth
+                if len(self.capital_history) > 0:
+                    growth_rate = ((self.current_capital / self.initial_capital) ** (1/successful_trades) - 1) * 100
+                    print(f"  Compound Growth Rate per Trade: {growth_rate:.3f}%")
+        
+        return df
+
     def run_backtest(self, symbols: List[str], is_long: bool, profit_target_pct: float,
                     stop_loss_pct: float, max_hold_hours: int, symbol_first_timestamp: Dict[str, str] = None) -> pd.DataFrame:
-        """Run backtest for multiple symbols"""
+        """Run backtest for multiple symbols (original method for backward compatibility)"""
         
         # Reset capital for new backtest
         self.current_capital = self.initial_capital
@@ -268,7 +409,7 @@ class CryptoBacktester:
         # Convert to DataFrame for analysis
         df = pd.DataFrame(results)
         
-        # Print summary
+        # Print summary (same as before)
         print(f"\n{'='*60}")
         print(f"BACKTEST SUMMARY")
         print(f"{'='*60}")
@@ -399,8 +540,9 @@ def main():
     # =================
     
     # File paths
-    PRICE_DATA_FOLDER = '/Users/krishnayadav/Documents/test_projects/telegram_trade/coin_price'
-    OUTPUT_CSV = '/Users/krishnayadav/Documents/test_projects/telegram_trade/backtest_results.csv'
+    PRICE_DATA_FOLDER = '/Users/krishnayadav/Documents/test_projects/telegram_listing/binance_data/bybit_coin_price'
+    COIN_ANALYSIS_CSV = '/Users/krishnayadav/Documents/test_projects/telegram_listing/binance_data/bybit_coin_price_analysis.csv'
+    OUTPUT_CSV = '/Users/krishnayadav/Documents/test_projects/telegram_listing/binance_data/bybit_backtest_results.csv'
     
     # Capital management
     INITIAL_CAPITAL = 2000.0  # Starting capital in USD
@@ -409,21 +551,18 @@ def main():
     IS_LONG = True  # Set to True for long trades, False for short trades
     PROFIT_TARGET_PCT = 15.0  # Profit target percentage
     STOP_LOSS_PCT = 2.0  # Stop loss percentage
-    MAX_HOLD_HOURS = 2  # Maximum hold time in hours
+    MAX_HOLD_HOURS = 1  # Maximum hold time in hours
     
-    # Date filtering
-    START_DATE = "2025-01-01"  # Only backtest symbols first mentioned on or after this date (format: YYYY-MM-DD)
+    # Date filtering (applied to the CSV data)
+    START_DATE = "2024-06-10"  # Only backtest symbols first mentioned on or after this date (format: YYYY-MM-DD)
+    END_DATE = None  # Optional end date filter (format: YYYY-MM-DD)
     # Set to None to disable date filtering: START_DATE = None
 
-
-    # # Backtest all coins (no date filter)
-    # START_DATE = None
-
-    # # Only backtest very recent coins
-    # START_DATE = "2024-12-01"
+    # Option to use CSV-based backtesting (recommended for matching order)
+    USE_CSV_ORDER = True  # Set to True to use CSV order, False to use original method
     
     # Optional: Specify symbols to test (leave empty to test all available)
-    SPECIFIC_SYMBOLS = []  # e.g., ['BTCUSDT', 'ETHUSDT'] or [] for all (recommended: [] to test all coins)
+    SPECIFIC_SYMBOLS = []  # e.g., ['BTC', 'ETH'] or [] for all (only used if USE_CSV_ORDER is False)
     
     # =================
     # EXECUTION
@@ -432,28 +571,52 @@ def main():
     # Initialize backtester with initial capital
     backtester = CryptoBacktester(PRICE_DATA_FOLDER, INITIAL_CAPITAL)
     
-    # Get symbols to test
-    if SPECIFIC_SYMBOLS:
-        symbols_to_test = SPECIFIC_SYMBOLS
-        symbol_first_timestamp = {}  # No timestamp info for specific symbols
-        print(f"Testing specific symbols: {symbols_to_test}")
+    if USE_CSV_ORDER:
+        # NEW METHOD: Use coin analysis CSV to determine order and symbols
+        print("Using CSV-based backtesting to match coin price analysis order")
+        results_df = backtester.run_backtest_from_csv(
+            coin_analysis_csv=COIN_ANALYSIS_CSV,
+            is_long=IS_LONG,
+            profit_target_pct=PROFIT_TARGET_PCT,
+            stop_loss_pct=STOP_LOSS_PCT,
+            max_hold_hours=MAX_HOLD_HOURS,
+            start_date=START_DATE,
+            end_date=END_DATE
+        )
     else:
-        symbols_to_test, symbol_first_timestamp = get_symbols_from_sorted_messages(START_DATE)
-        print(f"Found {len(symbols_to_test)} symbols in sorted messages")
+        # ORIGINAL METHOD: Use sorted messages file
+        print("Using original method with sorted messages file")
+        
+        # Get symbols to test
+        if SPECIFIC_SYMBOLS:
+            symbols_to_test = SPECIFIC_SYMBOLS
+            symbol_first_timestamp = {}  # No timestamp info for specific symbols
+            print(f"Testing specific symbols: {symbols_to_test}")
+        else:
+            symbols_to_test, symbol_first_timestamp = get_symbols_from_sorted_messages(START_DATE)
+            print(f"Found {len(symbols_to_test)} symbols in sorted messages")
+        
+        if not symbols_to_test:
+            print("No symbols found to test. Please check your sorted messages file.")
+            return
+        
+        # Run backtest
+        results_df = backtester.run_backtest(
+            symbols=symbols_to_test,
+            is_long=IS_LONG,
+            profit_target_pct=PROFIT_TARGET_PCT,
+            stop_loss_pct=STOP_LOSS_PCT,
+            max_hold_hours=MAX_HOLD_HOURS,
+            symbol_first_timestamp=symbol_first_timestamp
+        )
     
-    if not symbols_to_test:
-        print("No symbols found to test. Please check your sorted messages file.")
+    # =================
+    # SAVE RESULTS
+    # =================
+    
+    if results_df.empty:
+        print("No results to save - backtest failed or no valid trades.")
         return
-    
-    # Run backtest
-    results_df = backtester.run_backtest(
-        symbols=symbols_to_test,
-        is_long=IS_LONG,
-        profit_target_pct=PROFIT_TARGET_PCT,
-        stop_loss_pct=STOP_LOSS_PCT,
-        max_hold_hours=MAX_HOLD_HOURS,
-        symbol_first_timestamp=symbol_first_timestamp
-    )
     
     # Save results
     results_df.to_csv(OUTPUT_CSV, index=False)
@@ -463,11 +626,17 @@ def main():
     valid_results = results_df[results_df['pnl_percent'].notna()] if 'pnl_percent' in results_df.columns else pd.DataFrame()
     if len(valid_results) > 0:
         print(f"\nTop 5 Performers (by $ P&L):")
-        top_5 = valid_results.nlargest(5, 'pnl_amount')[['symbol', 'pnl_amount', 'pnl_percent', 'exit_reason', 'capital_after']]
+        if 'csv_row_index' in valid_results.columns:
+            top_5 = valid_results.nlargest(5, 'pnl_amount')[['csv_row_index', 'symbol', 'pnl_amount', 'pnl_percent', 'exit_reason', 'capital_after']]
+        else:
+            top_5 = valid_results.nlargest(5, 'pnl_amount')[['symbol', 'pnl_amount', 'pnl_percent', 'exit_reason', 'capital_after']]
         print(top_5.to_string(index=False))
         
         print(f"\nWorst 5 Performers (by $ P&L):")
-        worst_5 = valid_results.nsmallest(5, 'pnl_amount')[['symbol', 'pnl_amount', 'pnl_percent', 'exit_reason', 'capital_after']]
+        if 'csv_row_index' in valid_results.columns:
+            worst_5 = valid_results.nsmallest(5, 'pnl_amount')[['csv_row_index', 'symbol', 'pnl_amount', 'pnl_percent', 'exit_reason', 'capital_after']]
+        else:
+            worst_5 = valid_results.nsmallest(5, 'pnl_amount')[['symbol', 'pnl_amount', 'pnl_percent', 'exit_reason', 'capital_after']]
         print(worst_5.to_string(index=False))
         
         print(f"\nCapital Growth Over Time:")
@@ -483,6 +652,50 @@ def main():
         capital_history_file = OUTPUT_CSV.replace('.csv', '_capital_history.csv')
         capital_history_df.to_csv(capital_history_file, index=False)
         print(f"\nCapital history saved to: {capital_history_file}")
+        
+        # Verify order matching with original CSV
+        if USE_CSV_ORDER and 'csv_row_index' in results_df.columns:
+            print(f"\n{'='*60}")
+            print(f"ORDER VERIFICATION")
+            print(f"{'='*60}")
+            print("Checking if backtest results match original CSV order...")
+            
+            # Load original CSV for comparison
+            try:
+                original_df = pd.read_csv(COIN_ANALYSIS_CSV)
+                print(f"Original CSV has {len(original_df)} rows")
+                print(f"Backtest results have {len(results_df)} rows")
+                
+                # Check if we have csv_row_index for order verification
+                results_with_index = results_df[results_df['csv_row_index'].notna()]
+                if len(results_with_index) > 0:
+                    # Check if the order matches
+                    expected_order = list(range(len(results_with_index)))
+                    actual_order = results_with_index['csv_row_index'].astype(int).tolist()
+                    
+                    if expected_order == actual_order:
+                        print("✅ SUCCESS: Backtest results are in the same order as the original CSV!")
+                    else:
+                        print("❌ WARNING: Order mismatch detected")
+                        print(f"Expected: {expected_order[:10]}...")
+                        print(f"Actual: {actual_order[:10]}...")
+                
+                # Show first few symbols for manual verification
+                print(f"\nFirst 5 symbols comparison:")
+                print("Original CSV | Backtest Results")
+                print("-" * 40)
+                for i in range(min(5, len(original_df), len(results_df))):
+                    orig_symbol = original_df.iloc[i].get('coin_name', 'N/A')
+                    if orig_symbol == 'N/A':
+                        orig_symbol = original_df.iloc[i].get('symbol', 'N/A')
+                    
+                    backtest_symbol = results_df.iloc[i].get('symbol', 'N/A')
+                    match_indicator = "✅" if orig_symbol == backtest_symbol else "❌"
+                    print(f"{orig_symbol:12} | {backtest_symbol:12} {match_indicator}")
+                        
+            except Exception as e:
+                print(f"Could not verify order: {e}")
+                
     else:
         print(f"\nNo successful trades to analyze.")
         print(f"This could be because:")
@@ -492,7 +705,10 @@ def main():
         print(f"\nPlease check:")
         print(f"  1. Price data folder: {PRICE_DATA_FOLDER}")
         print(f"  2. Expected file format: SYMBOL.json (e.g., BTCUSDT.json)")
-        print(f"  3. Symbol names in your sorted messages file match the price data files")
+        print(f"  3. Symbol names in your CSV match the price data files")
+        if USE_CSV_ORDER:
+            print(f"  4. Coin analysis CSV: {COIN_ANALYSIS_CSV}")
+            print(f"  5. Column 'coin_name' or 'symbol' exists in the CSV")
 
 if __name__ == '__main__':
     main()

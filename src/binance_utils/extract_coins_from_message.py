@@ -1,8 +1,8 @@
 import json
 import re
 
-INPUT_JSON = '/Users/krishnayadav/Documents/test_projects/telegram_trade/binance_future_split.json'
-OUTPUT_JSON = '/Users/krishnayadav/Documents/test_projects/telegram_trade/coin_symbols_from_message.json'
+INPUT_JSON = '/Users/krishnayadav/Documents/test_projects/telegram_listing/binance_data/bybit_futures.json'
+OUTPUT_JSON = '/Users/krishnayadav/Documents/test_projects/telegram_listing/binance_data/bybit_futures_coin_symbols.json'
 
 with open(INPUT_JSON, 'r') as f:
     data = json.load(f)
