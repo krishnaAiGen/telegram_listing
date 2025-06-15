@@ -315,7 +315,7 @@ def get_symbols_from_sorted_messages(start_date: str = None) -> Tuple[List[str],
         start_date: Only include symbols first mentioned on or after this date (format: 'YYYY-MM-DD')
     Returns: (symbols_list, symbol_to_first_timestamp_dict)
     """
-    sorted_messages_file = '/Users/krishnayadav/Documents/test_projects/telegram_trade/coin_symbols_from_message_sorted.json'
+    sorted_messages_file = '/Users/krishnayadav/Documents/test_projects/telegram_listing/coin_symbols_from_message.json'
     
     try:
         with open(sorted_messages_file, 'r') as f:
@@ -399,8 +399,9 @@ def main():
     # =================
     
     # File paths
-    PRICE_DATA_FOLDER = '/Users/krishnayadav/Documents/test_projects/telegram_trade/coin_price'
-    OUTPUT_CSV = '/Users/krishnayadav/Documents/test_projects/telegram_trade/backtest_results.csv'
+    # PRICE_DATA_FOLDER = '/Users/krishnayadav/Documents/test_projects/telegram_trade/coin_price'
+    PRICE_DATA_FOLDER = '/Users/krishnayadav/Documents/test_projects/telegram_listing/coin_alpha_price'
+    OUTPUT_CSV = '/Users/krishnayadav/Documents/test_projects/telegram_listing/binance_data/backtest_results.csv'
     
     # Capital management
     INITIAL_CAPITAL = 2000.0  # Starting capital in USD
@@ -412,7 +413,7 @@ def main():
     MAX_HOLD_HOURS = 2  # Maximum hold time in hours
     
     # Date filtering
-    START_DATE = "2025-01-01"  # Only backtest symbols first mentioned on or after this date (format: YYYY-MM-DD)
+    START_DATE = "2024-06-10"  # Only backtest symbols first mentioned on or after this date (format: YYYY-MM-DD)
     # Set to None to disable date filtering: START_DATE = None
 
 

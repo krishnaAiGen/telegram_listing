@@ -23,7 +23,7 @@ def parse_binance_messages(messages: List[Dict], output_file: str = 'binance.jso
                 text = str(text)
         tokens = re.findall(r'\w+', text.lower())
         print(tokens)
-        if 'binance' in tokens and 'spot' in tokens:
+        if 'binance' in tokens and 'alpha' in tokens:
             results.append({
                 'timestamp': str(msg.get('date', '')),
                 'message': text

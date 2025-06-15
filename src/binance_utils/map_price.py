@@ -5,9 +5,9 @@ from datetime import datetime, timezone, timedelta
 import time
 import os
 
-INPUT_JSON = '/Users/krishnayadav/Documents/test_projects/telegram_trade/coin_symbols_from_message.json'
-OUTPUT_CSV = '/Users/krishnayadav/Documents/test_projects/telegram_trade/coin_price_analysis.csv'
-PRICE_DATA_FOLDER = '/Users/krishnayadav/Documents/test_projects/telegram_trade/coin_price'
+INPUT_JSON = '/Users/krishnayadav/Documents/test_projects/telegram_listing/coin_symbols_from_message.json'
+OUTPUT_CSV = '/Users/krishnayadav/Documents/test_projects/telegram_listing/coin_price_analysis.csv'
+PRICE_DATA_FOLDER = '/Users/krishnayadav/Documents/test_projects/telegram_listing/coin_alpha_price'
 
 # Create coin_price folder if it doesn't exist
 os.makedirs(PRICE_DATA_FOLDER, exist_ok=True)
