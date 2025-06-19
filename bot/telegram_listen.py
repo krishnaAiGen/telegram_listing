@@ -44,10 +44,10 @@ class TelegramListener:
         
         # Regex patterns for symbol extraction
         self.symbol_patterns = [
-            r'\$([A-Z]{2,10})\s+listed\s+on\s+binance\s+futures',  # $LA listed on Binance futures
-            r'([A-Z]{2,10})\s+listed\s+on\s+binance\s+futures',   # LA listed on Binance futures
-            r'\$([A-Z]{2,10})\s+.*binance.*futures',              # $LA ... binance ... futures
-            r'([A-Z]{2,10})\s+.*binance.*futures',                # LA ... binance ... futures
+            r'\$([A-Z]{2,10})(?:\s*,|\s+listed)',  # $MYX, or $SPK listed
+            r'\$([A-Z]{2,10})\b',                  # Any $SYMBOL format
+            r'\b([A-Z]{2,10})\s+listed\s+on\s+binance\s+futures',  # SYMBOL listed on binance futures
+            r'\b([A-Z]{2,10})\s+.*binance.*futures',               # SYMBOL ... binance ... futures
         ]
         
         logger.info("TelegramListener initialized")
@@ -192,12 +192,18 @@ class TelegramListener:
             for pattern in self.symbol_patterns:
                 matches = re.findall(pattern, text, re.IGNORECASE)
                 if matches:
-                    # Return only the FIRST symbol found
-                    first_symbol = matches[0].upper()
-                    # Validate symbol (2-10 characters, letters only)
-                    if 2 <= len(first_symbol) <= 10 and first_symbol.isalpha():
-                        logger.info(f"Multiple symbols detected, using first one: {first_symbol}")
-                        return first_symbol
+                    # Filter out common words that are not symbols
+                    excluded_words = {'LISTED', 'ON', 'BINANCE', 'FUTURES', 'AND', 'THE', 'FOR', 'TO', 'IN', 'AT', 'IS', 'ARE'}
+                    
+                    for match in matches:
+                        symbol = match.upper().strip()
+                        # Validate symbol (2-10 characters, letters only, not excluded words)
+                        if (2 <= len(symbol) <= 10 and 
+                            symbol.isalpha() and 
+                            symbol not in excluded_words):
+                            if len(matches) > 1:
+                                logger.info(f"Multiple symbols detected, using first one: {symbol}")
+                            return symbol
             return None
         except Exception as e:
             error_msg = f"Error extracting symbol from text: {e}"

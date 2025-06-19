@@ -486,17 +486,72 @@ class TradingBot:
             return 1
     
     async def retry_scheduler(self):
-        """Scheduler to retry failed trades every minute"""
+        """Scheduler to retry failed trades every 5 minutes at :03 seconds"""
         # Start trade monitoring and completion checking in parallel
         asyncio.create_task(self.monitor_active_trades())
         asyncio.create_task(self.check_trade_completion_status())
         
         while True:
             try:
-                await asyncio.sleep(60)  # Wait 1 minute
+                current_time = datetime.now()
                 
+                # Wait until next 5-minute interval at :03 seconds
+                # Target minutes: 00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55
+                current_minute = current_time.minute
+                current_second = current_time.second
+                
+                # Calculate next target minute (next 5-minute interval)
+                next_target_minute = ((current_minute // 5) + 1) * 5
+                if next_target_minute >= 60:
+                    next_target_minute = 0
+                
+                # Calculate time to wait
+                if next_target_minute == 0:
+                    # Next hour
+                    next_retry_time = current_time.replace(
+                        hour=(current_time.hour + 1) % 24,
+                        minute=0,
+                        second=3,
+                        microsecond=0
+                    )
+                else:
+                    # Same hour, next 5-minute mark
+                    next_retry_time = current_time.replace(
+                        minute=next_target_minute,
+                        second=3,
+                        microsecond=0
+                    )
+                
+                # If we've already passed the target time for this interval, move to next
+                if next_retry_time <= current_time:
+                    next_target_minute = ((next_target_minute // 5) + 1) * 5
+                    if next_target_minute >= 60:
+                        next_retry_time = current_time.replace(
+                            hour=(current_time.hour + 1) % 24,
+                            minute=0,
+                            second=3,
+                            microsecond=0
+                        )
+                    else:
+                        next_retry_time = current_time.replace(
+                            minute=next_target_minute,
+                            second=3,
+                            microsecond=0
+                        )
+                
+                # Calculate sleep duration
+                sleep_duration = (next_retry_time - current_time).total_seconds()
+                
+                logger.info(f"Next retry attempt scheduled at: {next_retry_time.strftime('%H:%M:%S')} (in {sleep_duration:.1f} seconds)")
+                
+                # Wait until the exact time
+                await asyncio.sleep(sleep_duration)
+                
+                # Now perform retry attempts
                 current_time = datetime.now()
                 symbols_to_remove = []
+                
+                logger.info(f"🔄 Executing retry attempts at {current_time.strftime('%H:%M:%S')}")
                 
                 for symbol, retry_info in self.retry_attempts.items():
                     # Check if max retry time exceeded
@@ -514,7 +569,7 @@ class TradingBot:
                         continue
                     
                     # Attempt retry
-                    logger.info(f"Retrying trade for {symbol} (attempt {retry_info['attempts'] + 1})")
+                    logger.info(f"Retrying trade for {symbol} (attempt {retry_info['attempts'] + 1}) at {current_time.strftime('%H:%M:%S')}")
                     
                     trade_result = await self.place_long_trade(symbol, retry_info.get('original_message', ''))
                     
@@ -599,6 +654,8 @@ class TradingBot:
                 logger.error(error_msg)
                 # Send error to Slack
                 self.slack_notifier.post_error_to_slack(f"Retry scheduler error: {e}")
+                # Wait 30 seconds before continuing in case of error
+                await asyncio.sleep(30)
     
     def has_active_trade(self):
         """Check if there's currently an active trade"""
