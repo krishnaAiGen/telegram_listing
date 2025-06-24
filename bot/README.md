@@ -144,6 +144,9 @@ MAX_RETRY_MINUTES=1440     # Retry limit (minutes)
 
 # Slack Notifications
 SLACK_WEBHOOK_URL=your_webhook_url
+
+# New TIMING_MODE variable
+TIMING_MODE=1              # Trade execution timing (1 or 10)
 ```
 
 ### Trading Parameters Explained
@@ -155,6 +158,7 @@ SLACK_WEBHOOK_URL=your_webhook_url
 | `STOP_LOSS_PCT` | Stop loss percentage | 2.0 | -2% stop loss |
 | `LEVERAGE` | Futures leverage | 1 | 1x leverage |
 | `MAX_RETRY_MINUTES` | Retry failed trades for X minutes | 1440 | 24 hours |
+| `TIMING_MODE` | Trade execution timing (1 or 10) | 1 | 1=every minute, 10=every 10 minutes |
 
 ## 🎮 Usage
 
@@ -201,10 +205,20 @@ bot/
 - No active trades currently running
 - Symbol exists on Binance Futures
 
+### Trade Execution Flow
+1. **Message Received** → Symbol extracted → **Wait 2 seconds** → Attempt trade execution
+2. **If trade succeeds** → Stop loss & take profit placed → Trade complete
+3. **If trade fails** → Queue for next timing window retry
+
+### Timing Windows (for failed trades only)
+- **TIMING_MODE=1**: Retries failed trades every minute at :02 seconds
+- **TIMING_MODE=10**: Retries failed trades every 10 minutes at :02 seconds (00:02, 10:02, 20:02, etc.)
+- Only failed trades use the timing queue system
+
 ### Position Management
-- **Entry**: Market buy order
-- **Stop Loss**: -2% from entry price
-- **Take Profit**: +15% from entry price
+- **Entry**: Market buy order (executed at timed intervals)
+- **Stop Loss**: -2% from entry price (placed immediately after entry)
+- **Take Profit**: +15% from entry price (placed immediately after entry)
 - **Max Hold**: 2 hours maximum
 
 ### Exit Conditions
@@ -217,11 +231,23 @@ bot/
 
 ### Slack Notifications
 
-#### Trade Execution
+The bot now sends **minimal notifications** to reduce noise:
+
+#### 1. Symbol Extraction (when message received)
 ```
-🎯 TRADE EXECUTED: ✅ SUCCESS
+🎯 SYMBOL EXTRACTED: ✅ EXECUTING IN 2 SECONDS
 Time: 2024-01-15 10:35:00
 Symbol: TAIKO
+Trading Pair: TAIKOUSDT
+Original Message: $TAIKO listed on Binance futures
+Status: Will attempt execution in 2 seconds, queue if failed
+```
+
+#### 2. Trade Execution (when trade is actually placed)
+```
+🎯 TRADE EXECUTED: ✅ SUCCESS
+Time: 2024-01-15 10:35:02
+Symbol: TAIKOUSDT
 Entry Price: $0.1234
 Quantity: 1215.0
 Stop Loss: $0.1209 (-2%)

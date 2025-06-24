@@ -16,7 +16,7 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 class TradingBot:
-    def __init__(self):
+    def __init__(self, timing_mode=1):
         # Binance credentials
         self.binance_api_key = os.getenv('BINANCE_API_KEY')
         self.binance_api_secret = os.getenv('BINANCE_API_SECRET')
@@ -29,6 +29,9 @@ class TradingBot:
         self.max_retry_minutes = int(os.getenv('MAX_RETRY_MINUTES', '1440'))  # 24 hours
         self.max_hold_hours = 2  # Maximum hold time: 2 hours
         
+        # Timing mode: 1 = every minute at :02, 10 = every 10 minutes at :02
+        self.timing_mode = timing_mode
+        
         # Initialize Binance client
         self.binance_client = Client(self.binance_api_key, self.binance_api_secret, tld='com')
         
@@ -39,6 +42,9 @@ class TradingBot:
         self.retry_attempts = {}  # symbol -> {'attempts': count, 'last_attempt': datetime}
         self.active_trades = {}   # symbol -> trade_info
         
+        # Pending trades (waiting for timing)
+        self.pending_trades = {}  # symbol -> {'message': original_message, 'timestamp': when_received}
+        
         # Trade logging file
         self.trade_log_file = 'trades.json'
         
@@ -48,6 +54,7 @@ class TradingBot:
         logger.info(f"Stop loss: {self.stop_loss_pct}%")
         logger.info(f"Leverage: {self.leverage}x")
         logger.info(f"Max hold time: {self.max_hold_hours} hours")
+        logger.info(f"Timing mode: {self.timing_mode} ({'every minute' if timing_mode == 1 else 'every 10 minutes'} at :02 seconds)")
     
     def load_trades_log(self):
         """Load existing trades from JSON file"""
@@ -90,11 +97,15 @@ class TradingBot:
             return False
     
     async def execute_trade(self, symbol, original_message):
-        """Execute a long trade for the given symbol"""
+        """Execute trade immediately after 2 seconds, queue if failed"""
         try:
-            logger.info(f"Attempting to execute LONG trade for {symbol}")
+            logger.info(f"Waiting 2 seconds before executing trade for {symbol}")
             
-            # Try to place the trade
+            # Wait 2 seconds
+            await asyncio.sleep(2)
+            
+            # Try to execute trade immediately
+            logger.info(f"Attempting immediate execution for {symbol}")
             trade_result = await self.place_long_trade(symbol, original_message)
             
             if trade_result['success']:
@@ -147,35 +158,126 @@ class TradingBot:
                 }
                 self.slack_notifier.post_trade_notification(trade_info)
                 
-                # Remove from retry list if it was there
-                if symbol in self.retry_attempts:
-                    del self.retry_attempts[symbol]
             else:
-                logger.warning(f"❌ Trade failed for {symbol} - adding to retry list")
+                # Trade failed - queue for next timing window
+                logger.warning(f"❌ Immediate trade failed for {symbol} - queueing for next timing window")
                 
-                # Send failure notification to Slack
-                trade_info = {
-                    'success': False,
-                    'symbol': symbol,
-                    'error': trade_result.get('error', 'Unknown error'),
+                # Add to pending trades for timed retry
+                self.pending_trades[symbol] = {
+                    'message': original_message,
+                    'timestamp': datetime.now(),
+                    'failed_attempts': 1,
+                    'last_error': trade_result.get('error', 'Unknown error')
+                }
+                
+                logger.info(f"Trade queued for {symbol}. Will retry at next timing window (:02 seconds)")
+                
+        except Exception as e:
+            error_msg = f"Error executing immediate trade for {symbol}: {e}"
+            logger.error(error_msg)
+            
+            # Queue for timing window on any exception
+            self.pending_trades[symbol] = {
+                'message': original_message,
+                'timestamp': datetime.now(),
+                'failed_attempts': 1,
+                'last_error': str(e)
+            }
+            
+            logger.info(f"Trade queued for {symbol} due to exception. Will retry at next timing window (:02 seconds)")
+            
+            # Send error to Slack
+            self.slack_notifier.post_error_to_slack(f"Immediate trade execution error for {symbol}: {e}")
+    
+    async def execute_pending_trade(self, symbol, pending_info):
+        """Execute a pending trade (called at timed intervals)"""
+        try:
+            original_message = pending_info['message']
+            failed_attempts = pending_info.get('failed_attempts', 0)
+            
+            logger.info(f"Attempting to execute pending trade for {symbol} (attempt #{failed_attempts + 1})")
+            
+            # Try to place the trade
+            trade_result = await self.place_long_trade(symbol, original_message)
+            
+            if trade_result['success']:
+                logger.info(f"✅ Pending trade executed successfully for {symbol}")
+                
+                # Add to active trades for monitoring
+                self.active_trades[symbol] = {
+                    'entry_time': datetime.now(),
+                    'entry_price': trade_result['entry_price'],
+                    'quantity': trade_result['quantity'],
+                    'stop_loss_price': trade_result['stop_loss_price'],
+                    'take_profit_price': trade_result['take_profit_price'],
                     'original_message': original_message,
-                    'added_to_retry': True
+                    'stop_loss_order_id': trade_result.get('stop_loss_order_id'),
+                    'take_profit_order_id': trade_result.get('take_profit_order_id')
+                }
+                
+                # Log trade entry to JSON
+                trade_log_entry = {
+                    'trade_id': f"{symbol}_{int(datetime.now().timestamp())}",
+                    'symbol': symbol,
+                    'action': 'BUY',
+                    'entry_time': datetime.now().isoformat(),
+                    'entry_price': trade_result['entry_price'],
+                    'quantity': trade_result['quantity'],
+                    'stop_loss_price': trade_result['stop_loss_price'],
+                    'take_profit_price': trade_result['take_profit_price'],
+                    'leverage': self.leverage,
+                    'trade_amount': self.trade_amount,
+                    'original_message': original_message,
+                    'status': 'ACTIVE',
+                    'failed_attempts': failed_attempts,
+                    'max_hold_until': (datetime.now() + timedelta(hours=self.max_hold_hours)).isoformat()
+                }
+                self.save_trade_to_log(trade_log_entry)
+                
+                # Send success notification to Slack
+                trade_info = {
+                    'success': True,
+                    'symbol': symbol,
+                    'entry_price': trade_result.get('entry_price'),
+                    'quantity': trade_result.get('quantity'),
+                    'stop_loss_price': trade_result.get('stop_loss_price'),
+                    'take_profit_price': trade_result.get('take_profit_price'),
+                    'stop_loss_pct': self.stop_loss_pct,
+                    'profit_target_pct': self.profit_target_pct,
+                    'leverage': self.leverage,
+                    'trade_amount': self.trade_amount,
+                    'original_message': original_message,
+                    'max_hold_time': f"{self.max_hold_hours} hours"
                 }
                 self.slack_notifier.post_trade_notification(trade_info)
                 
-                # Add to retry list
+                return True  # Success
+            else:
+                logger.warning(f"❌ Pending trade failed for {symbol} - will move to retry system")
+                
+                # Move to retry system after max pending attempts
                 self.retry_attempts[symbol] = {
                     'attempts': 1,
                     'last_attempt': datetime.now(),
                     'original_message': original_message
                 }
                 
+                return False  # Failed
+                
         except Exception as e:
-            error_msg = f"Error executing trade for {symbol}: {e}"
+            error_msg = f"Error executing pending trade for {symbol}: {e}"
             logger.error(error_msg)
             
+            # Move to retry system on exception
+            self.retry_attempts[symbol] = {
+                'attempts': 1,
+                'last_attempt': datetime.now(),
+                'original_message': pending_info['message']
+            }
+            
             # Send error to Slack
-            self.slack_notifier.post_error_to_slack(f"Trade execution error for {symbol}: {e}")
+            self.slack_notifier.post_error_to_slack(f"Pending trade execution error for {symbol}: {e}")
+            return False  # Failed
     
     async def place_long_trade(self, symbol, original_message=""):
         """Place a long trade with stop loss and take profit"""
@@ -486,7 +588,7 @@ class TradingBot:
             return 1
     
     async def retry_scheduler(self):
-        """Scheduler to retry failed trades every 5 minutes at :03 seconds"""
+        """Scheduler to handle timed trade execution and retries"""
         # Start trade monitoring and completion checking in parallel
         asyncio.create_task(self.monitor_active_trades())
         asyncio.create_task(self.check_trade_completion_status())
@@ -495,165 +597,181 @@ class TradingBot:
             try:
                 current_time = datetime.now()
                 
-                # Wait until next 5-minute interval at :03 seconds
-                # Target minutes: 00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55
-                current_minute = current_time.minute
-                current_second = current_time.second
-                
-                # Calculate next target minute (next 5-minute interval)
-                next_target_minute = ((current_minute // 5) + 1) * 5
-                if next_target_minute >= 60:
-                    next_target_minute = 0
-                
-                # Calculate time to wait
-                if next_target_minute == 0:
-                    # Next hour
-                    next_retry_time = current_time.replace(
-                        hour=(current_time.hour + 1) % 24,
-                        minute=0,
-                        second=3,
+                # Calculate next execution time based on timing mode
+                if self.timing_mode == 1:
+                    # Execute every minute at :02 seconds
+                    next_execution_time = current_time.replace(
+                        minute=(current_time.minute + 1) % 60,
+                        second=2,
                         microsecond=0
                     )
+                    if current_time.minute == 59:
+                        next_execution_time = next_execution_time.replace(
+                            hour=(current_time.hour + 1) % 24,
+                            minute=0
+                        )
                 else:
-                    # Same hour, next 5-minute mark
-                    next_retry_time = current_time.replace(
-                        minute=next_target_minute,
-                        second=3,
-                        microsecond=0
-                    )
-                
-                # If we've already passed the target time for this interval, move to next
-                if next_retry_time <= current_time:
-                    next_target_minute = ((next_target_minute // 5) + 1) * 5
+                    # Execute every 10 minutes at :02 seconds (00, 10, 20, 30, 40, 50)
+                    current_minute = current_time.minute
+                    next_target_minute = ((current_minute // 10) + 1) * 10
                     if next_target_minute >= 60:
-                        next_retry_time = current_time.replace(
+                        next_target_minute = 0
+                        next_execution_time = current_time.replace(
                             hour=(current_time.hour + 1) % 24,
                             minute=0,
-                            second=3,
+                            second=2,
                             microsecond=0
                         )
                     else:
-                        next_retry_time = current_time.replace(
+                        next_execution_time = current_time.replace(
                             minute=next_target_minute,
-                            second=3,
+                            second=2,
                             microsecond=0
                         )
                 
-                # Calculate sleep duration
-                sleep_duration = (next_retry_time - current_time).total_seconds()
+                # If we've already passed the target time, move to next
+                if next_execution_time <= current_time:
+                    if self.timing_mode == 1:
+                        next_execution_time = next_execution_time.replace(
+                            minute=(next_execution_time.minute + 1) % 60
+                        )
+                        if next_execution_time.minute == 0:
+                            next_execution_time = next_execution_time.replace(
+                                hour=(next_execution_time.hour + 1) % 24
+                            )
+                    else:
+                        next_target_minute = ((next_execution_time.minute // 10) + 1) * 10
+                        if next_target_minute >= 60:
+                            next_execution_time = next_execution_time.replace(
+                                hour=(next_execution_time.hour + 1) % 24,
+                                minute=0
+                            )
+                        else:
+                            next_execution_time = next_execution_time.replace(
+                                minute=next_target_minute
+                            )
                 
-                logger.info(f"Next retry attempt scheduled at: {next_retry_time.strftime('%H:%M:%S')} (in {sleep_duration:.1f} seconds)")
+                # Calculate sleep duration
+                sleep_duration = (next_execution_time - current_time).total_seconds()
+                
+                timing_desc = "every minute" if self.timing_mode == 1 else "every 10 minutes"
+                logger.info(f"Next execution scheduled at: {next_execution_time.strftime('%H:%M:%S')} ({timing_desc}) (in {sleep_duration:.1f} seconds)")
                 
                 # Wait until the exact time
                 await asyncio.sleep(sleep_duration)
                 
-                # Now perform retry attempts
+                # Now execute pending trades and retries
                 current_time = datetime.now()
-                symbols_to_remove = []
+                logger.info(f"🔄 Executing trades at {current_time.strftime('%H:%M:%S')}")
                 
-                logger.info(f"🔄 Executing retry attempts at {current_time.strftime('%H:%M:%S')}")
-                
-                for symbol, retry_info in self.retry_attempts.items():
-                    # Check if max retry time exceeded
-                    time_elapsed = current_time - retry_info['last_attempt']
+                # Execute pending trades first
+                pending_to_remove = []
+                for symbol, pending_info in self.pending_trades.items():
+                    logger.info(f"Executing pending trade for {symbol}")
+                    success = await self.execute_pending_trade(symbol, pending_info)
                     
-                    if time_elapsed.total_seconds() / 60 >= self.max_retry_minutes:
-                        logger.info(f"Max retry time exceeded for {symbol} - removing from retry list")
-                        
-                        # Send max retry notification to Slack
-                        self.slack_notifier.post_error_to_slack(
-                            f"Max retry time exceeded for {symbol}. Stopped retrying after {self.max_retry_minutes} minutes."
-                        )
-                        
-                        symbols_to_remove.append(symbol)
-                        continue
-                    
-                    # Attempt retry
-                    logger.info(f"Retrying trade for {symbol} (attempt {retry_info['attempts'] + 1}) at {current_time.strftime('%H:%M:%S')}")
-                    
-                    trade_result = await self.place_long_trade(symbol, retry_info.get('original_message', ''))
-                    
-                    if trade_result['success']:
-                        logger.info(f"✅ Retry successful for {symbol}")
-                        
-                        # Add to active trades for monitoring
-                        self.active_trades[symbol] = {
-                            'entry_time': datetime.now(),
-                            'entry_price': trade_result['entry_price'],
-                            'quantity': trade_result['quantity'],
-                            'stop_loss_price': trade_result['stop_loss_price'],
-                            'take_profit_price': trade_result['take_profit_price'],
-                            'original_message': retry_info.get('original_message', ''),
-                            'stop_loss_order_id': trade_result.get('stop_loss_order_id'),
-                            'take_profit_order_id': trade_result.get('take_profit_order_id')
-                        }
-                        
-                        # Log successful retry trade
-                        trade_log_entry = {
-                            'trade_id': f"{symbol}_{int(datetime.now().timestamp())}",
-                            'symbol': symbol,
-                            'action': 'BUY',
-                            'entry_time': datetime.now().isoformat(),
-                            'entry_price': trade_result['entry_price'],
-                            'quantity': trade_result['quantity'],
-                            'stop_loss_price': trade_result['stop_loss_price'],
-                            'take_profit_price': trade_result['take_profit_price'],
-                            'leverage': self.leverage,
-                            'trade_amount': self.trade_amount,
-                            'original_message': retry_info.get('original_message', ''),
-                            'status': 'ACTIVE',
-                            'retry_attempt': retry_info['attempts'] + 1,
-                            'max_hold_until': (datetime.now() + timedelta(hours=self.max_hold_hours)).isoformat()
-                        }
-                        self.save_trade_to_log(trade_log_entry)
-                        
-                        # Send retry success notification to Slack
-                        self.slack_notifier.post_retry_notification(
-                            symbol, 
-                            retry_info['attempts'] + 1, 
-                            success=True
-                        )
-                        
-                        # Send successful trade notification
-                        trade_info = {
-                            'success': True,
-                            'symbol': symbol,
-                            'entry_price': trade_result.get('entry_price'),
-                            'quantity': trade_result.get('quantity'),
-                            'stop_loss_price': trade_result.get('stop_loss_price'),
-                            'take_profit_price': trade_result.get('take_profit_price'),
-                            'stop_loss_pct': self.stop_loss_pct,
-                            'profit_target_pct': self.profit_target_pct,
-                            'leverage': self.leverage,
-                            'trade_amount': self.trade_amount,
-                            'original_message': retry_info.get('original_message', ''),
-                            'max_hold_time': f"{self.max_hold_hours} hours"
-                        }
-                        self.slack_notifier.post_trade_notification(trade_info)
-                        
-                        symbols_to_remove.append(symbol)
+                    if success:
+                        # Trade executed successfully, remove from pending
+                        pending_to_remove.append(symbol)
                     else:
-                        # Update retry info
-                        retry_info['attempts'] += 1
-                        retry_info['last_attempt'] = current_time
-                        logger.info(f"❌ Retry failed for {symbol} (attempt {retry_info['attempts']})")
-                        
-                        # Send retry failure notification to Slack
-                        self.slack_notifier.post_retry_notification(
-                            symbol, 
-                            retry_info['attempts'], 
-                            success=False
-                        )
+                        # Trade failed, it's now moved to retry system, remove from pending
+                        pending_to_remove.append(symbol)
                 
-                # Remove successful or expired symbols
-                for symbol in symbols_to_remove:
-                    del self.retry_attempts[symbol]
+                # Remove processed pending trades
+                for symbol in pending_to_remove:
+                    del self.pending_trades[symbol]
+                
+                # Handle retries (every 5 minutes)
+                if current_time.minute % 5 == 0:
+                    symbols_to_remove = []
+                    
+                    for symbol, retry_info in self.retry_attempts.items():
+                        # Check if max retry time exceeded
+                        time_elapsed = current_time - retry_info['last_attempt']
+                        
+                        if time_elapsed.total_seconds() / 60 >= self.max_retry_minutes:
+                            logger.info(f"Max retry time exceeded for {symbol} - removing from retry list")
+                            
+                            # Send max retry notification to Slack
+                            self.slack_notifier.post_error_to_slack(
+                                f"Max retry time exceeded for {symbol}. Stopped retrying after {self.max_retry_minutes} minutes."
+                            )
+                            
+                            symbols_to_remove.append(symbol)
+                            continue
+                        
+                        # Attempt retry
+                        logger.info(f"Retrying trade for {symbol} (attempt {retry_info['attempts'] + 1}) at {current_time.strftime('%H:%M:%S')}")
+                        
+                        trade_result = await self.place_long_trade(symbol, retry_info.get('original_message', ''))
+                        
+                        if trade_result['success']:
+                            logger.info(f"✅ Retry successful for {symbol}")
+                            
+                            # Add to active trades for monitoring
+                            self.active_trades[symbol] = {
+                                'entry_time': datetime.now(),
+                                'entry_price': trade_result['entry_price'],
+                                'quantity': trade_result['quantity'],
+                                'stop_loss_price': trade_result['stop_loss_price'],
+                                'take_profit_price': trade_result['take_profit_price'],
+                                'original_message': retry_info.get('original_message', ''),
+                                'stop_loss_order_id': trade_result.get('stop_loss_order_id'),
+                                'take_profit_order_id': trade_result.get('take_profit_order_id')
+                            }
+                            
+                            # Log successful retry trade
+                            trade_log_entry = {
+                                'trade_id': f"{symbol}_{int(datetime.now().timestamp())}",
+                                'symbol': symbol,
+                                'action': 'BUY',
+                                'entry_time': datetime.now().isoformat(),
+                                'entry_price': trade_result['entry_price'],
+                                'quantity': trade_result['quantity'],
+                                'stop_loss_price': trade_result['stop_loss_price'],
+                                'take_profit_price': trade_result['take_profit_price'],
+                                'leverage': self.leverage,
+                                'trade_amount': self.trade_amount,
+                                'original_message': retry_info.get('original_message', ''),
+                                'status': 'ACTIVE',
+                                'retry_attempt': retry_info['attempts'] + 1,
+                                'max_hold_until': (datetime.now() + timedelta(hours=self.max_hold_hours)).isoformat()
+                            }
+                            self.save_trade_to_log(trade_log_entry)
+                            
+                            # Send successful trade notification
+                            trade_info = {
+                                'success': True,
+                                'symbol': symbol,
+                                'entry_price': trade_result.get('entry_price'),
+                                'quantity': trade_result.get('quantity'),
+                                'stop_loss_price': trade_result.get('stop_loss_price'),
+                                'take_profit_price': trade_result.get('take_profit_price'),
+                                'stop_loss_pct': self.stop_loss_pct,
+                                'profit_target_pct': self.profit_target_pct,
+                                'leverage': self.leverage,
+                                'trade_amount': self.trade_amount,
+                                'original_message': retry_info.get('original_message', ''),
+                                'max_hold_time': f"{self.max_hold_hours} hours"
+                            }
+                            self.slack_notifier.post_trade_notification(trade_info)
+                            
+                            symbols_to_remove.append(symbol)
+                        else:
+                            # Update retry info
+                            retry_info['attempts'] += 1
+                            retry_info['last_attempt'] = current_time
+                            logger.info(f"❌ Retry failed for {symbol} (attempt {retry_info['attempts']})")
+                    
+                    # Remove successful or expired symbols
+                    for symbol in symbols_to_remove:
+                        del self.retry_attempts[symbol]
                     
             except Exception as e:
-                error_msg = f"Error in retry scheduler: {e}"
+                error_msg = f"Error in scheduler: {e}"
                 logger.error(error_msg)
                 # Send error to Slack
-                self.slack_notifier.post_error_to_slack(f"Retry scheduler error: {e}")
+                self.slack_notifier.post_error_to_slack(f"Scheduler error: {e}")
                 # Wait 30 seconds before continuing in case of error
                 await asyncio.sleep(30)
     

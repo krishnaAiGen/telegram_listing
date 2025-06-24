@@ -23,7 +23,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class TelegramListener:
-    def __init__(self):
+    def __init__(self, timing_mode=1):
         # Telegram credentials
         self.api_id = int(os.getenv('TELEGRAM_API_ID'))
         self.api_hash = os.getenv('TELEGRAM_API_HASH')
@@ -33,8 +33,8 @@ class TelegramListener:
         # Initialize Telegram client
         self.telegram_client = TelegramClient('trading_session', self.api_id, self.api_hash)
         
-        # Initialize trading bot
-        self.trading_bot = TradingBot()
+        # Initialize trading bot with timing mode
+        self.trading_bot = TradingBot(timing_mode=timing_mode)
         
         # Initialize Slack notifier
         self.slack_notifier = SlackNotifier()
@@ -116,16 +116,6 @@ class TelegramListener:
             if 'binance' in message_text and 'futures' in message_text:
                 logger.info("Message contains 'binance' and 'futures' - analyzing...")
                 
-                # Send message detection notification to Slack
-                detection_message = {
-                    "📨 MESSAGE DETECTED": "🔍 ANALYZING",
-                    "Time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                    "Channel": self.channel_username,
-                    "Message": original_text,
-                    "Status": "Checking for valid symbol..."
-                }
-                self.slack_notifier.post_to_slack(detection_message)
-                
                 # Extract symbol using regex (only first one)
                 symbol = self.extract_symbol(original_text)
                 
@@ -139,45 +129,23 @@ class TelegramListener:
                     # Check if there's already an active trade
                     if self.trading_bot.has_active_trade():
                         logger.info(f"Active trade exists - ignoring new trade for {trading_symbol}")
-                        
-                        # Send active trade notification to Slack
-                        active_trade_message = {
-                            "⚠️ TRADE IGNORED": "🔄 ACTIVE TRADE EXISTS",
-                            "Time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                            "Symbol": symbol,
-                            "Trading Pair": trading_symbol,
-                            "Reason": "Another trade is currently active",
-                            "Action": "Message ignored - no retry",
-                            "Original Message": original_text
-                        }
-                        self.slack_notifier.post_to_slack(active_trade_message)
                         return
                     
-                    # Send symbol extraction notification to Slack
+                    # Send symbol extraction notification to Slack (ONLY when symbol is found)
                     symbol_message = {
-                        "🎯 SYMBOL EXTRACTED": "✅ VALID",
+                        "🎯 SYMBOL EXTRACTED": "✅ EXECUTING IN 2 SECONDS",
                         "Time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                         "Symbol": symbol,
                         "Trading Pair": trading_symbol,
-                        "Action": "Sending to trading bot...",
-                        "Original Message": original_text
+                        "Original Message": original_text,
+                        "Status": "Will attempt execution in 2 seconds, queue if failed"
                     }
                     self.slack_notifier.post_to_slack(symbol_message)
                     
-                    # Send to trading bot
+                    # Send to trading bot (will be queued for timed execution)
                     await self.trading_bot.execute_trade(trading_symbol, original_text)
                 else:
                     logger.warning("No valid symbol found in message")
-                    
-                    # Send no symbol notification to Slack
-                    no_symbol_message = {
-                        "⚠️ NO SYMBOL FOUND": "❌ INVALID",
-                        "Time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                        "Message": original_text,
-                        "Reason": "No valid symbol pattern matched",
-                        "Action": "Message ignored"
-                    }
-                    self.slack_notifier.post_to_slack(no_symbol_message)
             else:
                 logger.debug("Message doesn't contain required keywords")
                 
@@ -214,7 +182,15 @@ class TelegramListener:
 async def main():
     """Main function to run the Telegram listener"""
     try:
-        listener = TelegramListener()
+        # Get timing mode from environment variable or default to 1
+        timing_mode = int(os.getenv('TIMING_MODE', '1'))
+        if timing_mode not in [1, 10]:
+            logger.warning(f"Invalid TIMING_MODE {timing_mode}, defaulting to 1")
+            timing_mode = 1
+        
+        logger.info(f"Starting with timing mode: {timing_mode} ({'every minute' if timing_mode == 1 else 'every 10 minutes'} at :02 seconds)")
+        
+        listener = TelegramListener(timing_mode=timing_mode)
         await listener.start()
     except KeyboardInterrupt:
         logger.info("Telegram listener stopped by user")
